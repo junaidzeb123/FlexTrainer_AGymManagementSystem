@@ -55,22 +55,28 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Coral;
             this.button1.Location = new System.Drawing.Point(572, 472);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 76);
+            this.button1.Size = new System.Drawing.Size(245, 76);
             this.button1.TabIndex = 13;
             this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button2.ForeColor = System.Drawing.Color.Coral;
             this.button2.Location = new System.Drawing.Point(321, 472);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 74);
+            this.button2.Size = new System.Drawing.Size(228, 74);
             this.button2.TabIndex = 23;
             this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1

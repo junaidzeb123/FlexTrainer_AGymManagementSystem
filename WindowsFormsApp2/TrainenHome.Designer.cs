@@ -75,9 +75,9 @@
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(598, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 63);
+            this.label1.Size = new System.Drawing.Size(421, 63);
             this.label1.TabIndex = 6;
-            this.label1.Text = "POWER BODY GYM";
+            this.label1.Text = "FLEX TRAINER";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label10
@@ -104,23 +104,23 @@
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 703);
+            this.panel1.Size = new System.Drawing.Size(455, 703);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(81, 61);
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button2.ForeColor = System.Drawing.Color.Coral;
+            this.button2.Location = new System.Drawing.Point(91, 72);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(256, 63);
+            this.button2.Size = new System.Drawing.Size(279, 63);
             this.button2.TabIndex = 18;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
@@ -129,16 +129,16 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(81, 149);
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Coral;
+            this.button1.Location = new System.Drawing.Point(91, 160);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(256, 63);
+            this.button1.Size = new System.Drawing.Size(279, 63);
             this.button1.TabIndex = 16;
             this.button1.Text = "PROFILE";
             this.button1.UseVisualStyleBackColor = false;
@@ -147,16 +147,16 @@
             // button9
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button9.Location = new System.Drawing.Point(81, 493);
+            this.button9.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button9.ForeColor = System.Drawing.Color.Coral;
+            this.button9.Location = new System.Drawing.Point(91, 504);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
             this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button9.Size = new System.Drawing.Size(256, 63);
+            this.button9.Size = new System.Drawing.Size(279, 63);
             this.button9.TabIndex = 7;
             this.button9.Text = "Reports";
             this.button9.UseVisualStyleBackColor = false;
@@ -165,16 +165,16 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button8.Location = new System.Drawing.Point(81, 407);
+            this.button8.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button8.ForeColor = System.Drawing.Color.Coral;
+            this.button8.Location = new System.Drawing.Point(91, 418);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
             this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button8.Size = new System.Drawing.Size(256, 63);
+            this.button8.Size = new System.Drawing.Size(279, 63);
             this.button8.TabIndex = 5;
             this.button8.Text = "Appointments";
             this.button8.UseVisualStyleBackColor = false;
@@ -183,16 +183,16 @@
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(81, 239);
+            this.button7.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button7.ForeColor = System.Drawing.Color.Coral;
+            this.button7.Location = new System.Drawing.Point(91, 250);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
             this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button7.Size = new System.Drawing.Size(256, 63);
+            this.button7.Size = new System.Drawing.Size(279, 63);
             this.button7.TabIndex = 3;
             this.button7.Text = "Workout";
             this.button7.UseVisualStyleBackColor = false;
@@ -201,16 +201,16 @@
             // logout_btn
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.BackColor = System.Drawing.Color.White;
+            this.logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.logout_btn.Location = new System.Drawing.Point(81, 582);
+            this.logout_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.logout_btn.ForeColor = System.Drawing.Color.Coral;
+            this.logout_btn.Location = new System.Drawing.Point(91, 593);
             this.logout_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.logout_btn.Size = new System.Drawing.Size(256, 63);
+            this.logout_btn.Size = new System.Drawing.Size(279, 63);
             this.logout_btn.TabIndex = 2;
             this.logout_btn.Text = "LOGOUT";
             this.logout_btn.UseVisualStyleBackColor = false;
@@ -219,16 +219,16 @@
             // home_btn
             // 
             this.home_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.home_btn.BackColor = System.Drawing.Color.White;
+            this.home_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.home_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.home_btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.home_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.home_btn.Location = new System.Drawing.Point(81, 324);
+            this.home_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.home_btn.ForeColor = System.Drawing.Color.Coral;
+            this.home_btn.Location = new System.Drawing.Point(91, 335);
             this.home_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.home_btn.Name = "home_btn";
             this.home_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.home_btn.Size = new System.Drawing.Size(256, 63);
+            this.home_btn.Size = new System.Drawing.Size(279, 63);
             this.home_btn.TabIndex = 0;
             this.home_btn.Text = "Diet Plans";
             this.home_btn.UseVisualStyleBackColor = false;

@@ -43,12 +43,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Coral;
             this.button1.Location = new System.Drawing.Point(576, 407);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 62);
+            this.button1.Size = new System.Drawing.Size(235, 62);
             this.button1.TabIndex = 9;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
@@ -56,12 +56,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button2.ForeColor = System.Drawing.Color.Coral;
             this.button2.Location = new System.Drawing.Point(305, 407);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(220, 62);
+            this.button2.Size = new System.Drawing.Size(245, 62);
             this.button2.TabIndex = 10;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;

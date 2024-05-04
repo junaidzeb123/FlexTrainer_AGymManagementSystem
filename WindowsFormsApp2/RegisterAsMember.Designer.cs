@@ -51,9 +51,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 22F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Coral;
             this.button1.Location = new System.Drawing.Point(628, 495);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 72);
@@ -64,9 +64,9 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 22F);
-            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button4.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button4.ForeColor = System.Drawing.Color.Coral;
             this.button4.Location = new System.Drawing.Point(379, 495);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(233, 72);
@@ -95,6 +95,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.panel1.Location = new System.Drawing.Point(68, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 620);
@@ -103,12 +104,13 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(425, 323);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 48);
+            this.comboBox1.Size = new System.Drawing.Size(369, 43);
             this.comboBox1.TabIndex = 71;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -124,21 +126,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(171, 326);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 45);
+            this.label4.Size = new System.Drawing.Size(172, 35);
             this.label4.TabIndex = 69;
             this.label4.Text = "Diet Plan :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comboBox4
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(425, 232);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(369, 48);
+            this.comboBox4.Size = new System.Drawing.Size(369, 43);
             this.comboBox4.TabIndex = 68;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -155,32 +158,35 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(426, 164);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(369, 48);
+            this.comboBox3.Size = new System.Drawing.Size(369, 43);
             this.comboBox3.TabIndex = 66;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(425, 95);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(369, 48);
+            this.comboBox2.Size = new System.Drawing.Size(369, 43);
             this.comboBox2.TabIndex = 65;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(171, 415);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 45);
+            this.label2.Size = new System.Drawing.Size(243, 35);
             this.label2.TabIndex = 64;
             this.label2.Text = "Select Pachage";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // radioButton3
             // 
@@ -207,6 +213,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Premium";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -224,46 +231,50 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(171, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 45);
+            this.label6.Size = new System.Drawing.Size(149, 35);
             this.label6.TabIndex = 60;
             this.label6.Text = "Trainer :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(171, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 45);
+            this.label5.Size = new System.Drawing.Size(253, 35);
             this.label5.TabIndex = 59;
             this.label5.Text = "Workout Plan :";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(171, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 45);
+            this.label1.Size = new System.Drawing.Size(193, 35);
             this.label1.TabIndex = 58;
             this.label1.Text = "Select Gym :";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Algerian", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(505, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 63);
+            this.label3.Size = new System.Drawing.Size(117, 35);
             this.label3.TabIndex = 57;
             this.label3.Text = "Signup";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // RegisterAsMember
             // 
