@@ -108,11 +108,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(192, 465);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(227, 45);
+            this.label8.Size = new System.Drawing.Size(243, 35);
             this.label8.TabIndex = 93;
             this.label8.Text = "Specilify Area :";
             // 
@@ -127,11 +127,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(192, 398);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 45);
+            this.label7.Size = new System.Drawing.Size(215, 35);
             this.label7.TabIndex = 91;
             this.label7.Text = "Experience3 :";
             // 
@@ -146,11 +146,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(192, 327);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 45);
+            this.label5.Size = new System.Drawing.Size(214, 35);
             this.label5.TabIndex = 89;
             this.label5.Text = "Experience2 :";
             // 
@@ -165,11 +165,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(192, 258);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 45);
+            this.label4.Size = new System.Drawing.Size(213, 35);
             this.label4.TabIndex = 87;
             this.label4.Text = "Experience1 :";
             // 
@@ -193,33 +193,33 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(192, 177);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 45);
+            this.label6.Size = new System.Drawing.Size(260, 35);
             this.label6.TabIndex = 84;
             this.label6.Text = "Qualifincation :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(192, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 45);
+            this.label1.Size = new System.Drawing.Size(193, 35);
             this.label1.TabIndex = 83;
             this.label1.Text = "Select Gym :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Algerian", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(537, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 66);
+            this.label3.Size = new System.Drawing.Size(185, 54);
             this.label3.TabIndex = 82;
             this.label3.Text = "Signup";
             this.label3.Click += new System.EventHandler(this.label3_Click);

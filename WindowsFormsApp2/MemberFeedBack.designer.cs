@@ -49,9 +49,10 @@
             this.panel3.Controls.Add(this.home);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel2);
-            this.panel3.Location = new System.Drawing.Point(12, 5);
+            this.panel3.Location = new System.Drawing.Point(14, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1238, 714);
+            this.panel3.Size = new System.Drawing.Size(1393, 892);
             this.panel3.TabIndex = 6;
             // 
             // panel5
@@ -60,9 +61,10 @@
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Location = new System.Drawing.Point(333, 201);
+            this.panel5.Location = new System.Drawing.Point(375, 251);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(854, 473);
+            this.panel5.Size = new System.Drawing.Size(961, 591);
             this.panel5.TabIndex = 21;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -76,10 +78,11 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(147, 129);
+            this.button2.Location = new System.Drawing.Point(165, 161);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(221, 220);
+            this.button2.Size = new System.Drawing.Size(249, 275);
             this.button2.TabIndex = 20;
             this.button2.Text = "\r\nMY Feedbacks";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -96,10 +99,11 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(452, 129);
+            this.button1.Location = new System.Drawing.Point(508, 161);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(222, 220);
+            this.button1.Size = new System.Drawing.Size(250, 275);
             this.button1.TabIndex = 19;
             this.button1.Text = "Give Feedback";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -110,9 +114,10 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(17, 201);
+            this.panel1.Location = new System.Drawing.Point(19, 251);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(298, 473);
+            this.panel1.Size = new System.Drawing.Size(335, 591);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -126,10 +131,11 @@
             this.home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.home.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.home.Location = new System.Drawing.Point(1107, 32);
+            this.home.Location = new System.Drawing.Point(1245, 40);
+            this.home.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.home.Name = "home";
             this.home.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.home.Size = new System.Drawing.Size(80, 65);
+            this.home.Size = new System.Drawing.Size(90, 81);
             this.home.TabIndex = 18;
             this.home.Text = "\r\n";
             this.home.UseVisualStyleBackColor = false;
@@ -139,11 +145,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 30F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(494, 101);
+            this.label1.Location = new System.Drawing.Point(556, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 66);
+            this.label1.Size = new System.Drawing.Size(368, 74);
             this.label1.TabIndex = 6;
             this.label1.Text = "Feedbacks";
             // 
@@ -152,17 +158,19 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(68, 15);
+            this.panel2.Location = new System.Drawing.Point(76, 19);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 133);
+            this.panel2.Size = new System.Drawing.Size(218, 166);
             this.panel2.TabIndex = 1;
             // 
             // MemberFeedBack
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 725);
+            this.ClientSize = new System.Drawing.Size(1420, 906);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MemberFeedBack";
             this.Text = "MemberFeedBack";
             this.panel3.ResumeLayout(false);

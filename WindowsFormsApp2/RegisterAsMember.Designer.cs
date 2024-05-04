@@ -267,11 +267,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(505, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 35);
+            this.label3.Size = new System.Drawing.Size(185, 54);
             this.label3.TabIndex = 57;
             this.label3.Text = "Signup";
             this.label3.Click += new System.EventHandler(this.label3_Click);

@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,6 +102,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1135, 614);
             this.panel1.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
+            this.label3.Location = new System.Drawing.Point(432, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(302, 50);
+            this.label3.TabIndex = 100;
+            this.label3.Text = "FLEX TRAINER";
             // 
             // label9
             // 
@@ -254,17 +265,6 @@
             this.label1.Size = new System.Drawing.Size(106, 35);
             this.label1.TabIndex = 83;
             this.label1.Text = "Name :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(432, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(302, 50);
-            this.label3.TabIndex = 100;
-            this.label3.Text = "FLEX TRAINER";
             // 
             // GymOwner_AddTrainer
             // 

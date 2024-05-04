@@ -126,11 +126,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(555, 344);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 45);
+            this.label2.Size = new System.Drawing.Size(183, 35);
             this.label2.TabIndex = 47;
             this.label2.Text = "Register as";
             // 
@@ -175,147 +175,147 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(272, 357);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 48);
+            this.comboBox1.Size = new System.Drawing.Size(277, 43);
             this.comboBox1.TabIndex = 43;
             // 
             // textBox8
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox8.Location = new System.Drawing.Point(276, 180);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(277, 48);
+            this.textBox8.Size = new System.Drawing.Size(277, 42);
             this.textBox8.TabIndex = 42;
             // 
             // textBox7
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox7.Location = new System.Drawing.Point(746, 266);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(277, 48);
+            this.textBox7.Size = new System.Drawing.Size(277, 42);
             this.textBox7.TabIndex = 41;
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox5.Location = new System.Drawing.Point(276, 269);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(277, 48);
+            this.textBox5.Size = new System.Drawing.Size(277, 42);
             this.textBox5.TabIndex = 40;
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox3.Location = new System.Drawing.Point(747, 109);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(277, 48);
+            this.textBox3.Size = new System.Drawing.Size(277, 42);
             this.textBox3.TabIndex = 39;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(555, 275);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 45);
+            this.label9.Size = new System.Drawing.Size(95, 35);
             this.label9.TabIndex = 38;
             this.label9.Text = "Cnic :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(555, 112);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 45);
+            this.label8.Size = new System.Drawing.Size(175, 35);
             this.label8.TabIndex = 37;
             this.label8.Text = "Last Name :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(555, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 45);
+            this.label7.Size = new System.Drawing.Size(153, 35);
             this.label7.TabIndex = 36;
             this.label7.Text = "Address :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(56, 183);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 45);
+            this.label6.Size = new System.Drawing.Size(116, 35);
             this.label6.TabIndex = 35;
             this.label6.Text = "Gmail :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(56, 269);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(218, 45);
+            this.label5.Size = new System.Drawing.Size(218, 35);
             this.label5.TabIndex = 34;
             this.label5.Text = "Father Name :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(56, 360);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 45);
+            this.label4.Size = new System.Drawing.Size(141, 35);
             this.label4.TabIndex = 33;
             this.label4.Text = "Gender :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(56, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 45);
+            this.label1.Size = new System.Drawing.Size(188, 35);
             this.label1.TabIndex = 32;
             this.label1.Text = "First Name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Algerian", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Yellow;
-            this.label3.Location = new System.Drawing.Point(490, 13);
+            this.label3.Location = new System.Drawing.Point(511, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 66);
+            this.label3.Size = new System.Drawing.Size(185, 54);
             this.label3.TabIndex = 31;
             this.label3.Text = "Signup";
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox2.Location = new System.Drawing.Point(746, 192);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 48);
+            this.textBox2.Size = new System.Drawing.Size(277, 42);
             this.textBox2.TabIndex = 30;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.textBox1.Location = new System.Drawing.Point(272, 109);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 48);
+            this.textBox1.Size = new System.Drawing.Size(277, 42);
             this.textBox1.TabIndex = 29;
             // 
             // SignupPage

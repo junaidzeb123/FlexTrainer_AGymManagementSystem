@@ -114,10 +114,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.checkBox3.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.checkBox3.Location = new System.Drawing.Point(858, 373);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(103, 32);
+            this.checkBox3.Size = new System.Drawing.Size(103, 24);
             this.checkBox3.TabIndex = 41;
             this.checkBox3.Text = "Lactose";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.checkBox2.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.checkBox2.Location = new System.Drawing.Point(731, 378);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(106, 32);
+            this.checkBox2.Size = new System.Drawing.Size(107, 24);
             this.checkBox2.TabIndex = 40;
             this.checkBox2.Text = "Gluston";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -136,10 +136,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.checkBox1.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.checkBox1.Location = new System.Drawing.Point(591, 378);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 32);
+            this.checkBox1.Size = new System.Drawing.Size(97, 24);
             this.checkBox1.TabIndex = 39;
             this.checkBox1.Text = "Peanut";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -147,28 +147,29 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.label10.Location = new System.Drawing.Point(586, 374);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 28);
+            this.label10.Size = new System.Drawing.Size(0, 20);
             this.label10.TabIndex = 38;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label9.Location = new System.Drawing.Point(108, 373);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(329, 45);
+            this.label9.Size = new System.Drawing.Size(357, 35);
             this.label9.TabIndex = 37;
             this.label9.Text = "Enter Allergens  if any";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 8F);
             this.label8.Location = new System.Drawing.Point(476, 378);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 28);
+            this.label8.Size = new System.Drawing.Size(103, 20);
             this.label8.TabIndex = 36;
             this.label8.Text = "Allergens :";
             // 
@@ -217,65 +218,71 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label7.Location = new System.Drawing.Point(564, 292);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 45);
+            this.label7.Size = new System.Drawing.Size(160, 35);
             this.label7.TabIndex = 29;
             this.label7.Text = "Calories :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label6.Location = new System.Drawing.Point(98, 305);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 45);
+            this.label6.Size = new System.Drawing.Size(80, 35);
             this.label6.TabIndex = 28;
             this.label6.Text = "Fat :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label5.Location = new System.Drawing.Point(564, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 45);
+            this.label5.Size = new System.Drawing.Size(111, 35);
             this.label5.TabIndex = 27;
             this.label5.Text = "Fiber :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label4.Location = new System.Drawing.Point(98, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 45);
+            this.label4.Size = new System.Drawing.Size(117, 35);
             this.label4.TabIndex = 26;
             this.label4.Text = "Carbs :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label3.Location = new System.Drawing.Point(564, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 45);
+            this.label3.Size = new System.Drawing.Size(152, 35);
             this.label3.TabIndex = 25;
             this.label3.Text = "Protein :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label2.Location = new System.Drawing.Point(98, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 45);
+            this.label2.Size = new System.Drawing.Size(106, 35);
             this.label2.TabIndex = 24;
             this.label2.Text = "Name :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(270, 23);
+            this.label1.Location = new System.Drawing.Point(380, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(584, 63);
+            this.label1.Size = new System.Drawing.Size(447, 54);
             this.label1.TabIndex = 23;
             this.label1.Text = "Enter Meal Detail";
             // 

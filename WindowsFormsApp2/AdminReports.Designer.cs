@@ -87,11 +87,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(430, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 54);
+            this.label1.Size = new System.Drawing.Size(375, 54);
             this.label1.TabIndex = 12;
             this.label1.Text = "ADMIN REPORTS";
             // 

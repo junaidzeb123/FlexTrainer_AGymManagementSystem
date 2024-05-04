@@ -119,11 +119,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Algerian", 36F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 30F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(547, 165);
+            this.label1.Location = new System.Drawing.Point(534, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(691, 80);
+            this.label1.Size = new System.Drawing.Size(567, 74);
             this.label1.TabIndex = 6;
             this.label1.Text = "Create Diet Plan";
             // 
@@ -211,6 +211,7 @@
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label2);
+            this.panel7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.panel7.Location = new System.Drawing.Point(423, 378);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";

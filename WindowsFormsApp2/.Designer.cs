@@ -95,7 +95,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label7.Location = new System.Drawing.Point(160, 202);
+            this.label7.Location = new System.Drawing.Point(258, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 30);
             this.label7.TabIndex = 20;
@@ -103,7 +103,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.textBox2.Location = new System.Drawing.Point(528, 260);
+            this.textBox2.Location = new System.Drawing.Point(553, 272);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(358, 37);
             this.textBox2.TabIndex = 18;
@@ -111,7 +111,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.textBox1.Location = new System.Drawing.Point(528, 202);
+            this.textBox1.Location = new System.Drawing.Point(553, 214);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(358, 37);
             this.textBox1.TabIndex = 17;
@@ -120,7 +120,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(201, 260);
+            this.label6.Location = new System.Drawing.Point(299, 272);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(205, 30);
             this.label6.TabIndex = 16;
@@ -130,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(205, 202);
+            this.label5.Location = new System.Drawing.Point(303, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 30);
             this.label5.TabIndex = 15;
@@ -148,7 +148,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(205, 149);
+            this.label3.Location = new System.Drawing.Point(303, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 30);
             this.label3.TabIndex = 13;
@@ -158,7 +158,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(528, 141);
+            this.comboBox1.Location = new System.Drawing.Point(553, 153);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(358, 38);
             this.comboBox1.TabIndex = 12;
@@ -166,11 +166,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Algerian", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(339, 23);
+            this.label2.Location = new System.Drawing.Point(382, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(559, 63);
+            this.label2.Size = new System.Drawing.Size(484, 54);
             this.label2.TabIndex = 11;
             this.label2.Text = "Workout Creation";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -285,11 +285,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Algerian", 60F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(312, 19);
+            this.label1.Location = new System.Drawing.Point(608, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1072, 134);
+            this.label1.Size = new System.Drawing.Size(435, 54);
             this.label1.TabIndex = 6;
             this.label1.Text = "POWER BODY GYM";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -339,10 +339,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label5.Location = new System.Drawing.Point(712, 476);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 32);
+            this.label5.Size = new System.Drawing.Size(213, 26);
             this.label5.TabIndex = 30;
             this.label5.Text = "Workout Reports";
             // 
@@ -352,6 +352,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button3.Location = new System.Drawing.Point(718, 321);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -364,10 +365,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label6.Location = new System.Drawing.Point(515, 476);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 32);
+            this.label6.Size = new System.Drawing.Size(156, 26);
             this.label6.TabIndex = 28;
             this.label6.Text = "My Diet Plans";
             // 
@@ -377,6 +378,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button4.Location = new System.Drawing.Point(494, 322);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -389,10 +391,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label7.Location = new System.Drawing.Point(270, 479);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 32);
+            this.label7.Size = new System.Drawing.Size(217, 26);
             this.label7.TabIndex = 26;
             this.label7.Text = "My Workout Plans";
             // 
@@ -402,6 +404,7 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button5.Location = new System.Drawing.Point(276, 324);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -414,10 +417,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label4.Location = new System.Drawing.Point(752, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 32);
+            this.label4.Size = new System.Drawing.Size(112, 26);
             this.label4.TabIndex = 24;
             this.label4.Text = "Feedback";
             // 
@@ -440,10 +443,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label3.Location = new System.Drawing.Point(537, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 32);
+            this.label3.Size = new System.Drawing.Size(121, 26);
             this.label3.TabIndex = 22;
             this.label3.Text = "Diet Plans";
             // 
@@ -466,10 +469,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label2.Location = new System.Drawing.Point(281, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 32);
+            this.label2.Size = new System.Drawing.Size(182, 26);
             this.label2.TabIndex = 20;
             this.label2.Text = "Workout Plans";
             // 
@@ -492,10 +495,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label9.Location = new System.Drawing.Point(39, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(239, 32);
+            this.label9.Size = new System.Drawing.Size(237, 26);
             this.label9.TabIndex = 11;
             this.label9.Text = "Your Daily Progress";
             // 
@@ -503,10 +506,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.label8.Location = new System.Drawing.Point(39, 484);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(265, 32);
+            this.label8.Size = new System.Drawing.Size(247, 26);
             this.label8.TabIndex = 10;
             this.label8.Text = "Book Training Session";
             // 
@@ -516,6 +519,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Showcard Gothic", 10F);
             this.button6.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button6.Location = new System.Drawing.Point(57, 329);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

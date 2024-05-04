@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1131, 633);
             this.panel1.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
+            this.label10.Location = new System.Drawing.Point(433, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(328, 54);
+            this.label10.TabIndex = 106;
+            this.label10.Text = "FLEX TRAINER";
             // 
             // button3
             // 
@@ -175,17 +186,6 @@
             this.label2.Size = new System.Drawing.Size(106, 35);
             this.label2.TabIndex = 94;
             this.label2.Text = "Name :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(424, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(302, 50);
-            this.label10.TabIndex = 106;
-            this.label10.Text = "FLEX TRAINER";
             // 
             // GymOwnerMemberReport
             // 

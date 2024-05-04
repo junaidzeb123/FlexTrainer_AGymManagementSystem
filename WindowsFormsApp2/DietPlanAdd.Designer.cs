@@ -113,41 +113,41 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label4.Location = new System.Drawing.Point(236, 295);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 37);
+            this.label4.Size = new System.Drawing.Size(202, 35);
             this.label4.TabIndex = 11;
             this.label4.Text = "No of Meals :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label3.Location = new System.Drawing.Point(236, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 37);
+            this.label3.Size = new System.Drawing.Size(158, 35);
             this.label3.TabIndex = 10;
             this.label3.Text = "Purpose :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label2.Location = new System.Drawing.Point(240, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 37);
+            this.label2.Size = new System.Drawing.Size(102, 35);
             this.label2.TabIndex = 9;
             this.label2.Text = "Type :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Algerian", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(347, 48);
+            this.label1.Location = new System.Drawing.Point(365, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(559, 63);
+            this.label1.Size = new System.Drawing.Size(446, 54);
             this.label1.TabIndex = 8;
             this.label1.Text = "Diet Plan Cration";
             // 
