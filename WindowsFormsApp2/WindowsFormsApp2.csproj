@@ -71,6 +71,24 @@
     <Compile Include="AdminReports.Designer.cs">
       <DependentUpon>AdminReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Home.Designer.cs">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_MoreReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_MoreReports.Designer.cs">
+      <DependentUpon>Admin_MoreReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReigistraionRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ReigistraionRequests.Designer.cs">
+      <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="DietPlanAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +251,12 @@
     <Compile Include="TrainerAppointmentManagment.Designer.cs">
       <DependentUpon>TrainerAppointmentManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainer_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer_Profile.Designer.cs">
+      <DependentUpon>Trainer_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkoutAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +289,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminReports.resx">
       <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Home.resx">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_MoreReports.resx">
+      <DependentUpon>Admin_MoreReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ReigistraionRequests.resx">
+      <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DietPlanAdd.resx">
       <DependentUpon>DietPlanAdd.cs</DependentUpon>
@@ -346,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrainerAppointmentManagment.resx">
       <DependentUpon>TrainerAppointmentManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer_Profile.resx">
+      <DependentUpon>Trainer_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkoutAdd.resx">
       <DependentUpon>WorkoutAdd.cs</DependentUpon>

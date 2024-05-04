@@ -48,7 +48,7 @@ int nHeightEllipse // height of ellipse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton3.Checked)
+            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton4.Checked)
                 MessageBox.Show("Please Complete you information");
             else if (radioButton1.Checked)
             {
@@ -76,7 +76,7 @@ int nHeightEllipse // height of ellipse
             else
             {
                 this.Hide();
-                GymOwnerHome signupAsGymOwner = new GymOwnerHome();
+                Admin_Home signupAsGymOwner = new Admin_Home();
                 signupAsGymOwner.Show();
             }
         }
@@ -92,6 +92,11 @@ int nHeightEllipse // height of ellipse
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
 
         }

@@ -68,11 +68,6 @@ namespace WindowsFormsApp2
 
         }
 
-        private void account_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -86,11 +81,6 @@ namespace WindowsFormsApp2
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -126,7 +116,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            button2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 20, 20));
+           // button2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button2.Width, button2.Height, 20, 20));
             this.Hide();
             SignupPage loginPage = new SignupPage();  
             loginPage.Show();
@@ -140,13 +130,27 @@ namespace WindowsFormsApp2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            button1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 20, 20));
+        //    button1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button1.Width, button1.Height, 20, 20));
 
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            LoginPage login = new LoginPage();
+            login.Show();
+        }
 
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void account_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Profile trainer_Profile     = new Trainer_Profile();
+            trainer_Profile.Show();
         }
     }
 }

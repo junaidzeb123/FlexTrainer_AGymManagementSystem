@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class AdminGymPerfomance : Form
+    public partial class Admin_MoreReports : Form
     {
-        public AdminGymPerfomance()
+        public Admin_MoreReports()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin_Home admin_Home = new Admin_Home();
-            admin_Home.Show();
+            AdminReports adminReports   = new AdminReports();   
+            adminReports.Show();
         }
     }
 }

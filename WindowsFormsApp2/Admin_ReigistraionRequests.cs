@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class AdminReports : Form
+    public partial class Admin_ReigistraionRequests : Form
     {
-        public AdminReports()
+        public Admin_ReigistraionRequests()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,13 +22,6 @@ namespace WindowsFormsApp2
             this.Hide();
             Admin_Home admin_Home = new Admin_Home();
             admin_Home.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Admin_MoreReports admin_MoreReports = new Admin_MoreReports();
-            admin_MoreReports.Show();
         }
     }
 }
