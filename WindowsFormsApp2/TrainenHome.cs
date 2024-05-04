@@ -145,5 +145,12 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void account_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Profile trainer_Profile     = new Trainer_Profile();
+            trainer_Profile.Show();
+        }
     }
 }

@@ -28,5 +28,12 @@ namespace WindowsFormsApp2
             Admin_Home admin_Home = new Admin_Home();
             admin_Home.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_MoreReports admin_MoreReports = new Admin_MoreReports();
+            admin_MoreReports.Show();
+        }
     }
 }
