@@ -16,5 +16,14 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GymOwnerHome home = new GymOwnerHome();
+            home.Show();
+            this.Hide();
+        }
+
+        
     }
 }

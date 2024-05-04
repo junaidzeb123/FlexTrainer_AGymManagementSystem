@@ -30,5 +30,19 @@ namespace WindowsFormsApp2
             trainer.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginPage login = new LoginPage();
+            login.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OwnerProfile ownerProfile = new OwnerProfile();
+            ownerProfile.Show();
+            this.Hide();
+        }
     }
 }

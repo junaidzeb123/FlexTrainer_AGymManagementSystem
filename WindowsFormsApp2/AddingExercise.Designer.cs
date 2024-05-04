@@ -102,7 +102,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(421, 471);
+            this.button1.Location = new System.Drawing.Point(532, 469);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(256, 77);
             this.button1.TabIndex = 22;

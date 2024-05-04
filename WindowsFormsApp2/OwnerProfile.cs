@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class GymownerSearch : Form
+    public partial class OwnerProfile : Form
     {
-        public GymownerSearch()
+        public OwnerProfile()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -31,9 +26,14 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GymOwner_AddTrainer addTrainer = new GymOwner_AddTrainer();
-            addTrainer.Show();
+             OwnerProfileEdit edit = new OwnerProfileEdit();
+            edit.Show();
             this.Hide();
+        }
+
+        private void OwnerProfile_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

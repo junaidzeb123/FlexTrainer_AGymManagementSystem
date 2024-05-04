@@ -37,6 +37,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // button2
+            // 
+            //this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            //this.button2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            //this.button2.ForeColor = System.Drawing.Color.Coral;
+            //this.button2.Location = new System.Drawing.Point(284, 492);
+            //this.button2.Name = "button2";
+            //this.button2.Size = new System.Drawing.Size(244, 83);
+            //this.button2.TabIndex = 12;
+            //this.button2.Text = "Back";
+            //this.button2.UseVisualStyleBackColor = false;
+            //this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
