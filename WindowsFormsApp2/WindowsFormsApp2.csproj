@@ -71,6 +71,18 @@
     <Compile Include="AdminReports.Designer.cs">
       <DependentUpon>AdminReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Home.Designer.cs">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_ReigistraionRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_ReigistraionRequests.Designer.cs">
+      <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="DietPlanAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminReports.resx">
       <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Home.resx">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_ReigistraionRequests.resx">
+      <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DietPlanAdd.resx">
       <DependentUpon>DietPlanAdd.cs</DependentUpon>

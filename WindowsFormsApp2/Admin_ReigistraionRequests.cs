@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class AdminReports : Form
+    public partial class Admin_ReigistraionRequests : Form
     {
-        public AdminReports()
+        public Admin_ReigistraionRequests()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
