@@ -86,5 +86,12 @@ namespace WindowsFormsApp2
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainenHome home = new TrainenHome();
+            home.Show();
+        }
     }
 }

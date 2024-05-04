@@ -115,5 +115,12 @@ int nHeightEllipse // height of ellipse
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignupPage signupPage = new SignupPage();
+            signupPage.Show();
+        }
     }
 }

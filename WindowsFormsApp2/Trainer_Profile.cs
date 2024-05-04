@@ -43,5 +43,12 @@ namespace WindowsFormsApp2
             TrainenHome trainenHome = new TrainenHome();    
             trainenHome.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrainenHome trainenHome = new TrainenHome();
+            trainenHome.Show();
+        }
     }
 }

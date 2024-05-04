@@ -260,12 +260,12 @@
             // 
             // Search_text_Box
             // 
-            this.Search_text_Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
-            this.Search_text_Box.Font = new System.Drawing.Font("Segoe UI", 18.2F);
-            this.Search_text_Box.Location = new System.Drawing.Point(575, 231);
+            this.Search_text_Box.BackColor = System.Drawing.Color.White;
+            this.Search_text_Box.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.Search_text_Box.Location = new System.Drawing.Point(574, 231);
             this.Search_text_Box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Search_text_Box.Name = "Search_text_Box";
-            this.Search_text_Box.Size = new System.Drawing.Size(558, 56);
+            this.Search_text_Box.Size = new System.Drawing.Size(559, 50);
             this.Search_text_Box.TabIndex = 2;
             this.Search_text_Box.TextChanged += new System.EventHandler(this.Search_text_Box_TextChanged);
             // 
@@ -275,10 +275,10 @@
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.panel6.Location = new System.Drawing.Point(508, 231);
+            this.panel6.Location = new System.Drawing.Point(519, 231);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(60, 60);
+            this.panel6.Size = new System.Drawing.Size(60, 50);
             this.panel6.TabIndex = 3;
             // 
             // label1

@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -52,6 +52,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -59,7 +60,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(563, 464);
+            this.button1.Location = new System.Drawing.Point(435, 466);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(261, 81);
             this.button1.TabIndex = 8;
@@ -79,24 +80,11 @@
             this.linkLabel1.Text = "Already have account. Login";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.button2.ForeColor = System.Drawing.Color.Coral;
-            this.button2.Location = new System.Drawing.Point(247, 464);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(261, 81);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.radioButton2);
@@ -123,12 +111,22 @@
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
+            this.pictureBox1.Location = new System.Drawing.Point(102, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.TabIndex = 112;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(555, 344);
+            this.label2.Location = new System.Drawing.Point(584, 357);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 35);
             this.label2.TabIndex = 47;
@@ -139,7 +137,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.Color.Black;
-            this.radioButton3.Location = new System.Drawing.Point(618, 401);
+            this.radioButton3.Location = new System.Drawing.Point(647, 405);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(138, 29);
             this.radioButton3.TabIndex = 46;
@@ -152,7 +150,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(917, 399);
+            this.radioButton2.Location = new System.Drawing.Point(955, 405);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(170, 29);
             this.radioButton2.TabIndex = 45;
@@ -165,7 +163,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
-            this.radioButton1.Location = new System.Drawing.Point(772, 399);
+            this.radioButton1.Location = new System.Drawing.Point(801, 403);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(128, 29);
             this.radioButton1.TabIndex = 44;
@@ -193,7 +191,7 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox7.Location = new System.Drawing.Point(746, 266);
+            this.textBox7.Location = new System.Drawing.Point(786, 269);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(277, 42);
             this.textBox7.TabIndex = 41;
@@ -209,7 +207,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox3.Location = new System.Drawing.Point(747, 109);
+            this.textBox3.Location = new System.Drawing.Point(787, 112);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(277, 42);
             this.textBox3.TabIndex = 39;
@@ -219,7 +217,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(555, 275);
+            this.label9.Location = new System.Drawing.Point(595, 278);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 35);
             this.label9.TabIndex = 38;
@@ -230,7 +228,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(555, 112);
+            this.label8.Location = new System.Drawing.Point(595, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 35);
             this.label8.TabIndex = 37;
@@ -241,7 +239,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(555, 195);
+            this.label7.Location = new System.Drawing.Point(595, 198);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 35);
             this.label7.TabIndex = 36;
@@ -305,7 +303,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox2.Location = new System.Drawing.Point(746, 192);
+            this.textBox2.Location = new System.Drawing.Point(786, 195);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(277, 42);
             this.textBox2.TabIndex = 30;
@@ -330,6 +328,7 @@
             this.Load += new System.EventHandler(this.LoginPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,7 +336,6 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -358,5 +356,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
