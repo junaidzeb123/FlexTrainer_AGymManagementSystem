@@ -62,6 +62,7 @@
             this.button2.TabIndex = 82;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -74,6 +75,7 @@
             this.button1.TabIndex = 58;
             this.button1.Text = "Save Changes";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 

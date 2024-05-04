@@ -167,6 +167,18 @@
     <Compile Include="MemeberGiveFeedBack.designer.cs">
       <DependentUpon>MemeberGiveFeedBack.cs</DependentUpon>
     </Compile>
+    <Compile Include="OwnerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerProfile.Designer.cs">
+      <DependentUpon>OwnerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OwnerProfileEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OwnerProfileEdit.Designer.cs">
+      <DependentUpon>OwnerProfileEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterAsMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemeberGiveFeedBack.resx">
       <DependentUpon>MemeberGiveFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerProfile.resx">
+      <DependentUpon>OwnerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OwnerProfileEdit.resx">
+      <DependentUpon>OwnerProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterAsMember.resx">
       <DependentUpon>RegisterAsMember.cs</DependentUpon>
