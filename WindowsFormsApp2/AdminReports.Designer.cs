@@ -77,12 +77,15 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(172, 148);
+            this.linkLabel1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(29, 145);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(162, 45);
+            this.linkLabel1.Size = new System.Drawing.Size(1042, 30);
             this.linkLabel1.TabIndex = 13;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.Text = "Details of members of one specific gym that get training from 1 specific trainer." +
+    "";
             // 
             // label1
             // 

@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GymOwnerHome());
+            Application.Run(new LoginPage());
         }
     }
 }

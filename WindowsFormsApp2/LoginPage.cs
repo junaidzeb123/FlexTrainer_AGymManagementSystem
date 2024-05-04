@@ -45,5 +45,55 @@ int nHeightEllipse // height of ellipse
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton3.Checked)
+                MessageBox.Show("Please Complete you information");
+            else if (radioButton1.Checked)
+            {
+               
+
+                this.Hide();
+                TrainenHome registerTrainer = new TrainenHome();
+                registerTrainer.Show();
+
+            }
+            else if (radioButton2.Checked)
+            {
+                this.Hide();
+                GymOwnerHome signupAsGymOwner = new GymOwnerHome();
+                signupAsGymOwner.Show();
+
+            }
+            else if (radioButton3.Checked)
+            {
+              
+                this.Hide();
+                MemberHome registerAsMember = new MemberHome();
+                registerAsMember.Show();
+            }
+            else
+            {
+                this.Hide();
+                GymOwnerHome signupAsGymOwner = new GymOwnerHome();
+                signupAsGymOwner.Show();
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
