@@ -89,6 +89,7 @@
     <Compile Include="Admin_ReigistraionRequests.Designer.cs">
       <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="DietPlanAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +180,7 @@
     <Compile Include="MemberWorkoutPlans.designer.cs">
       <DependentUpon>MemberWorkoutPlans.cs</DependentUpon>
     </Compile>
+    <Compile Include="Member_class.cs" />
     <Compile Include="MemeberGiveFeedBack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +253,7 @@
     <Compile Include="TrainerAppointmentManagment.Designer.cs">
       <DependentUpon>TrainerAppointmentManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trainer_class.cs" />
     <Compile Include="Trainer_Profile.cs">
       <SubType>Form</SubType>
     </Compile>

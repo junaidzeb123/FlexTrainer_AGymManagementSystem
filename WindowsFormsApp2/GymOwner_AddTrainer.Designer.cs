@@ -31,6 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1135, 614);
             this.panel1.TabIndex = 84;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
+            this.pictureBox1.Location = new System.Drawing.Point(58, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.TabIndex = 101;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -168,7 +177,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(782, 216);
+            this.dateTimePicker1.Location = new System.Drawing.Point(799, 197);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(308, 42);
             this.dateTimePicker1.TabIndex = 94;
@@ -206,7 +215,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox3.Location = new System.Drawing.Point(278, 369);
+            this.textBox3.Location = new System.Drawing.Point(287, 366);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(308, 42);
             this.textBox3.TabIndex = 90;
@@ -225,7 +234,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox2.Location = new System.Drawing.Point(278, 285);
+            this.textBox2.Location = new System.Drawing.Point(290, 284);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(308, 42);
             this.textBox2.TabIndex = 88;
@@ -271,15 +280,6 @@
             this.label1.TabIndex = 83;
             this.label1.Text = "Name :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
-            this.pictureBox1.Location = new System.Drawing.Point(58, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
-            this.pictureBox1.TabIndex = 101;
-            this.pictureBox1.TabStop = false;
-            // 
             // GymOwner_AddTrainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -290,6 +290,7 @@
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "GymOwner_AddTrainer";
             this.Text = "GymOwner_AddTrainer";
+            this.Load += new System.EventHandler(this.GymOwner_AddTrainer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

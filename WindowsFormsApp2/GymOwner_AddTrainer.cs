@@ -30,5 +30,10 @@ namespace WindowsFormsApp2
             search.Show();
             this.Hide();
         }
+
+        private void GymOwner_AddTrainer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -8,11 +8,27 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp2
 {
     public partial class LoginPage : Form
     {
+
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
         public LoginPage()
         {
             InitializeComponent();
@@ -31,19 +47,63 @@ namespace WindowsFormsApp2
 
         }
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-(
-int nLeftRect,     // x-coordinate of upper-left corner
-int nTopRect,      // y-coordinate of upper-left corner
-int nRightRect,    // x-coordinate of lower-right corner
-int nBottomRect,   // y-coordinate of lower-right corner
-int nWidthEllipse, // width of ellipse
-int nHeightEllipse // height of ellipse
-);
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
+        }
+
+
+        private void memberLogin()
+        {
+            this.Hide();
+            MemberHome registerAsMember = new MemberHome();
+            registerAsMember.Show();
+        }
+
+        private void TrainerLogin()
+        {
+
+            SqlConnection sqlConnection = DatabaseManager.GetConnection();
+            sqlConnection.Open();
+
+            string checkQuery = "SELECT COUNT(*) FROM Trainer WHERE UserName = @username and Password = @password";
+
+            string passwordstring = password.Text.Trim();
+            string UserNamestring = username.Text.Trim();
+
+            SqlCommand cmd5 = new SqlCommand(checkQuery, sqlConnection);
+            cmd5.Parameters.AddWithValue("@username", UserNamestring);
+            cmd5.Parameters.AddWithValue("@password", passwordstring);
+
+            int count = (int)cmd5.ExecuteScalar();
+
+            if (count == 0)
+            {
+                MessageBox.Show("InvalidCredencils");
+                return;
+            }
+
+            sqlConnection.Close();
+            this.Hide();
+            TrainenHome registerTrainer = new TrainenHome();
+            registerTrainer.Show();
+            
+
+        }
+        private void GymOwnerLogin()
+        {
+
+            this.Hide();
+            GymOwnerHome signupAsGymOwner = new GymOwnerHome();
+            signupAsGymOwner.Show();
+
+        }
+
+        private void adminLogin()
+        {
+            this.Hide();
+            Admin_Home signupAsGymOwner = new Admin_Home();
+            signupAsGymOwner.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,33 +112,23 @@ int nHeightEllipse // height of ellipse
                 MessageBox.Show("Please Complete you information");
             else if (radioButton1.Checked)
             {
-               
 
-                this.Hide();
-                TrainenHome registerTrainer = new TrainenHome();
-                registerTrainer.Show();
-
+                TrainerLogin();
             }
             else if (radioButton2.Checked)
             {
-                this.Hide();
-                GymOwnerHome signupAsGymOwner = new GymOwnerHome();
-                signupAsGymOwner.Show();
-
+                GymOwnerLogin();        
             }
             else if (radioButton3.Checked)
             {
-              
-                this.Hide();
-                MemberHome registerAsMember = new MemberHome();
-                registerAsMember.Show();
+                memberLogin();
             }
             else
             {
-                this.Hide();
-                Admin_Home signupAsGymOwner = new Admin_Home();
-                signupAsGymOwner.Show();
+                adminLogin();
             }
+
+        
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -97,6 +147,11 @@ int nHeightEllipse // height of ellipse
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void username_TextChanged(object sender, EventArgs e)
         {
 
         }
