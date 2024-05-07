@@ -138,6 +138,7 @@ namespace WindowsFormsApp2
         private void logout_btn_Click(object sender, EventArgs e)
         {
             Currbtn(ref logout_btn, 40);
+            Session.Logout();
             this.Hide();
             LoginPage login = new LoginPage();
             login.Show();

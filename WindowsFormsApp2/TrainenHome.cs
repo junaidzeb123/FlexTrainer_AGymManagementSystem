@@ -40,7 +40,7 @@ namespace WindowsFormsApp2
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Workout form = new Workout();   
+            Trainer_Workout form = new Trainer_Workout();   
             form.Show();
         }
 
@@ -92,7 +92,7 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Workout WorkoutAdd = new Workout();   
+            Trainer_Workout WorkoutAdd = new Trainer_Workout();   
             WorkoutAdd.Show();
             this.Hide();
         }
@@ -136,6 +136,7 @@ namespace WindowsFormsApp2
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
+            Session.Logout();
             this.Hide();
             LoginPage login = new LoginPage();
             login.Show();

@@ -54,6 +54,7 @@ namespace WindowsFormsApp2
 
         private void logout_btn_Click(object sender, EventArgs e)
         {
+            Session.Logout();
             this.Hide();
             LoginPage loginPage = new LoginPage();
             loginPage.Show();

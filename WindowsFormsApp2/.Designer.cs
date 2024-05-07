@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class WorkoutAdd
+    partial class Trainer_WorkoutAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.experience = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.purpose = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.NoofExercise = new System.Windows.Forms.TextBox();
+            this.reps = new System.Windows.Forms.TextBox();
+            this.sets = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +54,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(553, 455);
+            this.button1.Location = new System.Drawing.Point(548, 479);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(249, 75);
             this.button1.TabIndex = 11;
@@ -60,16 +65,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.sets);
+            this.panel1.Controls.Add(this.reps);
+            this.panel1.Controls.Add(this.NoofExercise);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.experience);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.purpose);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -98,27 +108,19 @@
             this.label7.Size = new System.Drawing.Size(0, 30);
             this.label7.TabIndex = 20;
             // 
-            // textBox2
+            // experience
             // 
-            this.textBox2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.textBox2.Location = new System.Drawing.Point(553, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(358, 37);
-            this.textBox2.TabIndex = 18;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.textBox1.Location = new System.Drawing.Point(553, 214);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 37);
-            this.textBox1.TabIndex = 17;
+            this.experience.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.experience.Location = new System.Drawing.Point(522, 214);
+            this.experience.Name = "experience";
+            this.experience.Size = new System.Drawing.Size(358, 37);
+            this.experience.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(299, 272);
+            this.label6.Location = new System.Drawing.Point(303, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(205, 30);
             this.label6.TabIndex = 16;
@@ -152,14 +154,15 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Purpose :";
             // 
-            // comboBox1
+            // purpose
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(553, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(358, 38);
-            this.comboBox1.TabIndex = 12;
+            this.purpose.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.purpose.FormattingEnabled = true;
+            this.purpose.Location = new System.Drawing.Point(522, 153);
+            this.purpose.Name = "purpose";
+            this.purpose.Size = new System.Drawing.Size(358, 38);
+            this.purpose.TabIndex = 12;
+            this.purpose.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label2
             // 
@@ -173,7 +176,63 @@
             this.label2.Text = "Workout Creation";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // WorkoutAdd
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(307, 399);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 30);
+            this.label1.TabIndex = 119;
+            this.label1.Text = "Sets :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(303, 341);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 30);
+            this.label8.TabIndex = 118;
+            this.label8.Text = "Reps :";
+            // 
+            // NoofExercise
+            // 
+            this.NoofExercise.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.NoofExercise.Location = new System.Drawing.Point(526, 271);
+            this.NoofExercise.Name = "NoofExercise";
+            this.NoofExercise.Size = new System.Drawing.Size(358, 37);
+            this.NoofExercise.TabIndex = 120;
+            // 
+            // reps
+            // 
+            this.reps.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.reps.Location = new System.Drawing.Point(522, 334);
+            this.reps.Name = "reps";
+            this.reps.Size = new System.Drawing.Size(358, 37);
+            this.reps.TabIndex = 121;
+            // 
+            // sets
+            // 
+            this.sets.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.sets.Location = new System.Drawing.Point(522, 392);
+            this.sets.Name = "sets";
+            this.sets.Size = new System.Drawing.Size(358, 37);
+            this.sets.TabIndex = 122;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(412, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 19);
+            this.label9.TabIndex = 123;
+            this.label9.Text = "(required)";
+            // 
+            // Trainer_WorkoutAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +240,7 @@
             this.ClientSize = new System.Drawing.Size(1228, 716);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Coral;
-            this.Name = "WorkoutAdd";
+            this.Name = "Trainer_WorkoutAdd";
             this.Text = "WorkoutAdd";
             this.Load += new System.EventHandler(this.WorkoutAdd_Load);
             this.panel1.ResumeLayout(false);
@@ -195,15 +254,20 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox experience;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox purpose;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox sets;
+        private System.Windows.Forms.TextBox reps;
+        private System.Windows.Forms.TextBox NoofExercise;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 

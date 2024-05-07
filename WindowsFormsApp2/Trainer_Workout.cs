@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Workout : Form
+    public partial class Trainer_Workout : Form
     {
-        public Workout()
+        public Trainer_Workout()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            WorkoutAdd workoutAdd = new WorkoutAdd();
+            Trainer_WorkoutAdd workoutAdd = new Trainer_WorkoutAdd();
             workoutAdd.Show();
         }
 

@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddingExercise.cs">
+    <Compile Include="NotificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddingExercise.Designer.cs">
-      <DependentUpon>AddingExercise.cs</DependentUpon>
+    <Compile Include="NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer_AddingExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trainer_AddingExercise.Designer.cs">
+      <DependentUpon>Trainer_AddingExercise.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminGymPerfomance.cs">
       <SubType>Form</SubType>
@@ -194,6 +200,7 @@
     <Compile Include="GymOwner_ProfileEdit.Designer.cs">
       <DependentUpon>GymOwner_ProfileEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionManagment.cs" />
     <Compile Include="Signup_AsMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,11 +262,11 @@
     <Compile Include="Trainer_Profile.Designer.cs">
       <DependentUpon>Trainer_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorkoutAdd.cs">
+    <Compile Include="Trainer_WorkoutAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>WorkoutAdd.cs</DependentUpon>
+      <DependentUpon>Trainer_WorkoutAdd.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -270,14 +277,18 @@
     <Compile Include="Treiner_Feedback.Designer.cs">
       <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Workout.cs">
+    <Compile Include="Trainer_Workout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Workout.Designer.cs">
-      <DependentUpon>Workout.cs</DependentUpon>
+    <Compile Include="Trainer_Workout.Designer.cs">
+      <DependentUpon>Trainer_Workout.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddingExercise.resx">
-      <DependentUpon>AddingExercise.cs</DependentUpon>
+    <Compile Include="WorkoutPlan.cs" />
+    <EmbeddedResource Include="NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trainer_AddingExercise.resx">
+      <DependentUpon>Trainer_AddingExercise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminGymPerfomance.resx">
       <DependentUpon>AdminGymPerfomance.cs</DependentUpon>
@@ -378,8 +389,8 @@
     <EmbeddedResource Include="Trainer_Profile.resx">
       <DependentUpon>Trainer_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorkoutAdd.resx">
-      <DependentUpon>WorkoutAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Trainer_WorkoutAdd.resx">
+      <DependentUpon>Trainer_WorkoutAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -394,8 +405,8 @@
     <EmbeddedResource Include="Treiner_Feedback.resx">
       <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workout.resx">
-      <DependentUpon>Workout.cs</DependentUpon>
+    <EmbeddedResource Include="Trainer_Workout.resx">
+      <DependentUpon>Trainer_Workout.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

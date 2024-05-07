@@ -77,6 +77,8 @@ namespace WindowsFormsApp2
             }
 
             sqlConnection.Close();
+            /*Creating login session for member*/
+            Session.Login(UserNamestring,"Member");
             this.Hide();
             Member_Home registerAsMember = new Member_Home();
             registerAsMember.Show();
@@ -104,7 +106,11 @@ namespace WindowsFormsApp2
                 return;
             }
 
+
+
             sqlConnection.Close();
+            /*Creating login session for Trainer*/
+            Session.Login(UserNamestring, "Trainer");
             this.Hide();
             TrainenHome registerTrainer = new TrainenHome();
             registerTrainer.Show();
@@ -134,6 +140,8 @@ namespace WindowsFormsApp2
             }
 
             sqlConnection.Close();
+            /*Creating login session for Gym_Owner*/
+            Session.Login(UserNamestring, "Gym_Owner");
             this.Hide();
             GymOwner_Home signupAsGymOwner = new GymOwner_Home();
             signupAsGymOwner.Show();
@@ -145,6 +153,8 @@ namespace WindowsFormsApp2
 
             if (username.Text == "admin" && password.Text == "admin")
             {
+                /*Creating login session for adming*/
+                Session.Login("admin", "Admin");
                 this.Hide();
                 Admin_Home signupAsGymOwner = new Admin_Home();
                 signupAsGymOwner.Show();

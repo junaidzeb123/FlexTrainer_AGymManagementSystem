@@ -71,9 +71,9 @@ namespace WindowsFormsApp2
                 member.SetUserName(username.Text.Trim());
                 member.SetLastName(lastName.Text.Trim());
                 member.SetGender(gender.Text.Trim());
-                member.SetCNIC(cnic2.Text.Trim());
+                member.SetCNIC(cnic.Text.Trim());
                 member.SetGmail(gmail.Text.Trim());
-                member.SetFatherName(fatherName2.Text.Trim());
+                member.SetFatherName(fatherName.Text.Trim());
                 member.SetGender(comboBox1.SelectedItem.ToString());
                 member.SetAddress(address.Text.Trim());
                 member.SetPassword(Password.Text.Trim());

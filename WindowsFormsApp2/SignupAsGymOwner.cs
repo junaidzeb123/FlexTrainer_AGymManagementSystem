@@ -90,6 +90,7 @@ namespace WindowsFormsApp2
                     // ExecuteNonQuery for each command
                     cmd2.ExecuteNonQuery();
 
+
                     sqlConnection.Close();
                     this.Hide();
                     LoginPage loginPage = new LoginPage();
