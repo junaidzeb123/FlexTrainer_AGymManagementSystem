@@ -10,28 +10,28 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class GymOwner_AddTrainer : Form
+    public partial class GymOwner_Profile : Form
     {
-        public GymOwner_AddTrainer()
+        public GymOwner_Profile()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Gymowner_Search search  = new Gymowner_Search();
-            search.Show();
+            GymOwner_Home home = new GymOwner_Home();
+            home.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Gymowner_Search search = new Gymowner_Search();
-            search.Show();
+             GymOwner_ProfileEdit edit = new GymOwner_ProfileEdit();
+            edit.Show();
             this.Hide();
         }
 
-        private void GymOwner_AddTrainer_Load(object sender, EventArgs e)
+        private void OwnerProfile_Load(object sender, EventArgs e)
         {
 
         }

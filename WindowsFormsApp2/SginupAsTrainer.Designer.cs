@@ -194,7 +194,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Showcard Gothic", 14F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(192, 177);
+            this.label6.Location = new System.Drawing.Point(192, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(260, 35);
             this.label6.TabIndex = 84;

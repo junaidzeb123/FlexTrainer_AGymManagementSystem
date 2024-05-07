@@ -48,7 +48,7 @@ namespace WindowsFormsApp2
         private void button9_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminReports adminReports = new AdminReports();
+            Admin_Reports adminReports = new Admin_Reports();
             adminReports.Show();
         }
 

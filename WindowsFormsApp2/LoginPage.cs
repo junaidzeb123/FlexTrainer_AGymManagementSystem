@@ -55,8 +55,30 @@ namespace WindowsFormsApp2
 
         private void memberLogin()
         {
+
+
+            SqlConnection sqlConnection = DatabaseManager.GetConnection();
+            sqlConnection.Open();
+
+            string checkQuery = "SELECT COUNT(*) FROM Member WHERE UserName = @username and Password = @password";
+
+            string passwordstring = password.Text.Trim();
+            string UserNamestring = username.Text.Trim();
+
+            SqlCommand cmd5 = new SqlCommand(checkQuery, sqlConnection);
+            cmd5.Parameters.AddWithValue("@username", UserNamestring);
+            cmd5.Parameters.AddWithValue("@password", passwordstring);
+            int count = (int)cmd5.ExecuteScalar();
+
+            if (count == 0)
+            {
+                MessageBox.Show("InvalidCredencils");
+                return;
+            }
+
+            sqlConnection.Close();
             this.Hide();
-            MemberHome registerAsMember = new MemberHome();
+            Member_Home registerAsMember = new Member_Home();
             registerAsMember.Show();
         }
 
@@ -74,7 +96,6 @@ namespace WindowsFormsApp2
             SqlCommand cmd5 = new SqlCommand(checkQuery, sqlConnection);
             cmd5.Parameters.AddWithValue("@username", UserNamestring);
             cmd5.Parameters.AddWithValue("@password", passwordstring);
-
             int count = (int)cmd5.ExecuteScalar();
 
             if (count == 0)
@@ -93,17 +114,45 @@ namespace WindowsFormsApp2
         private void GymOwnerLogin()
         {
 
+            SqlConnection sqlConnection = DatabaseManager.GetConnection();
+            sqlConnection.Open();
+
+            string checkQuery = "SELECT COUNT(*) FROM Gym_Owner WHERE UserName = @username and Password = @password";
+
+            string passwordstring = password.Text.Trim();
+            string UserNamestring = username.Text.Trim();
+
+            SqlCommand cmd5 = new SqlCommand(checkQuery, sqlConnection);
+            cmd5.Parameters.AddWithValue("@username", UserNamestring);
+            cmd5.Parameters.AddWithValue("@password", passwordstring);
+            int count = (int)cmd5.ExecuteScalar();
+
+            if (count == 0)
+            {
+                MessageBox.Show("InvalidCredencils");
+                return;
+            }
+
+            sqlConnection.Close();
             this.Hide();
-            GymOwnerHome signupAsGymOwner = new GymOwnerHome();
+            GymOwner_Home signupAsGymOwner = new GymOwner_Home();
             signupAsGymOwner.Show();
 
         }
 
         private void adminLogin()
         {
-            this.Hide();
-            Admin_Home signupAsGymOwner = new Admin_Home();
-            signupAsGymOwner.Show();
+
+            if (username.Text == "admin" && password.Text == "admin")
+            {
+                this.Hide();
+                Admin_Home signupAsGymOwner = new Admin_Home();
+                signupAsGymOwner.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Credentials");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

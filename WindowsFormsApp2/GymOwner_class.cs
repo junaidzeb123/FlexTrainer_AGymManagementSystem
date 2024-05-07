@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp2
 {
-    public class Member_class
+    public class Owner_class
     {
         private string firstName;
         private string lastName;
@@ -19,18 +21,22 @@ namespace WindowsFormsApp2
         private string password;
         private string userName;
 
-        private string gym;
-        private int VarificationStatus;
+        private string gymname;
+        private string licencseNO;
+        private string location;
+        private string timing;
+        private int  varificatiostatus;
 
 
-        public int GetVarificationStatus()
+
+        public int Getvarificatiostatus()
         {
-            return VarificationStatus;
+            return varificatiostatus;
         }
 
-        public void SetVarificationStatus(int value)
+        public void Setvarificatiostatus(int value)
         {
-            VarificationStatus = value;
+            varificatiostatus = value;
         }
         // Getter and setter methods for firstName
         public string GetFirstName()
@@ -94,15 +100,15 @@ namespace WindowsFormsApp2
             gender = value;
         }
 
-      
-        public string GetMemberGym()
+
+        public string Getgymname()
         {
-            return gym;
+            return gymname;
         }
 
         public void SetGymName(string value)
         {
-            gym = value;
+            gymname = value;
         }
 
         public string GetUserName()
@@ -132,5 +138,40 @@ namespace WindowsFormsApp2
         {
             password = value;
         }
+
+
+        public string GetLicenseNO()
+        {
+            return licencseNO;
+        }
+
+        public void SetLicenseNO(string value)
+        {
+            licencseNO = value;
+        }
+
+        public string GetLocation()
+        {
+            return location;
+        }
+
+        public void SetLocation(string value)
+        {
+            location = value;
+        }
+
+      
+
+        public string GetTiming()
+        {
+            return timing;
+        }
+
+        public void SetTiming(string value)
+        {
+            timing = value;
+        }
+
+      
     }
 }

@@ -26,6 +26,7 @@ namespace WindowsFormsApp2
         private string gym;
 
         private string userName;
+        private int VarificationStatus;
 
         // Getter and setter methods for firstName
         public string GetFirstName()
@@ -174,6 +175,15 @@ namespace WindowsFormsApp2
         public void SetPassword(string value)
         {
             password = value;
+        }
+        public int GetVarificationStatus()
+        {
+            return VarificationStatus;
+        }
+
+        public void SetVarificationStatus(int value)
+        {
+            VarificationStatus = value;
         }
     }
 }

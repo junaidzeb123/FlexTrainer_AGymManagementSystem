@@ -65,11 +65,11 @@
     <Compile Include="AdminMemberControl.Designer.cs">
       <DependentUpon>AdminMemberControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminReports.cs">
+    <Compile Include="Admin_Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminReports.Designer.cs">
-      <DependentUpon>AdminReports.cs</DependentUpon>
+    <Compile Include="Admin_Reports.Designer.cs">
+      <DependentUpon>Admin_Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Home.cs">
       <SubType>Form</SubType>
@@ -102,29 +102,30 @@
     <Compile Include="DietPlans.Designer.cs">
       <DependentUpon>DietPlans.cs</DependentUpon>
     </Compile>
-    <Compile Include="GymOwnerHome.cs">
+    <Compile Include="GymOwner_class.cs" />
+    <Compile Include="GymOwner_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GymOwnerHome.Designer.cs">
-      <DependentUpon>GymOwnerHome.cs</DependentUpon>
+    <Compile Include="GymOwner_Home.Designer.cs">
+      <DependentUpon>GymOwner_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="GymOwnerMemberReport.cs">
+    <Compile Include="GymOwner_MemberReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GymOwnerMemberReport.Designer.cs">
-      <DependentUpon>GymOwnerMemberReport.cs</DependentUpon>
+    <Compile Include="GymOwner_MemberReport.Designer.cs">
+      <DependentUpon>GymOwner_MemberReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="GymOwnerMemberSearch.cs">
+    <Compile Include="GymOwner_MemberSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GymOwnerMemberSearch.Designer.cs">
-      <DependentUpon>GymOwnerMemberSearch.cs</DependentUpon>
+    <Compile Include="GymOwner_MemberSearch.Designer.cs">
+      <DependentUpon>GymOwner_MemberSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="GymownerSearch.cs">
+    <Compile Include="Gymowner_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GymownerSearch.Designer.cs">
-      <DependentUpon>GymownerSearch.cs</DependentUpon>
+    <Compile Include="Gymowner_Search.Designer.cs">
+      <DependentUpon>Gymowner_Search.cs</DependentUpon>
     </Compile>
     <Compile Include="GymOwner_AddTrainer.cs">
       <SubType>Form</SubType>
@@ -132,78 +133,72 @@
     <Compile Include="GymOwner_AddTrainer.Designer.cs">
       <DependentUpon>GymOwner_AddTrainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GynOwnerHome.cs">
+    <Compile Include="Member_CreateDiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GynOwnerHome.Designer.cs">
-      <DependentUpon>GynOwnerHome.cs</DependentUpon>
+    <Compile Include="Member_CreateDiet.designer.cs">
+      <DependentUpon>Member_CreateDiet.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCreateDiet.cs">
+    <Compile Include="Member_CreateWorkout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberCreateDiet.designer.cs">
-      <DependentUpon>MemberCreateDiet.cs</DependentUpon>
+    <Compile Include="Member_CreateWorkout.designer.cs">
+      <DependentUpon>Member_CreateWorkout.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberCreateWorkout.cs">
+    <Compile Include="Member_DietPlans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberCreateWorkout.designer.cs">
-      <DependentUpon>MemberCreateWorkout.cs</DependentUpon>
+    <Compile Include="Member_DietPlans.designer.cs">
+      <DependentUpon>Member_DietPlans.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberDietPlans.cs">
+    <Compile Include="Member_FeedBack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberDietPlans.designer.cs">
-      <DependentUpon>MemberDietPlans.cs</DependentUpon>
+    <Compile Include="Member_FeedBack.designer.cs">
+      <DependentUpon>Member_FeedBack.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberFeedBack.cs">
+    <Compile Include="Member_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberFeedBack.designer.cs">
-      <DependentUpon>MemberFeedBack.cs</DependentUpon>
+    <Compile Include="Member_Home.Designer.cs">
+      <DependentUpon>Member_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberHome.cs">
+    <Compile Include="Member_SessionBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberHome.Designer.cs">
-      <DependentUpon>MemberHome.cs</DependentUpon>
+    <Compile Include="Member_SessionBook.Designer.cs">
+      <DependentUpon>Member_SessionBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberSessionBook.cs">
+    <Compile Include="Member_WorkoutPlans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemberSessionBook.Designer.cs">
-      <DependentUpon>MemberSessionBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MemberWorkoutPlans.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MemberWorkoutPlans.designer.cs">
-      <DependentUpon>MemberWorkoutPlans.cs</DependentUpon>
+    <Compile Include="Member_WorkoutPlans.designer.cs">
+      <DependentUpon>Member_WorkoutPlans.cs</DependentUpon>
     </Compile>
     <Compile Include="Member_class.cs" />
-    <Compile Include="MemeberGiveFeedBack.cs">
+    <Compile Include="Memeber_GiveFeedBack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemeberGiveFeedBack.designer.cs">
-      <DependentUpon>MemeberGiveFeedBack.cs</DependentUpon>
+    <Compile Include="Memeber_GiveFeedBack.designer.cs">
+      <DependentUpon>Memeber_GiveFeedBack.cs</DependentUpon>
     </Compile>
-    <Compile Include="OwnerProfile.cs">
+    <Compile Include="GymOwner_Profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OwnerProfile.Designer.cs">
-      <DependentUpon>OwnerProfile.cs</DependentUpon>
+    <Compile Include="GymOwner_Profile.Designer.cs">
+      <DependentUpon>GymOwner_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="OwnerProfileEdit.cs">
+    <Compile Include="GymOwner_ProfileEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OwnerProfileEdit.Designer.cs">
-      <DependentUpon>OwnerProfileEdit.cs</DependentUpon>
+    <Compile Include="GymOwner_ProfileEdit.Designer.cs">
+      <DependentUpon>GymOwner_ProfileEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisterAsMember.cs">
+    <Compile Include="Signup_AsMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterAsMember.Designer.cs">
-      <DependentUpon>RegisterAsMember.cs</DependentUpon>
+    <Compile Include="Signup_AsMember.Designer.cs">
+      <DependentUpon>Signup_AsMember.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrationRequestscs.cs">
       <SubType>Form</SubType>
@@ -247,11 +242,11 @@
     <Compile Include="TrainenHome.Designer.cs">
       <DependentUpon>TrainenHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrainerAppointmentManagment.cs">
+    <Compile Include="Trainer_AppointmentManagment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrainerAppointmentManagment.Designer.cs">
-      <DependentUpon>TrainerAppointmentManagment.cs</DependentUpon>
+    <Compile Include="Trainer_AppointmentManagment.Designer.cs">
+      <DependentUpon>Trainer_AppointmentManagment.cs</DependentUpon>
     </Compile>
     <Compile Include="Trainer_class.cs" />
     <Compile Include="Trainer_Profile.cs">
@@ -269,11 +264,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TreinerFeedback.cs">
+    <Compile Include="Treiner_Feedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TreinerFeedback.Designer.cs">
-      <DependentUpon>TreinerFeedback.cs</DependentUpon>
+    <Compile Include="Treiner_Feedback.Designer.cs">
+      <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </Compile>
     <Compile Include="Workout.cs">
       <SubType>Form</SubType>
@@ -290,8 +285,8 @@
     <EmbeddedResource Include="AdminMemberControl.resx">
       <DependentUpon>AdminMemberControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminReports.resx">
-      <DependentUpon>AdminReports.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_Reports.resx">
+      <DependentUpon>Admin_Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Home.resx">
       <DependentUpon>Admin_Home.cs</DependentUpon>
@@ -308,56 +303,53 @@
     <EmbeddedResource Include="DietPlans.resx">
       <DependentUpon>DietPlans.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GymOwnerHome.resx">
-      <DependentUpon>GymOwnerHome.cs</DependentUpon>
+    <EmbeddedResource Include="GymOwner_Home.resx">
+      <DependentUpon>GymOwner_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GymOwnerMemberReport.resx">
-      <DependentUpon>GymOwnerMemberReport.cs</DependentUpon>
+    <EmbeddedResource Include="GymOwner_MemberReport.resx">
+      <DependentUpon>GymOwner_MemberReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GymOwnerMemberSearch.resx">
-      <DependentUpon>GymOwnerMemberSearch.cs</DependentUpon>
+    <EmbeddedResource Include="GymOwner_MemberSearch.resx">
+      <DependentUpon>GymOwner_MemberSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GymownerSearch.resx">
-      <DependentUpon>GymownerSearch.cs</DependentUpon>
+    <EmbeddedResource Include="Gymowner_Search.resx">
+      <DependentUpon>Gymowner_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GymOwner_AddTrainer.resx">
       <DependentUpon>GymOwner_AddTrainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GynOwnerHome.resx">
-      <DependentUpon>GynOwnerHome.cs</DependentUpon>
+    <EmbeddedResource Include="Member_CreateDiet.resx">
+      <DependentUpon>Member_CreateDiet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberCreateDiet.resx">
-      <DependentUpon>MemberCreateDiet.cs</DependentUpon>
+    <EmbeddedResource Include="Member_CreateWorkout.resx">
+      <DependentUpon>Member_CreateWorkout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberCreateWorkout.resx">
-      <DependentUpon>MemberCreateWorkout.cs</DependentUpon>
+    <EmbeddedResource Include="Member_DietPlans.resx">
+      <DependentUpon>Member_DietPlans.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberDietPlans.resx">
-      <DependentUpon>MemberDietPlans.cs</DependentUpon>
+    <EmbeddedResource Include="Member_FeedBack.resx">
+      <DependentUpon>Member_FeedBack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberFeedBack.resx">
-      <DependentUpon>MemberFeedBack.cs</DependentUpon>
+    <EmbeddedResource Include="Member_Home.resx">
+      <DependentUpon>Member_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberHome.resx">
-      <DependentUpon>MemberHome.cs</DependentUpon>
+    <EmbeddedResource Include="Member_SessionBook.resx">
+      <DependentUpon>Member_SessionBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberSessionBook.resx">
-      <DependentUpon>MemberSessionBook.cs</DependentUpon>
+    <EmbeddedResource Include="Member_WorkoutPlans.resx">
+      <DependentUpon>Member_WorkoutPlans.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemberWorkoutPlans.resx">
-      <DependentUpon>MemberWorkoutPlans.cs</DependentUpon>
+    <EmbeddedResource Include="Memeber_GiveFeedBack.resx">
+      <DependentUpon>Memeber_GiveFeedBack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MemeberGiveFeedBack.resx">
-      <DependentUpon>MemeberGiveFeedBack.cs</DependentUpon>
+    <EmbeddedResource Include="GymOwner_Profile.resx">
+      <DependentUpon>GymOwner_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OwnerProfile.resx">
-      <DependentUpon>OwnerProfile.cs</DependentUpon>
+    <EmbeddedResource Include="GymOwner_ProfileEdit.resx">
+      <DependentUpon>GymOwner_ProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OwnerProfileEdit.resx">
-      <DependentUpon>OwnerProfileEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegisterAsMember.resx">
-      <DependentUpon>RegisterAsMember.cs</DependentUpon>
+    <EmbeddedResource Include="Signup_AsMember.resx">
+      <DependentUpon>Signup_AsMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationRequestscs.resx">
       <DependentUpon>RegistrationRequestscs.cs</DependentUpon>
@@ -380,8 +372,8 @@
     <EmbeddedResource Include="TrainenHome.resx">
       <DependentUpon>TrainenHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrainerAppointmentManagment.resx">
-      <DependentUpon>TrainerAppointmentManagment.cs</DependentUpon>
+    <EmbeddedResource Include="Trainer_AppointmentManagment.resx">
+      <DependentUpon>Trainer_AppointmentManagment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_Profile.resx">
       <DependentUpon>Trainer_Profile.cs</DependentUpon>
@@ -399,8 +391,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TreinerFeedback.resx">
-      <DependentUpon>TreinerFeedback.cs</DependentUpon>
+    <EmbeddedResource Include="Treiner_Feedback.resx">
+      <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Workout.resx">
       <DependentUpon>Workout.cs</DependentUpon>
@@ -477,6 +469,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photo-1534438327276-14e5300c3a48.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sql\ProjectQueris.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

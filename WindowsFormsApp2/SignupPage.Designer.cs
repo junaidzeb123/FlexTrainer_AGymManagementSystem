@@ -31,6 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Password2 = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,21 +42,19 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gmail = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cnic = new System.Windows.Forms.TextBox();
+            this.fatherName = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.TextBox();
-            this.cnic = new System.Windows.Forms.Label();
+            this.cnic2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.fatherName = new System.Windows.Forms.Label();
+            this.fatherName2 = new System.Windows.Forms.Label();
             this.gender = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.TextBox();
             this.firstName = new System.Windows.Forms.TextBox();
-            this.Password2 = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,14 +100,14 @@
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.gmail);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.lastName);
             this.panel1.Controls.Add(this.cnic);
+            this.panel1.Controls.Add(this.fatherName);
+            this.panel1.Controls.Add(this.lastName);
+            this.panel1.Controls.Add(this.cnic2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.fatherName);
+            this.panel1.Controls.Add(this.fatherName2);
             this.panel1.Controls.Add(this.gender);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
@@ -118,6 +118,26 @@
             this.panel1.Size = new System.Drawing.Size(1108, 633);
             this.panel1.TabIndex = 30;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Password2
+            // 
+            this.Password2.AutoSize = true;
+            this.Password2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.Password2.ForeColor = System.Drawing.Color.Black;
+            this.Password2.Location = new System.Drawing.Point(595, 301);
+            this.Password2.Name = "Password2";
+            this.Password2.Size = new System.Drawing.Size(179, 35);
+            this.Password2.TabIndex = 116;
+            this.Password2.Text = "Password:";
+            // 
+            // Password
+            // 
+            this.Password.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.Password.Location = new System.Drawing.Point(787, 298);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(277, 42);
+            this.Password.TabIndex = 115;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // label4
             // 
@@ -171,6 +191,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "As Member";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
             // radioButton2
             // 
@@ -184,6 +205,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "As Gym Owner";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -217,21 +239,21 @@
             this.gmail.Size = new System.Drawing.Size(277, 42);
             this.gmail.TabIndex = 42;
             // 
-            // textBox7
+            // cnic
             // 
-            this.textBox7.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox7.Location = new System.Drawing.Point(786, 241);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(277, 42);
-            this.textBox7.TabIndex = 41;
+            this.cnic.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.cnic.Location = new System.Drawing.Point(786, 241);
+            this.cnic.Name = "cnic";
+            this.cnic.Size = new System.Drawing.Size(277, 42);
+            this.cnic.TabIndex = 41;
             // 
-            // textBox5
+            // fatherName
             // 
-            this.textBox5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.textBox5.Location = new System.Drawing.Point(274, 241);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(277, 42);
-            this.textBox5.TabIndex = 40;
+            this.fatherName.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.fatherName.Location = new System.Drawing.Point(274, 241);
+            this.fatherName.Name = "fatherName";
+            this.fatherName.Size = new System.Drawing.Size(277, 42);
+            this.fatherName.TabIndex = 40;
             // 
             // lastName
             // 
@@ -241,16 +263,16 @@
             this.lastName.Size = new System.Drawing.Size(277, 42);
             this.lastName.TabIndex = 39;
             // 
-            // cnic
+            // cnic2
             // 
-            this.cnic.AutoSize = true;
-            this.cnic.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.cnic.ForeColor = System.Drawing.Color.Black;
-            this.cnic.Location = new System.Drawing.Point(601, 248);
-            this.cnic.Name = "cnic";
-            this.cnic.Size = new System.Drawing.Size(95, 35);
-            this.cnic.TabIndex = 38;
-            this.cnic.Text = "Cnic :";
+            this.cnic2.AutoSize = true;
+            this.cnic2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.cnic2.ForeColor = System.Drawing.Color.Black;
+            this.cnic2.Location = new System.Drawing.Point(601, 248);
+            this.cnic2.Name = "cnic2";
+            this.cnic2.Size = new System.Drawing.Size(95, 35);
+            this.cnic2.TabIndex = 38;
+            this.cnic2.Text = "Cnic :";
             // 
             // label8
             // 
@@ -285,16 +307,16 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Gmail :";
             // 
-            // fatherName
+            // fatherName2
             // 
-            this.fatherName.AutoSize = true;
-            this.fatherName.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.fatherName.ForeColor = System.Drawing.Color.Black;
-            this.fatherName.Location = new System.Drawing.Point(56, 241);
-            this.fatherName.Name = "fatherName";
-            this.fatherName.Size = new System.Drawing.Size(218, 35);
-            this.fatherName.TabIndex = 34;
-            this.fatherName.Text = "Father Name :";
+            this.fatherName2.AutoSize = true;
+            this.fatherName2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.fatherName2.ForeColor = System.Drawing.Color.Black;
+            this.fatherName2.Location = new System.Drawing.Point(56, 241);
+            this.fatherName2.Name = "fatherName2";
+            this.fatherName2.Size = new System.Drawing.Size(218, 35);
+            this.fatherName2.TabIndex = 34;
+            this.fatherName2.Text = "Father Name :";
             // 
             // gender
             // 
@@ -346,26 +368,6 @@
             this.firstName.TabIndex = 29;
             this.firstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Password2
-            // 
-            this.Password2.AutoSize = true;
-            this.Password2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.Password2.ForeColor = System.Drawing.Color.Black;
-            this.Password2.Location = new System.Drawing.Point(595, 301);
-            this.Password2.Name = "Password2";
-            this.Password2.Size = new System.Drawing.Size(179, 35);
-            this.Password2.TabIndex = 116;
-            this.Password2.Text = "Password:";
-            // 
-            // Password
-            // 
-            this.Password.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.Password.Location = new System.Drawing.Point(787, 298);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(277, 42);
-            this.Password.TabIndex = 115;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
-            // 
             // SignupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -393,14 +395,14 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox gmail;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cnic;
+        private System.Windows.Forms.TextBox fatherName;
         private System.Windows.Forms.TextBox lastName;
-        private System.Windows.Forms.Label cnic;
+        private System.Windows.Forms.Label cnic2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label fatherName;
+        private System.Windows.Forms.Label fatherName2;
         private System.Windows.Forms.Label gender;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

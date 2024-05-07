@@ -39,9 +39,9 @@ namespace WindowsFormsApp2
             //if any one is null or white space it return true;
             return string.IsNullOrWhiteSpace(firstName.Text) ||
                    string.IsNullOrWhiteSpace(lastName.Text) ||
-                   string.IsNullOrWhiteSpace(fatherName.Text) ||
+                   string.IsNullOrWhiteSpace(fatherName2.Text) ||
                    string.IsNullOrWhiteSpace(address.Text) ||
-                   string.IsNullOrWhiteSpace(cnic.Text) ||
+                   string.IsNullOrWhiteSpace(cnic2.Text) ||
                    string.IsNullOrWhiteSpace(gmail.Text) ||
                    string.IsNullOrWhiteSpace(username.Text) ||
                    string.IsNullOrWhiteSpace(Password2.Text) ||
@@ -62,31 +62,29 @@ namespace WindowsFormsApp2
 
             if (validateInput())
             {
-
+                MessageBox.Show("Some thing is wronge");
             }
             else
             {
-
-                Trainer_class trainer = new Trainer_class();
-                trainer.SetFirstName(firstName.Text.Trim());
-                trainer.SetLastName(lastName.Text.Trim());
-                trainer.SetGender(gender.Text.Trim());
-                trainer.SetCNIC(cnic.Text.Trim());
-                trainer.SetGmail(gmail.Text.Trim());
-                trainer.SetFatherName(fatherName.Text.Trim());
-                trainer.SetGender(comboBox1.SelectedItem.ToString());
-                trainer.SetUserName(username.Text.Trim());
-                trainer.SetAddress(address.Text.Trim());
-                trainer.SetPassword(Password.Text.Trim());
-
-
+                Member_class member = new Member_class();
+                member.SetFirstName(firstName.Text.Trim());
+                member.SetUserName(username.Text.Trim());
+                member.SetLastName(lastName.Text.Trim());
+                member.SetGender(gender.Text.Trim());
+                member.SetCNIC(cnic2.Text.Trim());
+                member.SetGmail(gmail.Text.Trim());
+                member.SetFatherName(fatherName2.Text.Trim());
+                member.SetGender(comboBox1.SelectedItem.ToString());
+                member.SetAddress(address.Text.Trim());
+                member.SetPassword(Password.Text.Trim());
+                
                 SqlConnection sqlConnection = DatabaseManager.GetConnection();
                 sqlConnection.Open();
 
-                string checkQuery = "SELECT COUNT(*) FROM Trainer WHERE UserName = @username";
+                string checkQuery = "SELECT COUNT(*) FROM Member WHERE UserName = @username";
                 SqlCommand checkCommand = new SqlCommand(checkQuery, sqlConnection);
 
-                SqlParameter usernameParam = new SqlParameter("@username", trainer.GetUserName());
+                SqlParameter usernameParam = new SqlParameter("@username", member.GetUserName());
                 checkCommand.Parameters.Add(usernameParam);
 
                 int count = (int)checkCommand.ExecuteScalar();
@@ -100,7 +98,7 @@ namespace WindowsFormsApp2
                 sqlConnection.Close();
 
                 this.Hide();
-                RegisterAsMember registerAsMember = new RegisterAsMember();
+                Signup_AsMember registerAsMember = new Signup_AsMember(member);
                 registerAsMember.Show();
             }
 
@@ -119,9 +117,9 @@ namespace WindowsFormsApp2
                 trainer.SetFirstName(firstName.Text.Trim());
                 trainer.SetLastName(lastName.Text.Trim());
                 trainer.SetGender(gender.Text.Trim());
-                trainer.SetCNIC(cnic.Text.Trim());
+                trainer.SetCNIC(cnic2.Text.Trim());
                 trainer.SetGmail(gmail.Text.Trim());
-                trainer.SetFatherName(fatherName.Text.Trim());
+                trainer.SetFatherName(fatherName2.Text.Trim());
                 trainer.SetGender(comboBox1.SelectedItem.ToString());
                 trainer.SetUserName(username.Text.Trim());
                 trainer.SetAddress(address.Text.Trim());
@@ -155,9 +153,50 @@ namespace WindowsFormsApp2
         private void GymOwnerSingup()
         {
 
-            this.Hide();
-            SignupAsGymOwner signupAsGymOwner = new SignupAsGymOwner();
-            signupAsGymOwner.Show();
+
+            if (validateInput())
+            {
+                MessageBox.Show("Some thing is wronge");
+            }
+            else
+            {
+                Owner_class owner = new Owner_class();
+                owner.SetFirstName(firstName.Text.Trim());
+                owner.SetUserName(username.Text.Trim());
+                owner.SetLastName(lastName.Text.Trim());
+                owner.SetGender(gender.Text.Trim());
+                owner.SetCNIC(cnic.Text.Trim());
+                owner.SetGmail(gmail.Text.Trim());
+                owner.SetFatherName(fatherName.Text.Trim());
+                owner.SetGender(comboBox1.SelectedItem.ToString());
+                owner.SetAddress(address.Text.Trim());
+                owner.SetPassword(Password.Text.Trim());
+
+                SqlConnection sqlConnection = DatabaseManager.GetConnection();
+                sqlConnection.Open();
+
+                string checkQuery = "SELECT COUNT(*) FROM Gym_Owner WHERE UserName = @username";
+                SqlCommand checkCommand = new SqlCommand(checkQuery, sqlConnection);
+
+                SqlParameter usernameParam = new SqlParameter("@username", owner.GetUserName());
+                checkCommand.Parameters.Add(usernameParam);
+
+                int count = (int)checkCommand.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    MessageBox.Show("a user with same user name exists");
+                    return;
+                }
+
+                sqlConnection.Close();
+
+                this.Hide();
+                SignupAsGymOwner signupAsGymOwner = new SignupAsGymOwner(owner);
+                signupAsGymOwner.Show();
+
+            }
+
         }
 
 
@@ -174,11 +213,11 @@ namespace WindowsFormsApp2
             else if (radioButton2.Checked)
             {
 
-                memberSingup();
+                GymOwnerSingup();
             }
             else
             {
-                GymOwnerSingup();
+                memberSingup();
             }
         }
 
@@ -230,6 +269,16 @@ namespace WindowsFormsApp2
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

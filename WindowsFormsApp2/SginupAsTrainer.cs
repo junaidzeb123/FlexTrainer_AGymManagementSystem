@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp2
 {
@@ -19,31 +20,40 @@ namespace WindowsFormsApp2
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
-              int nLeftRect,     // x-coordinate of upper-left corner
-              int nTopRect,      // y-coordinate of upper-left corner
-              int nRightRect,    // x-coordinate of lower-right corner
-              int nBottomRect,   // y-coordinate of lower-right corner
-              int nWidthEllipse, // width of ellipse
-              int nHeightEllipse // height of ellipse
+              int nLeftRect,    
+              int nTopRect,      
+              int nRightRect,    
+              int nBottomRect,   
+              int nWidthEllipse, 
+              int nHeightEllipse 
       );
         public SginupAsTrainer(Trainer_class trainer)
         {
             this.trainer = trainer;
             InitializeComponent();
-            gym.Items.Add("a");
-            gym.Items.Add("b");
-            gym.Items.Add("c");
-            
+
+            SqlConnection sqlConnection = DatabaseManager.GetConnection();
+            sqlConnection.Open();
+
+            string checkQuery = "SELECT Gyms.Name FROM Gyms";
+            SqlCommand command = new SqlCommand(checkQuery, sqlConnection);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                var value1 = reader["Name"];
+                gym.Items.Add(value1);
+            }
+            sqlConnection.Close();
         }
 
         private bool validateInput()
         {
-            return  string.IsNullOrWhiteSpace(experience1.Text) ||
-                    string.IsNullOrWhiteSpace(experience2.Text) ||
-                    string.IsNullOrWhiteSpace(experience3.Text) ||
+            return  string.IsNullOrWhiteSpace(experience1.Text)  ||
+                    string.IsNullOrWhiteSpace(experience2.Text)  ||
+                    string.IsNullOrWhiteSpace(experience3.Text)  ||
                     string.IsNullOrWhiteSpace(speciltyarea.Text) ||
                     string.IsNullOrWhiteSpace(qualification.Text);
-
+                 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,11 +73,12 @@ namespace WindowsFormsApp2
                 trainer.SetSpecilifyArea(speciltyarea.Text.Trim());
                 trainer.SetQualification(qualification.Text.Trim());
                 trainer.SetGymName(gym.SelectedItem.ToString());
+                trainer.SetVarificationStatus(0);
 
                 SqlConnection sqlConnection = DatabaseManager.GetConnection();
                 sqlConnection.Open();
 
-                string query = "INSERT INTO Trainer VALUES (@UserName, @FirstName, @Gmail, @Qualification, @SpecializeArea, @Address, @Date, @Password)";
+                string query = "INSERT INTO Trainer VALUES (@UserName, @FirstName, @Gmail, @Qualification, @SpecializeArea,@VarificationStatus, @Address, @Date, @Password)";
                 string query2 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
                 string query3 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
                 string query4 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
@@ -82,6 +93,7 @@ namespace WindowsFormsApp2
                 cmd1.Parameters.AddWithValue("@Address", trainer.GetAddress());
                 cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
                 cmd1.Parameters.AddWithValue("@Password", trainer.GetPassword());
+                cmd1.Parameters.AddWithValue("@VarificationStatus", trainer.GetVarificationStatus());
 
                 SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
                 cmd2.Parameters.AddWithValue("@Experience", trainer.GetExperience1());

@@ -11,18 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Admin_MoreReports : Form
+    public partial class Admin_Reports : Form
     {
-        public Admin_MoreReports()
+        public Admin_Reports()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Admin_Reports adminReports   = new Admin_Reports();   
-            adminReports.Show();
         }
 
 
@@ -40,12 +33,30 @@ int nHeightEllipse // height of ellipse
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_Home admin_Home = new Admin_Home();
+            admin_Home.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin_MoreReports admin_MoreReports = new Admin_MoreReports();
+            admin_MoreReports.Show();
+        }
+
+        private void AdminReports_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Admin_Reports adminReports = new Admin_Reports();
-            adminReports.Show();
+            Admin_Home admin_Home = new Admin_Home();
+            admin_Home.Show();
         }
     }
 }

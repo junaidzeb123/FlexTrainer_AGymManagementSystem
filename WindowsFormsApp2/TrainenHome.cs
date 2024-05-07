@@ -47,13 +47,13 @@ namespace WindowsFormsApp2
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrainerAppointmentManagment trainerAppointmentManagment = new TrainerAppointmentManagment();    
+            Trainer_AppointmentManagment trainerAppointmentManagment = new Trainer_AppointmentManagment();    
             trainerAppointmentManagment.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TreinerFeedback treinerFeedback = new TreinerFeedback();    
+            Treiner_Feedback treinerFeedback = new Treiner_Feedback();    
             treinerFeedback.Show();
             this.Hide();
         }
@@ -99,7 +99,7 @@ namespace WindowsFormsApp2
 
         private void button8_Click(object sender, EventArgs e)
         {
-            TrainerAppointmentManagment app = new TrainerAppointmentManagment();
+            Trainer_AppointmentManagment app = new Trainer_AppointmentManagment();
             app.Show();
             this.Hide();
         }
