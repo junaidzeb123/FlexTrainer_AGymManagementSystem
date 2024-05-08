@@ -18,6 +18,13 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
+
+        bool Validate()
+        {
+            return string.IsNullOrWhiteSpace(type.Text) ||
+                   string.IsNullOrWhiteSpace(purpose.Text) ||
+                   string.IsNullOrWhiteSpace(noofMeals.Text);
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -28,11 +35,27 @@ namespace WindowsFormsApp2
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MealDetail mealDetail = new MealDetail();
-            mealDetail.Show();
+
+            //if (Validate())
+            //{
+            //    MessageBox.Show("Invalid Input");
+            //}
+            //else
+            {
+                DietPlan_Class dietplan = new DietPlan_Class();
+
+
+                 dietplan.purpose = purpose.ToString().Trim();
+               // !int.TryParse(noofMeals.Text, out_ dietplan.nofoMeals);
+                 dietplan.type =  type.ToString().Trim();
+
+                this.Hide();
+                MealDetail mealDetail = new MealDetail(dietplan);
+                mealDetail.Show();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -59,7 +82,7 @@ int nHeightEllipse // height of ellipse
 );
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));
+            noofMeals.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, noofMeals.Width, noofMeals.Height, 40, 40));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

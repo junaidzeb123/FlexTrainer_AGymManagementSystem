@@ -27,14 +27,25 @@ namespace WindowsFormsApp2
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
-(
- int nLeftRect,     // x-coordinate of upper-left corner
- int nTopRect,      // y-coordinate of upper-left corner
- int nRightRect,    // x-coordinate of lower-right corner
- int nBottomRect,   // y-coordinate of lower-right corner
- int nWidthEllipse, // width of ellipse
- int nHeightEllipse // height of ellipse
-);
+        (
+         int nLeftRect,     // x-coordinate of upper-left corner
+         int nTopRect,      // y-coordinate of upper-left corner
+         int nRightRect,    // x-coordinate of lower-right corner
+         int nBottomRect,   // y-coordinate of lower-right corner
+         int nWidthEllipse, // width of ellipse
+         int nHeightEllipse // height of ellipse
+        );
+
+
+        //private bool Validate()
+        //{
+        //    // Check if any of the fields are empty or contain non-integer values
+        //    return string.IsNullOrWhiteSpace(type.Text) ||
+        //           string.IsNullOrWhiteSpace(Purpose.Text) ||
+        //           string.IsNullOrWhiteSpace(.Text) ||
+               
+        //}
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 40, 40));

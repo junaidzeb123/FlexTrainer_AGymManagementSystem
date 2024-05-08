@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.noofMeals = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.purpose = new System.Windows.Forms.TextBox();
+            this.type = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.noofMeals.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,24 +55,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel1
+            // noofMeals
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(80, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 599);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.noofMeals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
+            this.noofMeals.Controls.Add(this.pictureBox1);
+            this.noofMeals.Controls.Add(this.textBox3);
+            this.noofMeals.Controls.Add(this.button1);
+            this.noofMeals.Controls.Add(this.purpose);
+            this.noofMeals.Controls.Add(this.type);
+            this.noofMeals.Controls.Add(this.label4);
+            this.noofMeals.Controls.Add(this.label3);
+            this.noofMeals.Controls.Add(this.label2);
+            this.noofMeals.Controls.Add(this.label1);
+            this.noofMeals.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.noofMeals.Location = new System.Drawing.Point(80, 59);
+            this.noofMeals.Name = "noofMeals";
+            this.noofMeals.Size = new System.Drawing.Size(1070, 599);
+            this.noofMeals.TabIndex = 11;
+            this.noofMeals.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -92,21 +92,21 @@
             this.textBox3.Size = new System.Drawing.Size(322, 44);
             this.textBox3.TabIndex = 14;
             // 
-            // textBox2
+            // purpose
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(453, 234);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(322, 44);
-            this.textBox2.TabIndex = 13;
+            this.purpose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purpose.Location = new System.Drawing.Point(453, 234);
+            this.purpose.Name = "purpose";
+            this.purpose.Size = new System.Drawing.Size(322, 44);
+            this.purpose.TabIndex = 13;
             // 
-            // textBox1
+            // type
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(453, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 44);
-            this.textBox1.TabIndex = 12;
+            this.type.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type.Location = new System.Drawing.Point(453, 173);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(322, 44);
+            this.type.TabIndex = 12;
             // 
             // label4
             // 
@@ -155,13 +155,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1228, 716);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.noofMeals);
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "DietPlanAdd";
             this.Text = "DietPlanCreation";
             this.Load += new System.EventHandler(this.DietPlanCreation_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.noofMeals.ResumeLayout(false);
+            this.noofMeals.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -169,10 +169,10 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel noofMeals;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox purpose;
+        private System.Windows.Forms.TextBox type;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

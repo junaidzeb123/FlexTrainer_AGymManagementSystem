@@ -577,15 +577,16 @@
             this.account_btn.UseVisualStyleBackColor = false;
             this.account_btn.Click += new System.EventHandler(this.account_btn_Click);
             // 
-            // MemberHome
+            // Member_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1420, 906);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MemberHome";
+            this.Name = "Member_Home";
             this.Text = "MemberHome";
+            this.Load += new System.EventHandler(this.Member_Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
