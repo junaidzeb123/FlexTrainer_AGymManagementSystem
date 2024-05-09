@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class Admin_ReigistraionRequests
+    partial class GymOwner_RegistrationRequests
     {
         /// <summary>
         /// Required designer variable.
@@ -34,12 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Gridview = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,31 +51,7 @@
             this.panel1.Location = new System.Drawing.Point(49, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1131, 633);
-            this.panel1.TabIndex = 15;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(189, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(806, 54);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "REGISTRATION REQUESTS for gyms";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.panel1.TabIndex = 16;
             // 
             // Gridview
             // 
@@ -128,22 +104,44 @@
             this.Gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Gridview.Size = new System.Drawing.Size(1030, 405);
             this.Gridview.TabIndex = 119;
-            this.Gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gridview_CellContentClick);
+            this.Gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gridview_CellContentClick_1);
             // 
-            // Admin_ReigistraionRequests
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(142, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(858, 54);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "REGISTRATION REQUESTS of members";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // GymOwner_RegistrationRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1228, 716);
             this.Controls.Add(this.panel1);
-            this.Name = "Admin_ReigistraionRequests";
-            this.Text = "Admin_ReigistraionRequests";
-            this.Load += new System.EventHandler(this.Admin_ReigistraionRequests_Load);
+            this.Name = "GymOwner_RegistrationRequests";
+            this.Text = "GymOwner_RegistrationRequests";
+            this.Load += new System.EventHandler(this.GymOwner_RegistrationRequests_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Gridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,8 +149,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView Gridview;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

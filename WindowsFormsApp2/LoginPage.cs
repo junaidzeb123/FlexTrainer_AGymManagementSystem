@@ -108,6 +108,19 @@ namespace WindowsFormsApp2
 
 
 
+            string checkQuery2 = "SELECT VarificationStatus FROM Trainer WHERE UserName = @username and Password = @password";
+            SqlCommand cmd6 = new SqlCommand(checkQuery2, sqlConnection);
+            cmd6.Parameters.AddWithValue("@username", UserNamestring);
+            cmd6.Parameters.AddWithValue("@password", passwordstring);
+            int status = (int)cmd6.ExecuteScalar();
+
+            if (status == 0)
+            {
+                MessageBox.Show("Gym Owner did't Approve you");
+                return;
+
+            }
+
             sqlConnection.Close();
             /*Creating login session for Trainer*/
             Session.Login(UserNamestring, "Trainer");
@@ -138,6 +151,21 @@ namespace WindowsFormsApp2
                 MessageBox.Show("InvalidCredencils");
                 return;
             }
+
+
+            string checkQuery2 = "SELECT VarificationStatus FROM Gym_Owner WHERE UserName = @username and Password = @password";
+            SqlCommand cmd6 = new SqlCommand(checkQuery2, sqlConnection);
+            cmd6.Parameters.AddWithValue("@username", UserNamestring);
+            cmd6.Parameters.AddWithValue("@password", passwordstring);
+            int status = (int)cmd6.ExecuteScalar();
+
+            if (status == 0)
+            {
+                MessageBox.Show("Admin Have did't approve you.");
+                return;
+
+            }
+
 
             sqlConnection.Close();
             /*Creating login session for Gym_Owner*/
@@ -211,6 +239,11 @@ namespace WindowsFormsApp2
         }
 
         private void username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
         {
 
         }

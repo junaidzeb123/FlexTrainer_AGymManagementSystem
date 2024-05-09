@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DietPlan_Class.cs" />
+    <Compile Include="GymOwner_RegistrationRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GymOwner_RegistrationRequests.Designer.cs">
+      <DependentUpon>GymOwner_RegistrationRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Member_SessionBooking_display.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,9 @@
       <DependentUpon>Workout_Display.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkoutPlan.cs" />
+    <EmbeddedResource Include="GymOwner_RegistrationRequests.resx">
+      <DependentUpon>GymOwner_RegistrationRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Member_SessionBooking_display.resx">
       <DependentUpon>Member_SessionBooking_display.cs</DependentUpon>
     </EmbeddedResource>

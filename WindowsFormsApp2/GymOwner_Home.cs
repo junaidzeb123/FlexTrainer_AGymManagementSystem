@@ -50,5 +50,12 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GymOwner_RegistrationRequests gymOwner_RegistrationRequests = new GymOwner_RegistrationRequests();  
+            gymOwner_RegistrationRequests.Show();
+        }
     }
 }

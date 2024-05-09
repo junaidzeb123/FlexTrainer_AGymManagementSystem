@@ -26,7 +26,8 @@ namespace WindowsFormsApp2
             SqlConnection sqlConnection = DatabaseManager.GetConnection();
             sqlConnection.Open();
 
-            string checkQuery = "SELECT Gyms.Name FROM Gyms";
+            string checkQuery = "SELECT Gyms.Name FROM Gyms inner join Gym_Owner " +
+                                "on Gyms.UserName = Gym_Owner.UserName where VarificationStatus = 1";
             SqlCommand command = new SqlCommand(checkQuery, sqlConnection);
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())

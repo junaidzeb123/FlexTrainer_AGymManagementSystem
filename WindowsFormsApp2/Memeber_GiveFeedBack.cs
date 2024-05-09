@@ -232,7 +232,7 @@ namespace WindowsFormsApp2
                 string query2 = "Select TRAINER.UserName FROM TRAINER" +
                     " INNER JOIN TrainerGym " +
                     " on TrainerGym.UserName = Trainer.UserName " +
-                    "WHERE TrainerGym.Name = @gymsName;";
+                    "WHERE TrainerGym.Name = @gymsName and TRAINER.VarificationStatus = 1";
 
                 SqlCommand sqlCommand2 = new SqlCommand(query2, sqlConnection);
                 sqlCommand2.Parameters.AddWithValue("@gymsName", gymName);

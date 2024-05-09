@@ -148,7 +148,7 @@ namespace WindowsFormsApp2
             SqlConnection sqlConnection = DatabaseManager.GetConnection();
             sqlConnection.Open();
 
-            string query = "SELECT UserName from trainer";
+            string query = "SELECT UserName from trainer where trainer.VarificationStatus = 1";
 
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
 
