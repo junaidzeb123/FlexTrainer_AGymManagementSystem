@@ -119,7 +119,7 @@ namespace WindowsFormsApp2
         {
             Currbtn(ref button6, 30);
             Thread.Sleep(50);
-            Member_SessionBook form = new Member_SessionBook();
+            Member_SessionBooking_display form = new Member_SessionBooking_display();
             Hide();
             form.ShowDialog();
         }

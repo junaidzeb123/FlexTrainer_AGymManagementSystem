@@ -153,5 +153,12 @@ namespace WindowsFormsApp2
             Trainer_Profile trainer_Profile     = new Trainer_Profile();
             trainer_Profile.Show();
         }
+
+        private void Feedback_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trainer_Feebacks trainer_Feebacks = new Trainer_Feebacks();
+            trainer_Feebacks.Show();
+        }
     }
 }

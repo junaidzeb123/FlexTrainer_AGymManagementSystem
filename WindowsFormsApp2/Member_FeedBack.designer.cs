@@ -37,13 +37,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.home);
@@ -164,6 +167,18 @@
             this.panel5.TabIndex = 21;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 117;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Member_FeedBack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -176,6 +191,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,5 +205,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

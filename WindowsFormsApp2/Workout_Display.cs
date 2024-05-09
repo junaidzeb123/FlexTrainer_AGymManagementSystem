@@ -174,5 +174,10 @@ namespace WindowsFormsApp2
             Gridview.CellContentClick += Gridview_CellContentClick;
             LoadALLPlanIntoTable();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

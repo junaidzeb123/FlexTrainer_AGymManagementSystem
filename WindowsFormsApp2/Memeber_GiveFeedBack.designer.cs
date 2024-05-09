@@ -53,9 +53,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.feedback = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,6 +94,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.button1);
@@ -288,7 +291,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(721, 607);
+            this.button1.Location = new System.Drawing.Point(747, 607);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -335,10 +338,10 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(76, 19);
+            this.panel2.Location = new System.Drawing.Point(87, 19);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 166);
+            this.panel2.Size = new System.Drawing.Size(189, 135);
             this.panel2.TabIndex = 1;
             // 
             // comboBox1
@@ -360,6 +363,18 @@
             this.feedback.TabIndex = 21;
             this.feedback.Text = "";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.back;
+            this.pictureBox1.Location = new System.Drawing.Point(312, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Memeber_GiveFeedBack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -376,6 +391,7 @@
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +421,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RichTextBox feedback;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

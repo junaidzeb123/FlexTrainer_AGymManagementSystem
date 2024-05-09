@@ -201,7 +201,7 @@ namespace WindowsFormsApp2
                 radioButton3.Checked = false;
                 radioButton4.Checked = false;
                 radioButton5.Checked = false;
-
+                MessageBox.Show("Your Feeback Have been Submitted");
             }
         }
 
@@ -252,6 +252,13 @@ namespace WindowsFormsApp2
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Member_FeedBack member_FeedBack    = new Member_FeedBack();
+            member_FeedBack.Show();
         }
     }
 }
