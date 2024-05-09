@@ -30,11 +30,11 @@ namespace WindowsFormsApp2
                    string.IsNullOrWhiteSpace(calroriesinput.Text) ||
                    string.IsNullOrWhiteSpace(fatinput.Text) ||
                    string.IsNullOrWhiteSpace(fiberinput.Text) ||
-                   !int.TryParse(proteininput.Text, out _) ||
-                   !int.TryParse(carbsinput.Text, out _) ||
-                   !int.TryParse(calroriesinput.Text, out _) ||
-                   !int.TryParse(fatinput.Text, out _) ||
-                   !int.TryParse(fiberinput.Text, out _);
+                   !int.TryParse(proteininput,out _) ||
+                   !int.TryParse(carbsinput,out _) ||
+                   !int.TryParse(calroriesinput,out _) ||
+                   !int.TryParse(fatinput,out _) ||
+                   !int.TryParse(fiberinput,out _) ||;
         }
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
@@ -55,12 +55,12 @@ namespace WindowsFormsApp2
             else
             {
                 string mealName = mealNameInput.Text.Trim();
-                int protein , carbs, fat,fiber,calories;
-                int.TryParse(proteininput.Text, out protein);
-                int.TryParse(carbsinput.Text, out carbs);
-                int.TryParse(fatinput.Text, out fat);
-                int.TryParse(fiberinput.Text, out fiber);
-                int.TryParse(calroriesinput.Text, out calories);
+                int protein , carbs, fat,fiber,calrories;
+                int.TryParse(proteininput, out _ protein);
+                int.TryParse(carbsinput, out _ carbs);
+                int.TryParse(fatinput, out _ fat);
+                int.TryParse(fiberinput, out _ fiber);
+                int.TryParse(calroriesinput, out _ calroreis);
 
 
             }
