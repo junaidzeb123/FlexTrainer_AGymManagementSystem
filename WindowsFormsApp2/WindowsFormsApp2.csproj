@@ -60,6 +60,12 @@
     <Compile Include="ShowExercise.Designer.cs">
       <DependentUpon>ShowExercise.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowMeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMeals.Designer.cs">
+      <DependentUpon>ShowMeals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trainer_AddingExercise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowExercise.resx">
       <DependentUpon>ShowExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMeals.resx">
+      <DependentUpon>ShowMeals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_AddingExercise.resx">
       <DependentUpon>Trainer_AddingExercise.cs</DependentUpon>

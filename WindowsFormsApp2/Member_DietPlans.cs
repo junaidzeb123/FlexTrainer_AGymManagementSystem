@@ -65,12 +65,7 @@ namespace WindowsFormsApp2
             Currbtn(ref button1, 30);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Currbtn(ref button2, 30);
-
-        }
-
+   
         private void button3_Click(object sender, EventArgs e)
         {
             Currbtn(ref button3, 30);
@@ -92,7 +87,7 @@ namespace WindowsFormsApp2
         private void button6_Click(object sender, EventArgs e)
         {
             Currbtn(ref button6, 70);
-            Member_CreateDiet form = new Member_CreateDiet();
+            DietPlanAdd form = new DietPlanAdd();
             Hide();
             form.ShowDialog();
         }
@@ -111,6 +106,13 @@ namespace WindowsFormsApp2
         {
             Currbtn(ref account_btn, 40);
 
+        }
+
+        private void home_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DietPlans dietPlans = new DietPlans();
+            dietPlans.Show();
         }
     }
 }

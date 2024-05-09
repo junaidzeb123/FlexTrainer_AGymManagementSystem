@@ -189,7 +189,7 @@ namespace WindowsFormsApp2
                 
                 SqlConnection connection = DatabaseManager.GetConnection();
                 connection.Open();
-                // Insert into Machine table
+                // Insert into  table
                 string query8 = "INSERT INTO Exercise (Target_Muscle, Name, MachineName) OUTPUT INSERTED.ExerciseId VALUES (@TargetMuscle, @ExerciseName, @MachineName);";
                 SqlCommand cmd8 = new SqlCommand(query8, connection);
                 cmd8.Parameters.AddWithValue("@TargetMuscle", musclestring);

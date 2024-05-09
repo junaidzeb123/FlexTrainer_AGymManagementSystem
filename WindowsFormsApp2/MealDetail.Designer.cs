@@ -36,6 +36,8 @@
             this.mealNameInput = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.calroriesinput = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lactose = new System.Windows.Forms.CheckBox();
             this.gluton = new System.Windows.Forms.CheckBox();
@@ -55,8 +57,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.calroriesinput = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -138,6 +139,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
             this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.calroriesinput);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label12);
@@ -163,6 +165,26 @@
             this.panel7.Size = new System.Drawing.Size(820, 401);
             this.panel7.TabIndex = 48;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // calroriesinput
+            // 
+            this.calroriesinput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.calroriesinput.Location = new System.Drawing.Point(430, 260);
+            this.calroriesinput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calroriesinput.Name = "calroriesinput";
+            this.calroriesinput.Size = new System.Drawing.Size(227, 30);
+            this.calroriesinput.TabIndex = 31;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(228, 254);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 32);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "calories";
             // 
             // label12
             // 
@@ -213,6 +235,7 @@
             this.peanuts.TabIndex = 26;
             this.peanuts.Text = "Peanuts";
             this.peanuts.UseVisualStyleBackColor = true;
+            this.peanuts.CheckedChanged += new System.EventHandler(this.peanuts_CheckedChanged);
             // 
             // label11
             // 
@@ -370,25 +393,15 @@
             this.panel5.Size = new System.Drawing.Size(329, 180);
             this.panel5.TabIndex = 50;
             // 
-            // calroriesinput
+            // label2
             // 
-            this.calroriesinput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.calroriesinput.Location = new System.Drawing.Point(430, 260);
-            this.calroriesinput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calroriesinput.Name = "calroriesinput";
-            this.calroriesinput.Size = new System.Drawing.Size(227, 30);
-            this.calroriesinput.TabIndex = 31;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(228, 254);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 32);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "calories";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Coral;
+            this.label2.Location = new System.Drawing.Point(458, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 28);
+            this.label2.TabIndex = 32;
             // 
             // MealDetail
             // 
@@ -447,5 +460,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox calroriesinput;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
     }
 }

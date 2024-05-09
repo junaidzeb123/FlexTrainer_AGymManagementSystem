@@ -26,7 +26,7 @@ namespace WindowsFormsApp2
             }
             else
             {
-                MessageBox.Show("Invalid value. Defaulting to 0.");
+                MessageBox.Show("Someting Went Wronge.");
                 this.intValue = 0; // Default value
             }
         }

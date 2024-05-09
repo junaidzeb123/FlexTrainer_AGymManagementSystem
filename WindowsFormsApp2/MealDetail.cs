@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
@@ -16,10 +17,17 @@ namespace WindowsFormsApp2
     public partial class MealDetail : Form
     {
         DietPlan_Class DietPlan;
+        decimal DietPlanId;
+        bool dietPlanDone;
+        int proteinint, carbsint, fatint, fiberint, caloriesint; 
+        string mealName;
+        int noofMealsdone;
         public MealDetail(DietPlan_Class dietlan)
         {
             InitializeComponent();
             this.DietPlan = dietlan;
+            dietPlanDone = false;
+            noofMealsdone = 0;
         }
 
         bool Validate()
@@ -30,39 +38,164 @@ namespace WindowsFormsApp2
                    string.IsNullOrWhiteSpace(calroriesinput.Text) ||
                    string.IsNullOrWhiteSpace(fatinput.Text) ||
                    string.IsNullOrWhiteSpace(fiberinput.Text) ||
-                   !int.TryParse(proteininput,out _) ||
-                   !int.TryParse(carbsinput,out _) ||
-                   !int.TryParse(calroriesinput,out _) ||
-                   !int.TryParse(fatinput,out _) ||
-                   !int.TryParse(fiberinput,out _) ||;
+                   !int.TryParse(proteininput.Text,out _) ||
+                   !int.TryParse(carbsinput.Text,out _) ||
+                   !int.TryParse(calroriesinput.Text,out _) ||
+                   !int.TryParse(fatinput.Text,out _) ||
+                   !int.TryParse(fiberinput.Text,out _) ;
         }
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+
+        private void InsertMeal()
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = DatabaseManager.GetConnection())
+                {
+                    sqlConnection.Open();
+
+                    string query = "INSERT INTO Meal (MealName ,Amount_of_Protein,Carbs,Fiber,Fat,Calories)" +
+                                  " VALUES(@MealName, @Protein, @Carbs,@Fiber,@Fat,@Caloreis);  SELECT SCOPE_IDENTITY();";
+
+                    SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@MealName", mealName);
+                    sqlCommand.Parameters.AddWithValue("@Protein", proteinint);
+                    sqlCommand.Parameters.AddWithValue("@Carbs", carbsint);
+                    sqlCommand.Parameters.AddWithValue("@Fiber", fiberint);
+                    sqlCommand.Parameters.AddWithValue("@Fat", fatint);
+                    sqlCommand.Parameters.AddWithValue("@Caloreis", caloriesint);
+
+                      
+                    decimal mealId = (decimal)sqlCommand.ExecuteScalar();
+
+                    string query2 = "INSERT INTO Diet_Plan_Meal VALUES(@MealId,@DietPlanId)";
+                    SqlCommand sqlCommand2 = new SqlCommand(query2, sqlConnection);
+                    sqlCommand2.Parameters.AddWithValue("@MealId", mealId);
+                    sqlCommand2.Parameters.AddWithValue("@DietPlanId", this.DietPlanId);
+                    sqlCommand2.ExecuteNonQuery();
+
+                    if(peanuts.Checked)
+                    {
+                        string query3 = "INSERT INTO Meal_Allergens VALUES(@Allergens,@MealId)";
+                        SqlCommand sqlCommand3 = new SqlCommand(query3, sqlConnection);
+                        sqlCommand3.Parameters.AddWithValue("@Allergens", "peanuts");
+                        sqlCommand3.Parameters.AddWithValue("@MealId", mealId);
+                        sqlCommand3.ExecuteNonQuery();
+                    }
+
+                    if (gluton.Checked)
+                    {
+                        string query3 = "INSERT INTO Meal_Allergens VALUES(@Allergens,@MealId)";
+                        SqlCommand sqlCommand3 = new SqlCommand(query3, sqlConnection);
+                        sqlCommand3.Parameters.AddWithValue("@Allergens", "gluton");
+                        sqlCommand3.Parameters.AddWithValue("@MealId", mealId);
+                        sqlCommand3.ExecuteNonQuery();
+                    }
+                    if (lactose.Checked)
+                      {
+                      string query3 = "INSERT INTO Meal_Allergens VALUES(@Allergens,@MealId)";
+                        SqlCommand sqlCommand3 = new SqlCommand(query3, sqlConnection);
+                        sqlCommand3.Parameters.AddWithValue("@Allergens", "lactose");
+                        sqlCommand3.Parameters.AddWithValue("@MealId", mealId);
+                        sqlCommand3.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void InsertMealPlan()
         {
-            SqlConnection sqlConnection = DatabaseManager.GetConnection();
+            if (dietPlanDone == false)
+            {
+                try
+                {
+                    using (SqlConnection sqlConnection = DatabaseManager.GetConnection()) {
+                        sqlConnection.Open();
+
+                        string query = "INSERT INTO Diet_Plan (Type , Purpose, noofMeals) VALUES(@type, @purpose, @noofMeals);  SELECT SCOPE_IDENTITY();";
+
+                        SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                        sqlCommand.Parameters.AddWithValue("@type", DietPlan.type);
+                        sqlCommand.Parameters.AddWithValue("@purpose", DietPlan.purpose);
+                        sqlCommand.Parameters.AddWithValue("@noofMeals", DietPlan.nofoMeals);
+
+                        this.DietPlanId = (decimal)sqlCommand.ExecuteScalar();
+                        dietPlanDone = true;
+
+
+                        if(Session.IsAuthenticated)
+                        {
+                            if(Session.Role == "Member")
+                            {
+                                string query2 = "INSERT INTO MemberDietPlan (DietPlanId , UserName) VALUES(@DietPlanId, @UserName)";
+                                SqlCommand sqlCommand2 = new SqlCommand(query2, sqlConnection);
+                                sqlCommand2.Parameters.AddWithValue("@DietPlanId", DietPlanId);
+                                sqlCommand2.Parameters.AddWithValue("@UserName", Session.Username);
+                                sqlCommand2.ExecuteNonQuery();
+                            }
+                            else if(Session.Role == "Trainer")
+                            {
+                                string query2 = "INSERT INTO TrainerDietPlan (DietPlanId , UserName) VALUES(@DietPlanId, @UserName)";
+                                SqlCommand sqlCommand2 = new SqlCommand(query2, sqlConnection);
+                                sqlCommand2.Parameters.AddWithValue("@DietPlanId", DietPlanId);
+                                sqlCommand2.Parameters.AddWithValue("@UserName", Session.Username);
+                                sqlCommand2.ExecuteNonQuery();
+                            }
+                        }
+
+                    }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                dietPlanDone = true;    
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             if(Validate())
             {
-
+                MessageBox.Show("Invalid Input");
             }
             else
             {
-                string mealName = mealNameInput.Text.Trim();
-                int protein , carbs, fat,fiber,calrories;
-                int.TryParse(proteininput, out _ protein);
-                int.TryParse(carbsinput, out _ carbs);
-                int.TryParse(fatinput, out _ fat);
-                int.TryParse(fiberinput, out _ fiber);
-                int.TryParse(calroriesinput, out _ calroreis);
+                mealName = mealNameInput.Text.Trim();
+                int.TryParse(proteininput.Text, out proteinint); // corrected variable name
+                int.TryParse(carbsinput.Text, out carbsint); // corrected variable name
+                int.TryParse(fatinput.Text, out fatint); // corrected variable name
+                int.TryParse(fiberinput.Text, out fiberint); // corrected variable name
+                int.TryParse(calroriesinput.Text, out caloriesint); // corrected variable name
 
-
+                InsertMealPlan();
+                InsertMeal();
+                noofMealsdone++;
+                if (noofMealsdone != DietPlan.nofoMeals)
+                {
+                    label2.Text = "Enter next Meal";
+                    mealNameInput.Text = "";
+                    proteininput.Text = "";
+                    carbsinput.Text = "";
+                    fatinput.Text = "";
+                    fiberinput.Text = "";
+                    calroriesinput.Text = "";
+                }
+                else
+                {
+                    label2.Text = "Meal detail completed";
+                    await Task.Delay(1000);
+                    this.Hide();
+                    DietPlanAdd dietPlanAdd = new DietPlanAdd();
+                    dietPlanAdd.Show();
+                }
             }
         }
 
@@ -101,6 +234,11 @@ namespace WindowsFormsApp2
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void peanuts_CheckedChanged(object sender, EventArgs e)
         {
 
         }

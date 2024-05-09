@@ -82,11 +82,6 @@ namespace WindowsFormsApp2
             Currbtn(ref button4, 30);
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Currbtn(ref button5, 30);
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -148,9 +143,8 @@ namespace WindowsFormsApp2
         {
             Currbtn(ref button7, 40);
             Thread.Sleep(50);
-   //         Member_WorkoutPlans form = new Member_WorkoutPlans();
-                Trainer_Workout trainer_Workout = new Trainer_Workout();
-            trainer_Workout.Show();
+          Member_WorkoutPlans form = new Member_WorkoutPlans();
+            form.Show();
             this.Hide();
         }
 

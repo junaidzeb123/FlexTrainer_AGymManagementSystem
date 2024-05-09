@@ -23,7 +23,7 @@ namespace WindowsFormsApp2
         {
             return string.IsNullOrWhiteSpace(type.Text) ||
                    string.IsNullOrWhiteSpace(purpose.Text) ||
-                   string.IsNullOrWhiteSpace(noofMeals.Text);
+                   string.IsNullOrWhiteSpace(noofmeals.Text);
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -39,18 +39,18 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //if (Validate())
-            //{
-            //    MessageBox.Show("Invalid Input");
-            //}
-            //else
+            if (Validate())
+            {
+                MessageBox.Show("Invalid Input");
+            }
+            else
             {
                 DietPlan_Class dietplan = new DietPlan_Class();
 
 
-                 dietplan.purpose = purpose.ToString().Trim();
-               // !int.TryParse(noofMeals.Text, out_ dietplan.nofoMeals);
-                 dietplan.type =  type.ToString().Trim();
+                 dietplan.purpose = purpose.Text.Trim();
+                int.TryParse(noofmeals.Text, out dietplan.nofoMeals);
+                dietplan.type =  type.Text.Trim();
 
                 this.Hide();
                 MealDetail mealDetail = new MealDetail(dietplan);
@@ -82,14 +82,23 @@ int nHeightEllipse // height of ellipse
 );
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            noofMeals.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, noofMeals.Width, noofMeals.Height, 40, 40));
+            laberl.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, laberl.Width, laberl.Height, 40, 40));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            TrainenHome trainenHome = new TrainenHome();
-            trainenHome.Show();
+
+            if (Session.Role == "Trainer")
+            {
+                TrainenHome trainenHome = new TrainenHome();
+                trainenHome.Show();
+            }
+            else
+            {
+                Member_Home member_Home = new Member_Home();
+                member_Home.Show(); 
+            }
         }
     }
 }

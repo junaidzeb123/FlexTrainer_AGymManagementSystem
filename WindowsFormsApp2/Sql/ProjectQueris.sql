@@ -90,7 +90,6 @@ CREATE TABLE Meal
   Fiber INT NOT NULL,
   Fat INT NOT NULL,
   Calories INT NOT NULL,
-  PRIMARY KEY (Name)
 );
 
 CREATE TABLE Machine
