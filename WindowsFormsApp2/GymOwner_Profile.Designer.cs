@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +44,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
@@ -53,6 +53,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1131, 633);
             this.panel1.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.label5.Location = new System.Drawing.Point(103, 278);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 35);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "cnic:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.label4.Location = new System.Drawing.Point(86, 346);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 35);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "email:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.label2.Location = new System.Drawing.Point(69, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 35);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Reg No:";
+            this.label2.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.label3.Location = new System.Drawing.Point(86, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 35);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Name :";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // button2
             // 
@@ -91,54 +135,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.label2.Location = new System.Drawing.Point(86, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 35);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Name :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.label4.Location = new System.Drawing.Point(86, 346);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 35);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "email:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.label5.Location = new System.Drawing.Point(103, 278);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 35);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "cnic:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 14F);
-            this.label3.Location = new System.Drawing.Point(69, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 35);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Reg No:";
-            // 
-            // OwnerProfile
+            // GymOwner_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1228, 716);
             this.Controls.Add(this.panel1);
-            this.Name = "OwnerProfile";
+            this.Name = "GymOwner_Profile";
             this.Text = "OwnerProfile";
             this.Load += new System.EventHandler(this.OwnerProfile_Load);
             this.panel1.ResumeLayout(false);
@@ -155,7 +159,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

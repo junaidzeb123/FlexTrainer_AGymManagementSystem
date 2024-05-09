@@ -9,7 +9,7 @@ namespace WindowsFormsApp2
 {
     public static class DatabaseManager
     {
-        public static string ConnectionString = "Data Source=DESKTOP-9ARMI6J;Initial Catalog=GYM_MANAGMENT;Integrated Security=True";
+        public static string ConnectionString = "Data Source=DESKTOP-MAO1OJ0" + "\\" + "SQLEXPRESS;Initial Catalog=GYM_MANAGMENT;Integrated Security=True";
 
         public static SqlConnection GetConnection()
         {
