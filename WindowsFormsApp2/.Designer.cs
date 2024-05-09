@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class Trainer_WorkoutAdd
+    partial class Workout_Add
     {
         /// <summary>
         /// Required designer variable.

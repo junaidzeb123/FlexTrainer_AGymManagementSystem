@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class DietPlanAdd : Form
+    public partial class DietPlan_Add : Form
     {
-        public DietPlanAdd()
+        public DietPlan_Add()
         {
             InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace WindowsFormsApp2
                 dietplan.type =  type.Text.Trim();
 
                 this.Hide();
-                MealDetail mealDetail = new MealDetail(dietplan);
+                Diet_AddMealDetail mealDetail = new Diet_AddMealDetail(dietplan);
                 mealDetail.Show();
             }
         }
@@ -91,8 +91,8 @@ int nHeightEllipse // height of ellipse
 
             if (Session.Role == "Trainer")
             {
-                TrainenHome trainenHome = new TrainenHome();
-                trainenHome.Show();
+                DietPlans_Display diet  = new DietPlans_Display();
+                diet.Show();
             }
             else
             {

@@ -5,19 +5,22 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class ShowMeals : Form
+    public partial class Workout_Display_ShowExercise : Form
     {
 
+
         int intValue;
-        public ShowMeals(string value)
+        public Workout_Display_ShowExercise(string value)
         {
             InitializeComponent();
+
             if (int.TryParse(value, out intValue))
             {
             }
@@ -29,7 +32,7 @@ namespace WindowsFormsApp2
         }
 
 
-        private void LoadDataIntoTable()
+          private void LoadDataIntoTable()
         {
             try
             {
@@ -37,17 +40,17 @@ namespace WindowsFormsApp2
                 using (SqlConnection connection = DatabaseManager.GetConnection())
                 {
                     connection.Open();
-                    string query = "SELECT  Diet_Plan_Meal.DietPlanId, Meal.MealId, " +
-                   "Meal.MealName , Meal.Amount_of_Protein ,Meal.Carbs,Meal.Fiber,Meal.Fat,Meal.Calories  FROM " +
-                   "Meal INNER JOIN Diet_Plan_Meal ON Meal.MealId = Diet_Plan_Meal.MealId " +
-                   "WHERE Diet_Plan_Meal.DietPlanId = @dietplanid;";
+                    string query = "SELECT  Workout_Exercise.WorkoutPlanId, Exercise.ExerciseId, " +
+                                   "Exercise.Target_Muscle,Exercise.Name,Exercise.MachineName  FROM " +
+                                   "Exercise INNER JOIN Workout_Exercise ON Exercise.ExerciseId = Workout_Exercise.ExerciseId " +
+                                   "WHERE Workout_Exercise.WorkoutPlanId = @workoutId;";
 
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@dietplanid", intValue);
+                    command.Parameters.AddWithValue("@workoutId", intValue);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
-                    Gridview.DataSource = dataTable;
+                    Gridview.DataSource = dataTable; 
                 }
             }
             catch (Exception ex)
@@ -55,16 +58,26 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
+        private void ShowExercise_Load(object sender, EventArgs e)
+        {
+            LoadDataIntoTable();            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlans dietPlans = new DietPlans();
-            dietPlans.Show();
+            Workout_Display workout = new Workout_Display();    
+            workout.Show();
         }
 
-        private void ShowMeals_Load(object sender, EventArgs e)
+        private void Gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadDataIntoTable();
+
         }
     }
 }

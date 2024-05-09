@@ -54,23 +54,23 @@
     <Compile Include="NotificationForm.Designer.cs">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowExercise.cs">
+    <Compile Include="Workout_Display_ShowExercise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowExercise.Designer.cs">
-      <DependentUpon>ShowExercise.cs</DependentUpon>
+    <Compile Include="Workout_Display_ShowExercise.Designer.cs">
+      <DependentUpon>Workout_Display_ShowExercise.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowMeals.cs">
+    <Compile Include="Diet_Display_Show_Meals.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowMeals.Designer.cs">
-      <DependentUpon>ShowMeals.cs</DependentUpon>
+    <Compile Include="Diet_Display_Show_Meals.Designer.cs">
+      <DependentUpon>Diet_Display_Show_Meals.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trainer_AddingExercise.cs">
+    <Compile Include="Workout_AddExercise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Trainer_AddingExercise.Designer.cs">
-      <DependentUpon>Trainer_AddingExercise.cs</DependentUpon>
+    <Compile Include="Workout_AddExercise.Designer.cs">
+      <DependentUpon>Workout_AddExercise.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminGymPerfomance.cs">
       <SubType>Form</SubType>
@@ -109,17 +109,17 @@
       <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="DietPlanAdd.cs">
+    <Compile Include="DietPlan_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DietPlanAdd.Designer.cs">
-      <DependentUpon>DietPlanAdd.cs</DependentUpon>
+    <Compile Include="DietPlan_Add.Designer.cs">
+      <DependentUpon>DietPlan_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="DietPlans.cs">
+    <Compile Include="DietPlans_Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DietPlans.Designer.cs">
-      <DependentUpon>DietPlans.cs</DependentUpon>
+    <Compile Include="DietPlans_Display.Designer.cs">
+      <DependentUpon>DietPlans_Display.cs</DependentUpon>
     </Compile>
     <Compile Include="GymOwner_class.cs" />
     <Compile Include="GymOwner_Home.cs">
@@ -244,11 +244,11 @@
     <Compile Include="SignupPage.Designer.cs">
       <DependentUpon>SignupPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MealDetail.cs">
+    <Compile Include="Diet_AddMealDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MealDetail.Designer.cs">
-      <DependentUpon>MealDetail.cs</DependentUpon>
+    <Compile Include="Diet_AddMealDetail.Designer.cs">
+      <DependentUpon>Diet_AddMealDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -275,11 +275,11 @@
     <Compile Include="Trainer_Profile.Designer.cs">
       <DependentUpon>Trainer_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trainer_WorkoutAdd.cs">
+    <Compile Include="Workout_Add.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>Trainer_WorkoutAdd.cs</DependentUpon>
+      <DependentUpon>Workout_Add.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -290,24 +290,24 @@
     <Compile Include="Treiner_Feedback.Designer.cs">
       <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trainer_Workout.cs">
+    <Compile Include="Workout_Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Trainer_Workout.Designer.cs">
-      <DependentUpon>Trainer_Workout.cs</DependentUpon>
+    <Compile Include="Workout_Display.Designer.cs">
+      <DependentUpon>Workout_Display.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkoutPlan.cs" />
     <EmbeddedResource Include="NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowExercise.resx">
-      <DependentUpon>ShowExercise.cs</DependentUpon>
+    <EmbeddedResource Include="Workout_Display_ShowExercise.resx">
+      <DependentUpon>Workout_Display_ShowExercise.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowMeals.resx">
-      <DependentUpon>ShowMeals.cs</DependentUpon>
+    <EmbeddedResource Include="Diet_Display_Show_Meals.resx">
+      <DependentUpon>Diet_Display_Show_Meals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Trainer_AddingExercise.resx">
-      <DependentUpon>Trainer_AddingExercise.cs</DependentUpon>
+    <EmbeddedResource Include="Workout_AddExercise.resx">
+      <DependentUpon>Workout_AddExercise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminGymPerfomance.resx">
       <DependentUpon>AdminGymPerfomance.cs</DependentUpon>
@@ -327,11 +327,11 @@
     <EmbeddedResource Include="Admin_ReigistraionRequests.resx">
       <DependentUpon>Admin_ReigistraionRequests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DietPlanAdd.resx">
-      <DependentUpon>DietPlanAdd.cs</DependentUpon>
+    <EmbeddedResource Include="DietPlan_Add.resx">
+      <DependentUpon>DietPlan_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DietPlans.resx">
-      <DependentUpon>DietPlans.cs</DependentUpon>
+    <EmbeddedResource Include="DietPlans_Display.resx">
+      <DependentUpon>DietPlans_Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GymOwner_Home.resx">
       <DependentUpon>GymOwner_Home.cs</DependentUpon>
@@ -393,8 +393,8 @@
     <EmbeddedResource Include="SignupPage.resx">
       <DependentUpon>SignupPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MealDetail.resx">
-      <DependentUpon>MealDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Diet_AddMealDetail.resx">
+      <DependentUpon>Diet_AddMealDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -408,8 +408,8 @@
     <EmbeddedResource Include="Trainer_Profile.resx">
       <DependentUpon>Trainer_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Trainer_WorkoutAdd.resx">
-      <DependentUpon>Trainer_WorkoutAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Workout_Add.resx">
+      <DependentUpon>Workout_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -424,8 +424,8 @@
     <EmbeddedResource Include="Treiner_Feedback.resx">
       <DependentUpon>Treiner_Feedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Trainer_Workout.resx">
-      <DependentUpon>Trainer_Workout.cs</DependentUpon>
+    <EmbeddedResource Include="Workout_Display.resx">
+      <DependentUpon>Workout_Display.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

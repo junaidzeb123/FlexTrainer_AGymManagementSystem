@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Trainer_WorkoutAdd : Form
+    public partial class Workout_Add : Form
     {
-        public Trainer_WorkoutAdd()
+        public Workout_Add()
         {
             InitializeComponent();
             // Add the initial workout purposes to the ComboBox
@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
 
 
                 this.Hide();
-                Trainer_AddingExercise dietPlanCreation = new Trainer_AddingExercise(workoutplan);
+                Workout_AddExercise dietPlanCreation = new Workout_AddExercise(workoutplan);
                 dietPlanCreation.Show();
             }
         }
@@ -86,7 +86,7 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout workout = new Trainer_Workout();
+            Workout_Display workout = new Workout_Display();
             workout.Show();
         }
 
@@ -108,7 +108,7 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout workout = new Trainer_Workout();
+            Workout_Display workout = new Workout_Display();
             workout.Show();
         }
 

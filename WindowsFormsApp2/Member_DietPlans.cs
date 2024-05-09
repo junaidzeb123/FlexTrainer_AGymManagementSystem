@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
         private void button6_Click(object sender, EventArgs e)
         {
             Currbtn(ref button6, 70);
-            DietPlanAdd form = new DietPlanAdd();
+            DietPlan_Add form = new DietPlan_Add();
             Hide();
             form.ShowDialog();
         }
@@ -111,7 +111,7 @@ namespace WindowsFormsApp2
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlans dietPlans = new DietPlans();
+            DietPlans_Display dietPlans = new DietPlans_Display();
             dietPlans.Show();
         }
     }

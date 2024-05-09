@@ -64,7 +64,7 @@ namespace WindowsFormsApp2
         {
             Currbtn(ref button6, 70);
             Thread.Sleep(50);
-            Trainer_WorkoutAdd form = new Trainer_WorkoutAdd();
+            Workout_Add form = new Workout_Add();
             Hide();
             form.ShowDialog();
 
@@ -124,7 +124,7 @@ namespace WindowsFormsApp2
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout trainer_Workout = new Trainer_Workout();
+            Workout_Display trainer_Workout = new Workout_Display();
             trainer_Workout.Show();
         }
     }

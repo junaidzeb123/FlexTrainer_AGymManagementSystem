@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class MealDetail : Form
+    public partial class Diet_AddMealDetail : Form
     {
         DietPlan_Class DietPlan;
         decimal DietPlanId;
@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
         int proteinint, carbsint, fatint, fiberint, caloriesint; 
         string mealName;
         int noofMealsdone;
-        public MealDetail(DietPlan_Class dietlan)
+        public Diet_AddMealDetail(DietPlan_Class dietlan)
         {
             InitializeComponent();
             this.DietPlan = dietlan;
@@ -193,7 +193,7 @@ namespace WindowsFormsApp2
                     label2.Text = "Meal detail completed";
                     await Task.Delay(1000);
                     this.Hide();
-                    DietPlanAdd dietPlanAdd = new DietPlanAdd();
+                    DietPlan_Add dietPlanAdd = new DietPlan_Add();
                     dietPlanAdd.Show();
                 }
             }
@@ -207,7 +207,7 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlanAdd dietPlanCreation = new DietPlanAdd();
+            DietPlan_Add dietPlanCreation = new DietPlan_Add();
             dietPlanCreation.Show();
         }
 
@@ -229,7 +229,7 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlanAdd dietPlanCreation = new DietPlanAdd();
+            DietPlan_Add dietPlanCreation = new DietPlan_Add();
             dietPlanCreation.Show();
         }
 

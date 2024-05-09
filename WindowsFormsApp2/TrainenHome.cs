@@ -33,14 +33,14 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlanAdd dietPlanCreation = new DietPlanAdd();
+            DietPlan_Add dietPlanCreation = new DietPlan_Add();
             dietPlanCreation.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout form = new Trainer_Workout();   
+            Workout_Display form = new Workout_Display();   
             form.Show();
         }
 
@@ -71,7 +71,7 @@ namespace WindowsFormsApp2
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlans dietPlanCreation  = new DietPlans();
+            DietPlans_Display dietPlanCreation  = new DietPlans_Display();
             dietPlanCreation.Show();
         }
 
@@ -92,7 +92,7 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Trainer_Workout WorkoutAdd = new Trainer_Workout();   
+            Workout_Display WorkoutAdd = new Workout_Display();   
             WorkoutAdd.Show();
             this.Hide();
         }

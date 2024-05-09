@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace WindowsFormsApp2
 {
-    public partial class DietPlans : Form
+    public partial class DietPlans_Display : Form
     {
-        public DietPlans()
+        public DietPlans_Display()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlanAdd dietPlanAdd = new DietPlanAdd();
+            DietPlan_Add dietPlanAdd = new DietPlan_Add();
             dietPlanAdd.Show();
         }
 
@@ -119,7 +119,7 @@ namespace WindowsFormsApp2
                     string dataToSend = value.ToString();
 
                     this.Hide();
-                    ShowMeals otherForm = new ShowMeals(dataToSend); // Pass the value to the constructor
+                    Diet_Display_Show_Meals otherForm = new Diet_Display_Show_Meals(dataToSend); // Pass the value to the constructor
                     otherForm.Show();
                     return;
                 }
@@ -153,9 +153,9 @@ namespace WindowsFormsApp2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+                this.Hide();
             if(Session.Role == "Trainer")
             {
-                this.Hide();
                 TrainenHome trainenHome = new TrainenHome();
                 trainenHome.Show();
             }else if(Session.Role == "Member")

@@ -78,7 +78,8 @@ CREATE TABLE Diet_Plan
   Type VARCHAR(50) NOT NULL,
   Purpose VARCHAR(50) NOT NULL,
   noofMeals INT ,
-  PRIMARY KEY (DietPlanId)
+
+
 );
 
 CREATE TABLE Meal
@@ -91,6 +92,7 @@ CREATE TABLE Meal
   Fat INT NOT NULL,
   Calories INT NOT NULL,
 );
+
 
 CREATE TABLE Machine
 (
@@ -137,10 +139,9 @@ CREATE TABLE Workout_Exercise
 
 CREATE TABLE Diet_Plan_Meal
 (
-  Name VARCHAR(50) NOT NULL,
+  MealId INT NOT NULL,
   DietPlanId INT NOT NULL,
-  PRIMARY KEY (Name, DietPlanId),
-  FOREIGN KEY (Name) REFERENCES Meal(Name),
+  FOREIGN KEY (MealId) REFERENCES Meal(MealId),
   FOREIGN KEY (DietPlanId) REFERENCES Diet_Plan(DietPlanId)
 );
 
@@ -158,7 +159,6 @@ CREATE TABLE TrainerDietPlan
 (
   DietPlanId INT NOT NULL,
   UserName VARCHAR(50) NOT NULL,
-  PRIMARY KEY (DietPlanId, UserName),
   FOREIGN KEY (DietPlanId) REFERENCES Diet_Plan(DietPlanId),
   FOREIGN KEY (UserName) REFERENCES Trainer(UserName)
 );
@@ -183,9 +183,9 @@ CREATE TABLE Workout_Plan_Purposes_
 CREATE TABLE Meal_Allergens
 (
   Allergens VARCHAR(50) NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  PRIMARY KEY (Allergens, Name),
-  FOREIGN KEY (Name) REFERENCES Meal(Name)
+  MealId INT NOT NULL,
+  PRIMARY KEY (Allergens, MealId),
+  FOREIGN KEY (MealId) REFERENCES Meal(MealId)
 );
 
 
@@ -245,7 +245,6 @@ CREATE TABLE Trainer_Experience
   FOREIGN KEY (UserName) REFERENCES Trainer(UserName)
 );
 
-SELECT * FROM Workout_Plan NATURAL JOIN Workout_Plan_Purposes_;
 
 /**/
 CREATE TABLE AUDIT_TRAIL(
@@ -286,7 +285,7 @@ SELECT * FROM MemberDietPlan;
 
 
 
-
+Select * from Member
 
 -- Inserting dummy data into Trainer table
 INSERT INTO Trainer (UserName, Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date, Password) 

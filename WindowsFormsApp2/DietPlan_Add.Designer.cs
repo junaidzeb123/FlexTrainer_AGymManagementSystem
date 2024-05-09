@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class DietPlanAdd
+    partial class DietPlan_Add
     {
         /// <summary>
         /// Required designer variable.

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Trainer_AddingExercise : Form
+    public partial class Workout_AddExercise : Form
     {
 
         WorkoutPlan Plan;
@@ -31,13 +31,13 @@ namespace WindowsFormsApp2
              int nWidthEllipse, // width of ellipse
              int nHeightEllipse // height of ellipse
          );
-        public Trainer_AddingExercise()
+        public Workout_AddExercise()
         {
             InitializeComponent();
             isWorkoutDone = false;
 
         }
-          public Trainer_AddingExercise(WorkoutPlan plan)
+          public Workout_AddExercise(WorkoutPlan plan)
         {
             this.Plan = plan;
             InitializeComponent();
@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_Workout workout = new Trainer_Workout();
+            Workout_Display workout = new Workout_Display();
             workout.Show();
         }
 
@@ -257,14 +257,14 @@ namespace WindowsFormsApp2
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_WorkoutAdd workoutAdd = new Trainer_WorkoutAdd();
+            Workout_Add workoutAdd = new Workout_Add();
             workoutAdd.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Trainer_WorkoutAdd workoutAdd = new Trainer_WorkoutAdd();
+            Workout_Add workoutAdd = new Workout_Add();
             workoutAdd.Show();
         }
     }
