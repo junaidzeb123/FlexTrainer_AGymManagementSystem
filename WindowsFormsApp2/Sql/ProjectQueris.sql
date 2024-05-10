@@ -15,6 +15,12 @@ CREATE TABLE Trainer
   Password VARCHAR(50) NOT NULL,
   PRIMARY KEY (UserName),
 );
+select * from trainer;
+INSERT INTO Trainer (UserName, Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date, Password)
+VALUES 
+('trainer1', 'John Doe', 'john.doe@example.com', 'Certified Personal Trainer', 'Weightlifting, Cardio', 1, '123 Main St, City', '2023-01-01', 'password123'),
+('trainer2', 'Alice Smith', 'alice.smith@example.com', 'Fitness Instructor', 'Yoga, Pilates', 1, '456 Elm St, Town', '2023-02-01', 'password456'),
+('trainer3', 'Bob Jones', 'bob.jones@example.com', 'Strength and Conditioning Coach', 'Athletic Training, Sports Performance', 1, '789 Oak St, Village', '2023-03-01', 'password789');
 
 
 CREATE TABLE Gym_Owner
@@ -29,6 +35,8 @@ CREATE TABLE Gym_Owner
   PRIMARY KEY (UserName),
 );
 
+INSERT INTO Gym_Owner (UserName, Name, Email, Address, Start_Date, Password, VarificationStatus)
+VALUES ('owner123', 'John Smith', 'john.smith@example.com', '123 Main Street, City', '2024-05-10', '123', 1);
 
 CREATE TABLE Gyms
 (
@@ -78,7 +86,8 @@ CREATE TABLE Diet_Plan
   Type VARCHAR(50) NOT NULL,
   Purpose VARCHAR(50) NOT NULL,
   noofMeals INT ,
-  PRIMARY KEY (DietPlanId)
+
+
 );
 
 CREATE TABLE Meal
@@ -90,8 +99,8 @@ CREATE TABLE Meal
   Fiber INT NOT NULL,
   Fat INT NOT NULL,
   Calories INT NOT NULL,
-  PRIMARY KEY (Name)
 );
+
 
 CREATE TABLE Machine
 (
@@ -108,21 +117,15 @@ CREATE TABLE Exercise
   FOREIGN KEY (MachineName) REFERENCES Machine(Name)
 );
 
-CREATE TABLE Booking_Session
-(
-  BookingSessionId INT NOT NULL,
-  Date DATE NOT NULL,
-  Time VARCHAR(50) NOT NULL,
-  PRIMARY KEY (BookingSessionId)
-);
+
 
 CREATE TABLE Feedback
 (
-  FeedbackId INT NOT NULL,
-  Description VARCHAR(50) NOT NULL,
+  FeedbackId  INT IDENTITY(1,1) PRIMARY KEY,
+  Description VARCHAR(500) NOT NULL,
+  Rating INT ,
   MemberUserName VARCHAR(50) NOT NULL,
   TrainerUserName VARCHAR(50) NOT NULL,	
-  PRIMARY KEY (FeedbackId),
   FOREIGN KEY (MemberUserName) REFERENCES Member(UserName),
    FOREIGN KEY (TrainerUserName) REFERENCES Trainer(UserName)
 );
@@ -138,10 +141,9 @@ CREATE TABLE Workout_Exercise
 
 CREATE TABLE Diet_Plan_Meal
 (
-  Name VARCHAR(50) NOT NULL,
+  MealId INT NOT NULL,
   DietPlanId INT NOT NULL,
-  PRIMARY KEY (Name, DietPlanId),
-  FOREIGN KEY (Name) REFERENCES Meal(Name),
+  FOREIGN KEY (MealId) REFERENCES Meal(MealId),
   FOREIGN KEY (DietPlanId) REFERENCES Diet_Plan(DietPlanId)
 );
 
@@ -159,7 +161,6 @@ CREATE TABLE TrainerDietPlan
 (
   DietPlanId INT NOT NULL,
   UserName VARCHAR(50) NOT NULL,
-  PRIMARY KEY (DietPlanId, UserName),
   FOREIGN KEY (DietPlanId) REFERENCES Diet_Plan(DietPlanId),
   FOREIGN KEY (UserName) REFERENCES Trainer(UserName)
 );
@@ -184,9 +185,9 @@ CREATE TABLE Workout_Plan_Purposes_
 CREATE TABLE Meal_Allergens
 (
   Allergens VARCHAR(50) NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  PRIMARY KEY (Allergens, Name),
-  FOREIGN KEY (Name) REFERENCES Meal(Name)
+  MealId INT NOT NULL,
+  PRIMARY KEY (Allergens, MealId),
+  FOREIGN KEY (MealId) REFERENCES Meal(MealId)
 );
 
 
@@ -230,14 +231,6 @@ CREATE TABLE Member_WorkoutPlan
 );
 
 
-CREATE TABLE Trainer_BookingSession
-(
-  BookingSessionId INT NOT NULL,
-  UserName VARCHAR(50) NOT NULL,
-  PRIMARY KEY (BookingSessionId, UserName),
-  FOREIGN KEY (BookingSessionId) REFERENCES Booking_Session(BookingSessionId),
-  FOREIGN KEY (UserName) REFERENCES Trainer(UserName)
-);
 
 CREATE TABLE Trainer_Experience
 (
@@ -245,10 +238,23 @@ CREATE TABLE Trainer_Experience
   UserName VARCHAR(50) NOT NULL,
   FOREIGN KEY (UserName) REFERENCES Trainer(UserName)
 );
+SELECT * FROM Member;
+CREATE TABLE Booking_Session
+(
+  BookingSessionId  INT IDENTITY(1,1) PRIMARY KEY,
+  SessionDate DATE NOT NULL,  -- Separate column for date
+  startTime varchar(50),
+  endtime varchar(50),
+  MemberUserName VARCHAR(50) NOT NULL,
+  TrainerUserName VARCHAR(50) NOT NULL,	
+  FOREIGN KEY (MemberUserName) REFERENCES Member(UserName),
+  FOREIGN KEY (TrainerUserName) REFERENCES Trainer(UserName),
+  Status varchar(50)
+);
 
-SELECT * FROM Workout_Plan NATURAL JOIN Workout_Plan_Purposes_;
 
-/**/
+
+
 CREATE TABLE AUDIT_TRAIL(
 	audit_id INT IDENTITY(1,1) PRIMARY KEY,
 	OPERATION VARCHAR (100),
@@ -256,135 +262,31 @@ CREATE TABLE AUDIT_TRAIL(
 );
 
 SELECT * FROM Member;   /**/
-SELECT * FROM Gym_Owner;  /**/
+
+
 SELECT * FROM Admin;  /**/
 SELECT * FROM Trainer; /**/
-SELECT * FROM Workout_Plan; 
-SELECT * FROM Diet_Plan;
-SELECT * FROM Meal;
-SELECT * FROM Machine;
-SELECT * FROM Exercise;
-SELECT * FROM Booking_Session;
-SELECT * FROM Feedback; 
+SELECT * FROM Workout_Plan; 	/**/
+SELECT * FROM Diet_Plan;	/**/
+SELECT * FROM Meal;	/**/
+SELECT * FROM Machine;	/**/
+SELECT * FROM Exercise;	/**/
+SELECT * FROM Feedback; 	/**/
 SELECT * FROM Gyms;	/**/
-SELECT * FROM Diet_Plan_Meal;
-SELECT * FROM MemberDietPlan;
-SELECT * FROM AdminGym;
-SELECT * FROM Workout_Plan_Purposes_;
-SELECT * FROM Trainer_WorkoutPlan; 
+SELECT * FROM Diet_Plan_Meal;	/**/
+SELECT * FROM MemberDietPlan;	/**/
+SELECT * FROM AdminGym;	/**/
+SELECT * FROM Workout_Plan_Purposes_;	/**/
+SELECT * FROM Trainer_WorkoutPlan; 	/**/
 SELECT * FROM Meal_Allergens;
 SELECT * FROM TrainerGym; /**/
-SELECT * FROM Trainer_BookingSession; 
 SELECT * FROM Trainer_Experience; /**/
 
-
-SELECT * FROM Diet_Plan;
-SELECT * FROM Meal;
-SELECT * FROM Diet_Plan_Meal;
-SELECT * FROM TrainerDietPlan
-SELECT * FROM Meal_Allergens;
-SELECT * FROM MemberDietPlan;
+INSERT INTO Member (UserName, Name, Email, Cnic, Start_Date, Address, Membership_type, Password)
+VALUES ('john_doe', 'John Doe', 'john@example.com', '12345-6789012-3', '2024-05-10', '123 Main St, City', 'Premium', 'password123');
 
 
 
+SELECT * FROM Gym_Owner;
+SELECT * FROM Gyms;
 
-
--- Inserting dummy data into Trainer table
-INSERT INTO Trainer (UserName, Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date, Password) 
-VALUES ('trainer1', 'John Doe', 'john@example.com', 'Certified Personal Trainer', 'Weightlifting, Cardio', 1, '123 Main Street', '2023-01-15', 'password123');
-
--- Inserting dummy data into Gym_Owner table
-INSERT INTO Gym_Owner (UserName, Name, Email, Address, Start_Date, Password, VarificationStatus) 
-VALUES ('owner1', 'Fitness Center Owner', 'owner@example.com', '456 Elm Street', '2022-12-01', 'ownerpass', 1);
-
--- Inserting dummy data into Gyms table
-INSERT INTO Gyms (Name, Location, Timings, UserName, licenseno) 
-VALUES ('Fitness Zone', '789 Oak Avenue', '9:00 AM - 9:00 PM', 'owner1', 'GYM123456');
-
--- Inserting dummy data into Member table
-INSERT INTO Member (UserName, Name, Email, Cnic, Start_Date, Address, Membership_type, Password) 
-VALUES ('member1', 'Alice Smith', 'alice@example.com', '1234567890123', '2023-02-20', '321 Pine Street', 'Premium', 'memberpass');
-
--- Inserting dummy data into Admin table
-INSERT INTO Admin (Name, UserName, Password) 
-VALUES ('Admin User', 'admin1', 'adminpass');
-
--- Inserting dummy data into Workout_Plan table
-INSERT INTO Workout_Plan (Experience_required, nofoexercise, sets, reps) 
-VALUES ('Intermediate', 5, 3, 10);
-
--- Inserting dummy data into Diet_Plan table
-INSERT INTO Diet_Plan (DietPlanId, Type, Purpose) 
-VALUES (1, 'Keto', 'Weight Loss');
-
--- Inserting dummy data into Meal table
-INSERT INTO Meal (Amount_of_Protein, Carbs, Fiber, Fat, Calories, Name) 
-VALUES (30, 20, 10, 15, 350, 'Grilled Chicken Salad');
-
--- Inserting dummy data into Machine table
-INSERT INTO Machine (Name) 
-VALUES ('Treadmill');
-
--- Inserting dummy data into Exercise table
-INSERT INTO Exercise (Target_Muscle, Name, MachineName) 
-VALUES ('Legs', 'Squats', 'Treadmill');
-
--- Inserting dummy data into Booking_Session table
-INSERT INTO Booking_Session (BookingSessionId, Date, Time) 
-VALUES (1, '2024-05-10', '10:00 AM');
-
--- Inserting dummy data into Feedback table
-INSERT INTO Feedback (FeedbackId, Description, MemberUserName, TrainerUserName) 
-VALUES (1, 'Great training session!', 'member1', 'trainer1');
-
--- Inserting dummy data into Workout_Exercise table
-INSERT INTO Workout_Exercise (WorkoutPlanId, ExerciseId) 
-VALUES (1, 1);
-
--- Inserting dummy data into Diet_Plan_Meal table
-INSERT INTO Diet_Plan_Meal (Name, DietPlanId) 
-VALUES ('Grilled Chicken Salad', 1);
-
--- Inserting dummy data into MemberDietPlan table
-INSERT INTO MemberDietPlan (DietPlanId, UserName) 
-VALUES (1, 'member1');
-
--- Inserting dummy data into AdminGym table
-INSERT INTO AdminGym (Name, UserName) 
-VALUES ('Fitness Zone', 'admin1');
-
--- Inserting dummy data into Workout_Plan_Purposes_ table
-INSERT INTO Workout_Plan_Purposes_ (Purposes_, WorkoutPlanId) 
-VALUES ('Strength Training', 1);
-
--- Inserting dummy data into Meal_Allergens table
-INSERT INTO Meal_Allergens (Allergens, Name) 
-VALUES ('Gluten', 'Grilled Chicken Salad');
-
--- Inserting dummy data into TrainerGym table
-INSERT INTO TrainerGym (UserName, Name) 
-VALUES ('trainer1', 'Fitness Zone');
-
--- Inserting dummy data into MemberGym table
-INSERT INTO MemberGym (UserName, Name) 
-VALUES ('member1', 'Fitness Zone');
-
--- Inserting dummy data into Trainer_WorkoutPlan table
-INSERT INTO Trainer_WorkoutPlan (UserName, WorkoutPlanId) 
-VALUES ('trainer1', 1);
-
--- Inserting dummy data into Member_WorkoutPlan table
-INSERT INTO Member_WorkoutPlan (UserName, WorkoutPlanId) 
-VALUES ('member1', 1);
-
--- Inserting dummy data into Trainer_BookingSession table
-INSERT INTO Trainer_BookingSession (BookingSessionId, UserName) 
-VALUES (1, 'trainer1');
-
--- Inserting dummy data into Trainer_Experience table
-INSERT INTO Trainer_Experience (Experience, UserName) 
-VALUES ('5 years', 'trainer1');
-
--- Inserting dummy data into AUDIT_TRAIL table
-INSERT INTO AUDIT_TRAIL (OPERATION, timestamp) 
-VALUES ('Insertion', GETDATE());
