@@ -35,7 +35,9 @@ namespace WindowsFormsApp2
             SqlConnection sqlConnection = DatabaseManager.GetConnection();
             sqlConnection.Open();
 
-            string checkQuery = "SELECT Gyms.Name FROM Gyms";
+
+            string checkQuery = "SELECT Gyms.Name FROM Gyms inner join Gym_Owner " +
+                                "on Gyms.UserName = Gym_Owner.UserName where VarificationStatus = 1";
             SqlCommand command = new SqlCommand(checkQuery, sqlConnection);
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -93,7 +95,7 @@ namespace WindowsFormsApp2
                 cmd1.Parameters.AddWithValue("@Address", trainer.GetAddress());
                 cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
                 cmd1.Parameters.AddWithValue("@Password", trainer.GetPassword());
-                cmd1.Parameters.AddWithValue("@VarificationStatus", trainer.GetVarificationStatus());
+                cmd1.Parameters.AddWithValue("@VarificationStatus", 0);
 
                 SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
                 cmd2.Parameters.AddWithValue("@Experience", trainer.GetExperience1());

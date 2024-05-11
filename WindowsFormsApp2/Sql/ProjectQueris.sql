@@ -252,6 +252,19 @@ CREATE TABLE Booking_Session
   Status varchar(50)
 );
 
+CREATE TABLE Booking_Session
+(
+  BookingSessionId  INT IDENTITY(1,1) PRIMARY KEY,
+  SessionDate DATE NOT NULL,  -- Separate column for date
+  startTime varchar(50),
+  endtime varchar(50),
+  MemberUserName VARCHAR(50) NOT NULL,
+  TrainerUserName VARCHAR(50) NOT NULL,	
+  FOREIGN KEY (MemberUserName) REFERENCES Member(UserName),
+  FOREIGN KEY (TrainerUserName) REFERENCES Trainer(UserName),
+  Status varchar(50)
+);
+
 
 
 
@@ -282,11 +295,11 @@ SELECT * FROM Meal_Allergens;
 SELECT * FROM TrainerGym; /**/
 SELECT * FROM Trainer_Experience; /**/
 
-INSERT INTO Member (UserName, Name, Email, Cnic, Start_Date, Address, Membership_type, Password)
-VALUES ('john_doe', 'John Doe', 'john@example.com', '12345-6789012-3', '2024-05-10', '123 Main St, City', 'Premium', 'password123');
+
+
+
 
 
 
 SELECT * FROM Gym_Owner;
 SELECT * FROM Gyms;
-

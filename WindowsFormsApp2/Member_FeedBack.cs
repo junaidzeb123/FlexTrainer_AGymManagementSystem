@@ -82,5 +82,12 @@ namespace WindowsFormsApp2
             Hide();
             form.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Member_Home member_Home = new Member_Home();
+            member_Home.Show();
+        }
     }
 }

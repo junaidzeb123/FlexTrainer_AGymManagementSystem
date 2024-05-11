@@ -230,6 +230,7 @@
             this.ForeColor = System.Drawing.Color.Coral;
             this.Name = "LoginPage";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
