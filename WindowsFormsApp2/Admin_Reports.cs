@@ -40,13 +40,7 @@ int nHeightEllipse // height of ellipse
             admin_Home.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Admin_MoreReports admin_MoreReports = new Admin_MoreReports();
-            admin_MoreReports.Show();
-        }
-
+        
         private void AdminReports_Load(object sender, EventArgs e)
         {
 
@@ -57,6 +51,34 @@ int nHeightEllipse // height of ellipse
             this.Hide();
             Admin_Home admin_Home = new Admin_Home();
             admin_Home.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminQueries adminQueries = new AdminQueries();
+            adminQueries.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminPlanQuery adminPlanQuery = new AdminPlanQuery();
+            adminPlanQuery.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminWorkOutQuery adminWorkOutQuery = new AdminWorkOutQuery();
+            adminWorkOutQuery.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            auditQuery audit_query = new auditQuery();
+            audit_query.Show();
         }
     }
 }

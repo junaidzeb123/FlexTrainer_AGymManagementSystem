@@ -47,6 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPlanQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPlanQuery.Designer.cs">
+      <DependentUpon>AdminPlanQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQueries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminQueries.Designer.cs">
+      <DependentUpon>AdminQueries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminQueryDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminQueryDisplay.Designer.cs">
+      <DependentUpon>AdminQueryDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWorkOutQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWorkOutQuery.Designer.cs">
+      <DependentUpon>AdminWorkOutQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auditQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auditQuery.Designer.cs">
+      <DependentUpon>auditQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="DietPlan_Class.cs" />
     <Compile Include="GymOwner_RegistrationRequests.cs">
       <SubType>Form</SubType>
@@ -315,6 +345,21 @@
       <DependentUpon>Workout_Display.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkoutPlan.cs" />
+    <EmbeddedResource Include="AdminPlanQuery.resx">
+      <DependentUpon>AdminPlanQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminQueries.resx">
+      <DependentUpon>AdminQueries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminQueryDisplay.resx">
+      <DependentUpon>AdminQueryDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWorkOutQuery.resx">
+      <DependentUpon>AdminWorkOutQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auditQuery.resx">
+      <DependentUpon>auditQuery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GymOwner_RegistrationRequests.resx">
       <DependentUpon>GymOwner_RegistrationRequests.cs</DependentUpon>
     </EmbeddedResource>
