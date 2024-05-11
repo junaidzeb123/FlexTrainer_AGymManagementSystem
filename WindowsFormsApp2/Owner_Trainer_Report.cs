@@ -7,27 +7,25 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-
-    public partial class GymOwner_MemberReport : Form
+    public partial class Owner_Trainer_Report : Form
     {
         private string userName;
-        public GymOwner_MemberReport(string userName)
+        public Owner_Trainer_Report(string userName)
         {
-            this.userName = userName;
             InitializeComponent();
+            this.userName = userName;
             query_basic_info();
         }
         void query_basic_info()
         {
             using (SqlConnection connection = DatabaseManager.GetConnection())
             {
-                string query = "SELECT Name, Email, Cnic, Start_Date, Address, Membership_type FROM Member WHERE UserName = '" + userName + "'";
+                string query = "SELECT Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date FROM Trainer WHERE UserName = '" + userName + "'";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -40,17 +38,17 @@ namespace WindowsFormsApp2
                         try
                         {
                             var Name = reader["Name"].ToString();
-                            var cnic = reader["Cnic"].ToString();
                             var email = reader["Email"].ToString();
                             var start_date = reader["Start_Date"].ToString();
                             var Address = reader["Address"];
-                            var MemberShip_Type = reader["MemberShip_type"].ToString();
+                            var Specialty_areas = reader["Specialty_areas"].ToString();
+                            var Qualifications = reader["Qualifications"].ToString();
                             label2.Text += (" " + Name);
                             label6.Text += (" " + start_date);
-                            label8.Text += (" " + MemberShip_Type);
-                            label5.Text += (" " + cnic);
-                            label1.Text += (" " + Address);
+                            label8.Text += (" " + Address);
+                            label1.Text += (" " + Qualifications);
                             label7.Text += (" " + email);
+                            label3.Text += (" " + Specialty_areas);
 
                         }
                         catch (Exception ex)
@@ -62,21 +60,21 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            GymOwner_MemberSearch search = new GymOwner_MemberSearch();
-            search.Show();
-            this.Hide();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection connection = DatabaseManager.GetConnection();
-            string query = "DELETE FROM Member WHERE UserName = '" + userName + "'";
+            string query = "DELETE FROM TRAINER WHERE UserName = '" + userName + "'";
             SqlCommand command = new SqlCommand(query, connection);
 
             connection.Open();
-            GymOwner_MemberSearch search = new GymOwner_MemberSearch();
+            Gymowner_Search search = new Gymowner_Search();
+            search.Show();  
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Gymowner_Search search = new Gymowner_Search();
             search.Show();
             this.Hide();
         }

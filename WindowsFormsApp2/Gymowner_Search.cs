@@ -37,16 +37,15 @@ namespace WindowsFormsApp2
             this.Hide();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-//            if (e.ColumnIndex == dataGridView1.Columns["btnColumn"].Index && e.RowIndex >= 0)
-  //          {
-                // Retrieve the username from the Tag property of the button
-    //            string username = dataGridView1.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
+            if (e.ColumnIndex == dataGridView1.Columns["btnColumn"].Index && e.RowIndex >= 0)
+            {
+                string username = dataGridView1.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
     
-    //            GymOwner_MemberReport member = new GymOwner_MemberReport(username);
+                Owner_Trainer_Report member = new Owner_Trainer_Report(username);
 
-      //          member.Show();
-        //        this.Hide();
-          //  }
+                member.Show();
+               this.Hide();
+            }
         }
         private void button3_Click(object sender, EventArgs e)
         {

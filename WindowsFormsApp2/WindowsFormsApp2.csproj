@@ -96,6 +96,12 @@
     <Compile Include="NotificationForm.Designer.cs">
       <DependentUpon>NotificationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner_Trainer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner_Trainer_Report.Designer.cs">
+      <DependentUpon>Owner_Trainer_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trainer_Feebacks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationForm.resx">
       <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner_Trainer_Report.resx">
+      <DependentUpon>Owner_Trainer_Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trainer_Feebacks.resx">
       <DependentUpon>Trainer_Feebacks.cs</DependentUpon>
