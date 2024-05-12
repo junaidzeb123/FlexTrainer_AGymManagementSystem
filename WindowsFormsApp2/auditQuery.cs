@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,7 @@ namespace WindowsFormsApp2
             }
 
         private string query;
+        private string count;
         private void button1_Click(object sender, EventArgs e)
         {
             if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked)
@@ -43,15 +45,26 @@ namespace WindowsFormsApp2
             else
             {
                 if (radioButton1.Checked)
+                {
                     query = "Select audit_id, timestamp, OPERATION FROM Member Inner join MemberGym on Member.UserName = MemberGym.UserName Inner join Gyms on MemberGym.Name = Gyms.Name Inner join AUDIT_TRAIL on AUDIT_TRAIL.memberUserName = Member.UserName where OPERATION = 'Insert into Member'" + create_query_filter();
+                    count = "Select Count(Distinct audit_id) FROM Member Inner join MemberGym on Member.UserName = MemberGym.UserName Inner join Gyms on MemberGym.Name = Gyms.Name Inner join AUDIT_TRAIL on AUDIT_TRAIL.memberUserName = Member.UserName where OPERATION = 'Insert into Member'" + create_query_filter();
+                }
                 else if (radioButton2.Checked)
+                {
                     query = "Select audit_id, timestamp, OPERATION FROM Trainer Inner join TrainerGym on Trainer.UserName = TrainerGym.UserName Inner join Gyms on TrainerGym.Name = Gyms.Name Inner join AUDIT_TRAIL on AUDIT_TRAIL.trainerUserName = Trainer.UserName WHERE OPERATION = 'Insert into Trainer'" + create_query_filter();
+                    count = "Select Count(Distinct audit_id) FROM Trainer Inner join TrainerGym on Trainer.UserName = TrainerGym.UserName Inner join Gyms on TrainerGym.Name = Gyms.Name Inner join AUDIT_TRAIL on AUDIT_TRAIL.trainerUserName = Trainer.UserName WHERE OPERATION = 'Insert into Trainer'" + create_query_filter();
+                }
                 else if (radioButton3.Checked)
+                {
                     query = "Select audit_id, timestamp, OPERATION FROM Gym_Owner Inner join Gyms on Gyms.UserName = Gym_Owner.UserName Inner join AUDIT_TRAIL on AUDIT_TRAIL.ownerUserName = Gym_Owner.UserName WHERE OPERATION = 'Insert into Gym_Owner'" + create_query_filter();
+                    count = "Select Count(Distinct audit_id) FROM Gym_Owner Inner join Gyms on Gyms.UserName = Gym_Owner.UserName Inner join AUDIT_TRAIL on AUDIT_TRAIL.ownerUserName = Gym_Owner.UserName WHERE OPERATION = 'Insert into Gym_Owner'" + create_query_filter();
 
+                }
 
-            MessageBox.Show(query);
-            AdminQueryDisplay adminQueryDisplay = new AdminQueryDisplay(query, "audit");
+                SqlConnection connection = DatabaseManager.GetConnection();
+                connection.Open();
+                SqlCommand command = new SqlCommand(count, connection);
+            AdminQueryDisplay adminQueryDisplay = new AdminQueryDisplay(query, "audit", (int)command.ExecuteScalar());
             this.Hide();
             adminQueryDisplay.Show();
             }
