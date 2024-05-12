@@ -889,3 +889,6 @@ SELECT * FROM Gyms;
 
 
 select *from Gym_Owner
+
+
+select Workout_Plan.WorkoutPlanId, Workout_Plan.Experience_required, Workout_Plan.nofoexercise, Workout_Plan.sets, Workout_Plan.reps from Workout_Plan inner join Workout_Exercise on Workout_Plan.WorkoutPlanId = Workout_Exercise.WorkoutPlanId inner join Exercise on Workout_Exercise.ExerciseId = Exercise.ExerciseId 

@@ -63,11 +63,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(347, 172);
+            this.label5.Location = new System.Drawing.Point(236, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 30);
+            this.label5.Size = new System.Drawing.Size(267, 30);
             this.label5.TabIndex = 29;
-            this.label5.Text = "equipment:";
+            this.label5.Text = "exclude equipment:";
             // 
             // pictureBox1
             // 

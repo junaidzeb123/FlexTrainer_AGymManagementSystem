@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,8 +45,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox2);
@@ -64,23 +60,6 @@
             this.panel1.Size = new System.Drawing.Size(1131, 633);
             this.panel1.TabIndex = 19;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(500, 393);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 50);
-            this.textBox4.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(338, 407);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 30);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "equipment:";
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(500, 312);
@@ -92,11 +71,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(349, 326);
+            this.label4.Location = new System.Drawing.Point(240, 326);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 30);
+            this.label4.Size = new System.Drawing.Size(255, 30);
             this.label4.TabIndex = 27;
-            this.label4.Text = "allergees:";
+            this.label4.Text = "Exclude allergees:";
             // 
             // textBox2
             // 
@@ -109,11 +88,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label2.Location = new System.Drawing.Point(400, 246);
+            this.label2.Location = new System.Drawing.Point(274, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 30);
+            this.label2.Size = new System.Drawing.Size(220, 30);
             this.label2.TabIndex = 25;
-            this.label2.Text = "carbs:";
+            this.label2.Text = "Maximum carbs:";
             // 
             // textBox1
             // 
@@ -126,11 +105,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(365, 168);
+            this.label3.Location = new System.Drawing.Point(239, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 30);
+            this.label3.Size = new System.Drawing.Size(255, 30);
             this.label3.TabIndex = 23;
-            this.label3.Text = "calories:";
+            this.label3.Text = "Maximum Calories:";
             // 
             // pictureBox1
             // 
@@ -185,8 +164,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
