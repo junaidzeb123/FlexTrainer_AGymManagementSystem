@@ -37,12 +37,10 @@ namespace WindowsFormsApp2
 
                         try {
                             var Name = reader["UserName"].ToString();
-                            var cnic = reader["Cnic"].ToString();
                             var email = reader["Email"].ToString();
                         
                             label2.Text += (" " + regNo);
                             label3.Text += (" " + Name);
-                            label5.Text += (" " + cnic);
                             label4.Text += (" " + email);
 
                         }

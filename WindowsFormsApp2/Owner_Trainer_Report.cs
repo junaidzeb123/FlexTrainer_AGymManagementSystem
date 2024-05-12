@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
         {
             using (SqlConnection connection = DatabaseManager.GetConnection())
             {
-                string query = "SELECT Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date FROM Trainer WHERE UserName = '" + userName + "'";
+                string query = "SELECT Name, Email, Qualifications, Specialty_areas, VarificationStatus, Address, Start_Date FROM Trainer WHERE UserName = '" + userName + "' AND Terminated = 0";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 connection.Open();
@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection connection = DatabaseManager.GetConnection();
-            string query = "DELETE FROM TRAINER WHERE UserName = '" + userName + "'";
+            string query = "UPDATE TRAINER SET Terminated = 1 WHERE UserName = '" + userName + "'";
             SqlCommand command = new SqlCommand(query, connection);
 
             connection.Open();

@@ -1,10 +1,9 @@
 CREATE DATABASE GYM_MANAGMENT;
 USE GYM_MANAGMENT;
-drop database GYM_MANAGMENT;
-
 CREATE TABLE Trainer
 (
   UserName VARCHAR(50) NOT NULL,
+  Terminated Int DEFAULT 0,
   Name VARCHAR(50) NOT NULL,
   Email VARCHAR(50) NOT NULL,
   Qualifications VARCHAR(50) NOT NULL,
@@ -15,7 +14,6 @@ CREATE TABLE Trainer
   Password VARCHAR(50) NOT NULL,
   PRIMARY KEY (UserName),
 );
-
 
 CREATE TABLE Gym_Owner
 (
@@ -28,11 +26,9 @@ CREATE TABLE Gym_Owner
   VarificationStatus int NOT NULL,
   PRIMARY KEY (UserName),
 );
-INSERT INTO Gym_Owner (UserName, Name, Email, Address, Start_Date, Password, VarificationStatus)
-VALUES
-('owner1', 'John Doe', 'john.doe@example.com', '123 Main St', '2023-01-01', 'password1', 1);
 
 
+               
 CREATE TABLE Gyms
 (
   Name VARCHAR(50) NOT NULL,
@@ -269,7 +265,7 @@ ON Trainer
 AFTER INSERT
 AS
 BEGIN
-	declare @TrainerId INT;
+	declare @TrainerId varchar(50);
 	SELECT @TrainerId = inserted.UserName from inserted;
     INSERT INTO AUDIT_TRAIL (OPERATION, trainerUserName, timestamp)
     VALUES ('Insert into Trainer',@TrainerId,  GETDATE())
@@ -280,7 +276,7 @@ ON Trainer
 AFTER UPDATE
 AS
 BEGIN
-	declare @TrainerId INT;
+	declare @TrainerId varchar(50);
 	SELECT @TrainerId = inserted.UserName from inserted;
     INSERT INTO AUDIT_TRAIL (OPERATION, trainerUserName, timestamp)
     VALUES ('Update on Trainer', @TrainerId, GETDATE())
@@ -291,7 +287,7 @@ ON Trainer
 AFTER DELETE
 AS
 BEGIN
-	declare @TrainerId INT;
+	declare @TrainerId varchar(50);
 	SELECT @TrainerId = deleted.UserName from deleted;
     INSERT INTO AUDIT_TRAIL (OPERATION, trainerUserName, timestamp)
     VALUES ('Delete from Trainer',@TrainerId, GETDATE())
@@ -303,19 +299,18 @@ ON Gym_Owner
 AFTER INSERT
 AS
 BEGIN
-declare @OwnerID INT;
+declare @OwnerId varchar(50);
 	SELECT @OwnerID = inserted.UserName from inserted;
     INSERT INTO AUDIT_TRAIL (OPERATION, ownerUserName, timestamp)
     VALUES ('Insert into Gym_Owner',@OwnerID, GETDATE())
 END;
-
 CREATE TRIGGER trg_Gym_Owner_Update
 ON Gym_Owner
 AFTER UPDATE
 AS
 BEGIN
     
-declare @OwnerID INT;
+declare @OwnerId varchar(50);
 	SELECT @OwnerID = inserted.UserName from inserted;
     INSERT INTO AUDIT_TRAIL (OPERATION, ownerUserName, timestamp)
     VALUES ('Update on Gym_Owner',@OwnerID, GETDATE())
@@ -327,7 +322,7 @@ AFTER DELETE
 AS
 BEGIN
 
-declare @OwnerID INT;
+declare @OwnerId varchar(50);
 	SELECT @OwnerID = deleted.UserName from deleted;
     INSERT INTO AUDIT_TRAIL (OPERATION, ownerUserName, timestamp)
     VALUES ('Delete from Gym_Owner',@OwnerID, GETDATE())
@@ -367,7 +362,7 @@ ON Member
 AFTER INSERT
 AS
 BEGIN
-Declare @memberID int;
+Declare @memberId varchar(50);
 	SELECT @memberID = inserted.UserName from inserted
     INSERT INTO AUDIT_TRAIL (OPERATION, memberUserName, timestamp)
     VALUES ('Insert into Member', @memberID, GETDATE())
@@ -379,7 +374,7 @@ AFTER UPDATE
 AS
 BEGIN
     
-Declare @memberID int;
+Declare @memberId varchar(50);
 	SELECT @memberID = inserted.UserName from inserted
     INSERT INTO AUDIT_TRAIL (OPERATION, memberUserName, timestamp)
 	VALUES ('Update on Member', @memberID, GETDATE())
@@ -391,7 +386,7 @@ AFTER DELETE
 AS
 BEGIN
     
-Declare @memberID int;
+Declare @memberId varchar(50);
 	SELECT @memberID = deleted.UserName from deleted
     INSERT INTO AUDIT_TRAIL (OPERATION, memberUserName, timestamp)
 	VALUES ('Delete from Member', @memberID, GETDATE())
@@ -893,3 +888,4 @@ SELECT * FROM Gyms;
 
 
 
+select *from Gym_Owner
