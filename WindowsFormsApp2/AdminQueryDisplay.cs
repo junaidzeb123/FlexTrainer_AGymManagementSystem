@@ -13,11 +13,13 @@ namespace WindowsFormsApp2
 {
     public partial class AdminQueryDisplay : Form
     {
-        private string query, type;
-        public AdminQueryDisplay(string query, string type)
+        private string query, type, count;
+        public AdminQueryDisplay(string query, string type, int count)
         {
             this.query = query;
             this.type = type;
+            this.count = count.ToString();
+            label1.Text += (" " + this.count);
             InitializeComponent();
             addquery();
         }

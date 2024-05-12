@@ -305,3 +305,47 @@ SELECT * FROM Trainer_Experience; /**/
 
 
 
+
+
+SELECT * FROM Member;   /**/
+SELECT * FROM Admin;  /**/
+SELECT * FROM Trainer; /**/
+SELECT * FROM Workout_Plan; 	/**/
+SELECT * FROM Diet_Plan;	/**/
+SELECT * FROM Meal;	/**/
+SELECT * FROM Machine;	/**/
+SELECT * FROM Exercise;	/**/
+SELECT * FROM Feedback; 	/**/
+SELECT * FROM Gyms;	/**/
+SELECT * FROM Diet_Plan_Meal;	/**/
+SELECT * FROM MemberDietPlan;	/**/
+SELECT * FROM AdminGym;	/**/
+SELECT * FROM Workout_Plan_Purposes_;	/**/
+SELECT * FROM Trainer_WorkoutPlan; 	/**/
+SELECT * FROM Meal_Allergens;
+SELECT * FROM TrainerGym; /**/
+SELECT * FROM Trainer_Experience; /**/
+
+
+ SELECT VarificationStatus FROM Trainer WHERE 
+ UserName = 'ok' and Password = 'ok';
+
+SELECT * FROM TRAINER;
+SELECT * FROM TRAINERGYM
+
+
+select * from Member
+select * from gym_owner;
+select * from gyms
+
+
+
+
+
+
+
+
+select *from Gym_Owner
+
+
+select Workout_Plan.WorkoutPlanId, Workout_Plan.Experience_required, Workout_Plan.nofoexercise, Workout_Plan.sets, Workout_Plan.reps from Workout_Plan inner join Workout_Exercise on Workout_Plan.WorkoutPlanId = Workout_Exercise.WorkoutPlanId inner join Exercise on Workout_Exercise.ExerciseId = Exercise.ExerciseId 
