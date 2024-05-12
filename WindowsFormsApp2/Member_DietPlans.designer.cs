@@ -35,6 +35,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.home_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.home = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.account_btn = new System.Windows.Forms.Button();
-            this.home_btn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -138,6 +138,24 @@
             this.panel7.Size = new System.Drawing.Size(812, 543);
             this.panel7.TabIndex = 7;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // home_btn
+            // 
+            this.home_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.home_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.home_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.home_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.home_btn.ForeColor = System.Drawing.Color.Coral;
+            this.home_btn.Location = new System.Drawing.Point(319, 458);
+            this.home_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.home_btn.Name = "home_btn";
+            this.home_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.home_btn.Size = new System.Drawing.Size(201, 77);
+            this.home_btn.TabIndex = 19;
+            this.home_btn.Text = "Show Existing Plans";
+            this.home_btn.UseVisualStyleBackColor = false;
+            this.home_btn.Click += new System.EventHandler(this.home_btn_Click);
             // 
             // label5
             // 
@@ -292,24 +310,6 @@
             this.account_btn.UseVisualStyleBackColor = false;
             this.account_btn.Click += new System.EventHandler(this.account_btn_Click);
             // 
-            // home_btn
-            // 
-            this.home_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.home_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.home_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.home_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.home_btn.ForeColor = System.Drawing.Color.Coral;
-            this.home_btn.Location = new System.Drawing.Point(319, 458);
-            this.home_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.home_btn.Name = "home_btn";
-            this.home_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.home_btn.Size = new System.Drawing.Size(201, 77);
-            this.home_btn.TabIndex = 19;
-            this.home_btn.Text = "Show Existing Plans";
-            this.home_btn.UseVisualStyleBackColor = false;
-            this.home_btn.Click += new System.EventHandler(this.home_btn_Click);
-            // 
             // Member_DietPlans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -319,6 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Member_DietPlans";
             this.Text = "MemberDietPlans";
+            this.Load += new System.EventHandler(this.Member_DietPlans_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);

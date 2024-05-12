@@ -108,8 +108,17 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Workout_Display workout = new Workout_Display();
-            workout.Show();
+
+            if (Session.Role == "Member")
+            {
+                Member_WokroutPlanDisplay plan = new Member_WokroutPlanDisplay();
+                plan.Show();
+            }
+            else
+            {
+                Workout_Display workout = new Workout_Display();
+                workout.Show();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)

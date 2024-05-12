@@ -58,8 +58,17 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlans_Display dietPlans = new DietPlans_Display();
-            dietPlans.Show();
+
+            if (Session.Role == "Member")
+            {
+                Member_DietPlanShow member_DietPlanShow = new Member_DietPlanShow();
+                member_DietPlanShow.Show();
+            }
+            else
+            {
+                DietPlans_Display dietPlans = new DietPlans_Display();
+                dietPlans.Show();
+            }
         }
 
         private void ShowMeals_Load(object sender, EventArgs e)

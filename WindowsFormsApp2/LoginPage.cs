@@ -179,7 +179,7 @@ namespace WindowsFormsApp2
         private void adminLogin()
         {
 
-            if (username.Text == "admin" && password.Text == "admin")
+            if (username.Text.Trim() == "admin" && password.Text.Trim() == "admin")
             {
                 /*Creating login session for adming*/
                 Session.Login("admin", "Admin");

@@ -28,10 +28,6 @@ CREATE TABLE Gym_Owner
   VarificationStatus int NOT NULL,
   PRIMARY KEY (UserName),
 );
-INSERT INTO Gym_Owner (UserName, Name, Email, Address, Start_Date, Password, VarificationStatus)
-VALUES
-('owner1', 'John Doe', 'john.doe@example.com', '123 Main St', '2023-01-01', 'password1', 1);
-
 
 CREATE TABLE Gyms
 (
@@ -41,7 +37,7 @@ CREATE TABLE Gyms
   UserName VARCHAR(50) NOT NULL,
   licenseno VARCHAR(50) NOT NULL,
   PRIMARY KEY (Name),
-  FOREIGN KEY (UserName) REFERENCES Gym_Owner(UserName)
+  FOREIGN KEY (UserName) REFERENCES Gym_Owner(UserName) on delete cascade
 );
 
 
@@ -873,8 +869,8 @@ SELECT * FROM TrainerGym; /**/
 SELECT * FROM Trainer_Experience; /**/
 
 
- SELECT VarificationStatus FROM Trainer WHERE 
- UserName = 'ok' and Password = 'ok';
+
+
 
 SELECT * FROM TRAINER;
 SELECT * FROM TRAINERGYM
@@ -884,6 +880,8 @@ select * from Member
 select * from gym_owner;
 select * from gyms
 
+
+DELETE from gyms  where Name = 'abc'
 
 
  

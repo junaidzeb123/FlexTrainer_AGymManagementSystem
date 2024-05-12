@@ -111,8 +111,13 @@ namespace WindowsFormsApp2
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DietPlans_Display dietPlans = new DietPlans_Display();
+            Member_DietPlanShow dietPlans = new Member_DietPlanShow();
             dietPlans.Show();
+        }
+
+        private void Member_DietPlans_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
