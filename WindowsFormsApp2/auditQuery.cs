@@ -24,10 +24,10 @@ namespace WindowsFormsApp2
                 string condition = "";
 
                 if (!string.IsNullOrEmpty(textBox1.Text))
-                    condition += (" AND timestamp >= DATEADD(MONTH, " + textBox2.Text + ", GETDATE())");
+                    condition += (" AND timestamp >= DATEADD(MONTH, -" + textBox1.Text + ", GETDATE())");
                 
                 if (!string.IsNullOrEmpty(textBox2.Text))
-                    condition += (" AND Gyms.Name = " + textBox1.Text);
+                    condition += (" AND Gyms.Name = '" + textBox2.Text + "'");
 
             if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
                 condition = "";
@@ -48,8 +48,9 @@ namespace WindowsFormsApp2
                     query = "Select audit_id, timestamp, OPERATION FROM Trainer Inner join TrainerGym on Trainer.UserName = TrainerGym.UserName Inner join Gyms on TrainerGym.Name = Gyms.Name Inner join AUDIT_TRAIL on AUDIT_TRAIL.trainerUserName = Trainer.UserName WHERE OPERATION = 'Insert into Trainer'" + create_query_filter();
                 else if (radioButton3.Checked)
                     query = "Select audit_id, timestamp, OPERATION FROM Gym_Owner Inner join Gyms on Gyms.UserName = Gym_Owner.UserName Inner join AUDIT_TRAIL on AUDIT_TRAIL.ownerUserName = Gym_Owner.UserName WHERE OPERATION = 'Insert into Gym_Owner'" + create_query_filter();
-                
 
+
+            MessageBox.Show(query);
             AdminQueryDisplay adminQueryDisplay = new AdminQueryDisplay(query, "audit");
             this.Hide();
             adminQueryDisplay.Show();

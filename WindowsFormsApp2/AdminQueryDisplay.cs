@@ -48,7 +48,6 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             if (type == "member") { 
                 AdminQueries member = new AdminQueries();
                 member.Show();
@@ -63,11 +62,15 @@ namespace WindowsFormsApp2
                 AdminWorkOutQuery workout = new AdminWorkOutQuery();
                 workout.Show();
             }
-            else if (type == "audits")
+            else if (type == "audit")
             {
                 auditQuery audit = new auditQuery();
                 audit.Show();
             }
+            MessageBox.Show(type);
+            
+            
+            this.Hide();
         }
     }
 }
