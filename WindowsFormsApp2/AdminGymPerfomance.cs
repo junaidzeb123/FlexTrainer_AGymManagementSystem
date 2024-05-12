@@ -89,12 +89,6 @@ int nHeightEllipse // height of ellipse
             try
             {
 
-                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
-                buttonColumn.HeaderText = "Action";
-                buttonColumn.Text = "REMOVE";
-                buttonColumn.Name = "btnColumn";
-                buttonColumn.UseColumnTextForButtonValue = true;
-                Gridview.Columns.Add(buttonColumn);
                 Gridview.CellContentClick += Gridview_CellContentClick;
                 LoadALLPlanIntoTable();
             }
@@ -105,7 +99,7 @@ int nHeightEllipse // height of ellipse
 
         private void Gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
     }
 }

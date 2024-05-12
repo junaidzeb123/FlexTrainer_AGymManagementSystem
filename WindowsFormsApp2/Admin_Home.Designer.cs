@@ -36,12 +36,11 @@
             this.button9 = new System.Windows.Forms.Button();
             this.home_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Search_text_Box = new System.Windows.Forms.TextBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +105,7 @@
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.button9.ForeColor = System.Drawing.Color.Coral;
-            this.button9.Location = new System.Drawing.Point(99, 505);
+            this.button9.Location = new System.Drawing.Point(99, 457);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
             this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -124,7 +123,7 @@
             this.home_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.home_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.home_btn.ForeColor = System.Drawing.Color.Coral;
-            this.home_btn.Location = new System.Drawing.Point(99, 320);
+            this.home_btn.Location = new System.Drawing.Point(99, 340);
             this.home_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.home_btn.Name = "home_btn";
             this.home_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -142,7 +141,7 @@
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout_btn.Font = new System.Drawing.Font("Showcard Gothic", 12F);
             this.logout_btn.ForeColor = System.Drawing.Color.Coral;
-            this.logout_btn.Location = new System.Drawing.Point(99, 599);
+            this.logout_btn.Location = new System.Drawing.Point(99, 551);
             this.logout_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -152,29 +151,10 @@
             this.logout_btn.UseVisualStyleBackColor = false;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
-            // button8
-            // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.button8.ForeColor = System.Drawing.Color.Coral;
-            this.button8.Location = new System.Drawing.Point(99, 411);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button8.Name = "button8";
-            this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button8.Size = new System.Drawing.Size(246, 73);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "MEMBERS CONTROL";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(140)))), ((int)(((byte)(171)))));
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.logout_btn);
             this.panel1.Controls.Add(this.home_btn);
             this.panel1.Controls.Add(this.button9);
@@ -184,6 +164,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(417, 764);
             this.panel1.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Coral;
+            this.button1.Location = new System.Drawing.Point(99, 222);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(246, 73);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "REGISTRATION REQUESTS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -213,24 +211,6 @@
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(120, 90);
             this.vScrollBar1.TabIndex = 21;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F);
-            this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(99, 222);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(246, 73);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "REGISTRATION REQUESTS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Admin_Home
             // 
@@ -262,7 +242,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button home_btn;
         private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Search_text_Box;
