@@ -2,6 +2,8 @@ CREATE DATABASE GYM_MANAGMENT;
 USE GYM_MANAGMENT;
 drop database GYM_MANAGMENT;
 
+
+
 CREATE TABLE Trainer
 (
   UserName VARCHAR(50) NOT NULL,
@@ -212,6 +214,7 @@ CREATE TABLE Trainer_WorkoutPlan
 );
 
 
+
 CREATE TABLE Member_WorkoutPlan
 (
   UserName VARCHAR(50) NOT NULL,
@@ -245,7 +248,6 @@ CREATE TABLE Booking_Session
 
 
 
-
 CREATE TABLE AUDIT_TRAIL(
 	audit_id INT IDENTITY(1,1) PRIMARY KEY,
 	memberUserName varchar(50), 
@@ -259,7 +261,55 @@ CREATE TABLE AUDIT_TRAIL(
 );
 
 
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM Gym_Owner
+SELECT * FROM Member;   /**/
+SELECT * FROM Admin;  /**/
+SELECT * FROM Trainer; /**/
+SELECT * FROM Workout_Plan; 	/**/
+SELECT * FROM Diet_Plan;	/**/
+SELECT * FROM Meal;	/**/
+SELECT * FROM Machine;	/**/
+SELECT * FROM Exercise;	/**/
+SELECT * FROM Feedback; 	/**/
+SELECT * FROM Gyms;	
+SELECT * FROM Diet_Plan_Meal;	/**/
+SELECT * FROM MemberDietPlan;	/**/
+SELECT * FROM AdminGym;	/**/
+SELECT * FROM Workout_Plan_Purposes_;	/**/
+SELECT * FROM Trainer_WorkoutPlan; 	/**/
+SELECT * FROM Meal_Allergens;
+SELECT * FROM TrainerGym; /**/
+SELECT * FROM Trainer_Experience; /**/
+
+
+
+
+
+SELECT * FROM TRAINER;
+SELECT * FROM TRAINERGY;
+select * from Member
+select * from gym_owner;
+select * from gyms
+
+
+DELETE from gyms  where Name = 'abc'
+
+
+
+select * from MemberDietPlan
 -- Trigger for Trainer table
+
 CREATE TRIGGER trg_Trainer_Insert
 ON Trainer
 AFTER INSERT
@@ -839,55 +889,15 @@ END;
 
 
 
-
-
-
-
-
-
-
-
-
-
-SELECT * FROM Member;   /**/
-SELECT * FROM Admin;  /**/
-SELECT * FROM Trainer; /**/
-SELECT * FROM Workout_Plan; 	/**/
-SELECT * FROM Diet_Plan;	/**/
-SELECT * FROM Meal;	/**/
-SELECT * FROM Machine;	/**/
-SELECT * FROM Exercise;	/**/
-SELECT * FROM Feedback; 	/**/
-SELECT * FROM Gyms;	/**/
-SELECT * FROM Diet_Plan_Meal;	/**/
-SELECT * FROM MemberDietPlan;	/**/
-SELECT * FROM AdminGym;	/**/
-SELECT * FROM Workout_Plan_Purposes_;	/**/
-SELECT * FROM Trainer_WorkoutPlan; 	/**/
-SELECT * FROM Meal_Allergens;
-SELECT * FROM TrainerGym; /**/
-SELECT * FROM Trainer_Experience; /**/
-
-
-
-
-
-SELECT * FROM TRAINER;
-SELECT * FROM TRAINERGYM
-
-
-select * from Member
-select * from gym_owner;
-select * from gyms
-
-
-DELETE from gyms  where Name = 'abc'
-
-
  
 
 SELECT * FROM Gym_Owner;
 SELECT * FROM Gyms;
+
+
+
+
+
 
 
 
