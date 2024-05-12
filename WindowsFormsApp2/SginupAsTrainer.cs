@@ -69,62 +69,71 @@ namespace WindowsFormsApp2
             }
             else
             {
-                trainer.SetExperience1(experience1.Text.Trim());
-                trainer.SetExperience2(experience2.Text.Trim());
-                trainer.SetExperience3(experience3.Text.Trim());
-                trainer.SetSpecilifyArea(speciltyarea.Text.Trim());
-                trainer.SetQualification(qualification.Text.Trim());
-                trainer.SetGymName(gym.SelectedItem.ToString());
-                trainer.SetVarificationStatus(0);
+                try
+                {
+                    trainer.SetExperience1(experience1.Text.Trim());
+                    trainer.SetExperience2(experience2.Text.Trim());
+                    trainer.SetExperience3(experience3.Text.Trim());
+                    trainer.SetSpecilifyArea(speciltyarea.Text.Trim());
+                    trainer.SetQualification(qualification.Text.Trim());
+                    trainer.SetGymName(gym.SelectedItem.ToString());
+                    trainer.SetVarificationStatus(0);
 
-                SqlConnection sqlConnection = DatabaseManager.GetConnection();
-                sqlConnection.Open();
-
-                string query = "INSERT INTO Trainer VALUES (@UserName, @FirstName, @Gmail, @Qualification, @SpecializeArea,@VarificationStatus, @Address, @Date, @Password)";
-                string query2 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
-                string query3 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
-                string query4 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
-                string query5 = "INSERT INTO TrainerGym VALUES (@UserName,@TrainerGym)";
-
-                SqlCommand cmd1 = new SqlCommand(query, sqlConnection);
-                cmd1.Parameters.AddWithValue("@UserName", trainer.GetUserName());
-                cmd1.Parameters.AddWithValue("@FirstName", trainer.GetFirstName());
-                cmd1.Parameters.AddWithValue("@Gmail", trainer.GetGmail());
-                cmd1.Parameters.AddWithValue("@Qualification", trainer.GetQualification());
-                cmd1.Parameters.AddWithValue("@SpecializeArea", trainer.GetSpecilifyArea());
-                cmd1.Parameters.AddWithValue("@Address", trainer.GetAddress());
-                cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
-                cmd1.Parameters.AddWithValue("@Password", trainer.GetPassword());
-                cmd1.Parameters.AddWithValue("@VarificationStatus", 0);
-
-                SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
-                cmd2.Parameters.AddWithValue("@Experience", trainer.GetExperience1());
-                cmd2.Parameters.AddWithValue("@UserName", trainer.GetUserName());
-
-                SqlCommand cmd3 = new SqlCommand(query3, sqlConnection);
-                cmd3.Parameters.AddWithValue("@Experience", trainer.GetExperience2());
-                cmd3.Parameters.AddWithValue("@UserName", trainer.GetUserName());
-
-                SqlCommand cmd4 = new SqlCommand(query4, sqlConnection);
-                cmd4.Parameters.AddWithValue("@Experience", trainer.GetExperience3());
-                cmd4.Parameters.AddWithValue("@UserName", trainer.GetUserName());
-
-                SqlCommand cmd5 = new SqlCommand(query5, sqlConnection);
-                cmd5.Parameters.AddWithValue("@TrainerGym", trainer.GetTrainerGym());
-                cmd5.Parameters.AddWithValue("@UserName", trainer.GetUserName());
-
-                // ExecuteNonQuery for each command
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-                cmd4.ExecuteNonQuery();
-                cmd5.ExecuteNonQuery();
+                    SqlConnection sqlConnection = DatabaseManager.GetConnection();
+                    sqlConnection.Open();
 
 
-                sqlConnection.Close();
-                this.Hide();
-                LoginPage loginPage = new LoginPage();
-                loginPage.Show();
+                    string query = "INSERT INTO Trainer VALUES (@UserName, @FirstName, @Gmail, @Qualification," +
+                                   " @SpecializeArea,@VarificationStatus, @Address, @Date, @Password)";
+                    string query2 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
+                    string query3 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
+                    string query4 = "INSERT INTO Trainer_Experience VALUES (@Experience, @UserName)";
+                    string query5 = "INSERT INTO TrainerGym VALUES (@UserName,@TrainerGym)";
+
+                    SqlCommand cmd1 = new SqlCommand(query, sqlConnection);
+                    cmd1.Parameters.AddWithValue("@UserName", trainer.GetUserName());
+                    cmd1.Parameters.AddWithValue("@FirstName", trainer.GetFirstName());
+                    cmd1.Parameters.AddWithValue("@Gmail", trainer.GetGmail());
+                    cmd1.Parameters.AddWithValue("@Qualification", trainer.GetQualification());
+                    cmd1.Parameters.AddWithValue("@SpecializeArea", trainer.GetSpecilifyArea());
+                    cmd1.Parameters.AddWithValue("@Address", trainer.GetAddress());
+                    cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
+                    cmd1.Parameters.AddWithValue("@Password", trainer.GetPassword());
+                    cmd1.Parameters.AddWithValue("@VarificationStatus", 0);
+
+                    SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
+                    cmd2.Parameters.AddWithValue("@Experience", trainer.GetExperience1());
+                    cmd2.Parameters.AddWithValue("@UserName", trainer.GetUserName());
+
+                    SqlCommand cmd3 = new SqlCommand(query3, sqlConnection);
+                    cmd3.Parameters.AddWithValue("@Experience", trainer.GetExperience2());
+                    cmd3.Parameters.AddWithValue("@UserName", trainer.GetUserName());
+
+                    SqlCommand cmd4 = new SqlCommand(query4, sqlConnection);
+                    cmd4.Parameters.AddWithValue("@Experience", trainer.GetExperience3());
+                    cmd4.Parameters.AddWithValue("@UserName", trainer.GetUserName());
+
+                    SqlCommand cmd5 = new SqlCommand(query5, sqlConnection);
+                    cmd5.Parameters.AddWithValue("@TrainerGym", trainer.GetTrainerGym());
+                    cmd5.Parameters.AddWithValue("@UserName", trainer.GetUserName());
+
+                    // ExecuteNonQuery for each command
+                    cmd1.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
+                    cmd3.ExecuteNonQuery();
+                    cmd4.ExecuteNonQuery();
+                    cmd5.ExecuteNonQuery();
+
+
+                    sqlConnection.Close();
+                    this.Hide();
+                    LoginPage loginPage = new LoginPage();
+                    loginPage.Show();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
         private void SginupAsTrainer_Load(object sender, EventArgs e)

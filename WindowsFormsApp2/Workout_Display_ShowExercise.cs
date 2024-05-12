@@ -71,8 +71,17 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Workout_Display workout = new Workout_Display();    
-            workout.Show();
+
+            if (Session.Role == "Member")
+            {
+                Member_WokroutPlanDisplay member_WokroutPlanDisplay = new Member_WokroutPlanDisplay();
+                member_WokroutPlanDisplay.Show();
+            }
+            else
+            {
+                Workout_Display workout = new Workout_Display();
+                workout.Show();
+            }
         }
 
         private void Gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)

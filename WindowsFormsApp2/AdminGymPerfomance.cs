@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -52,6 +53,59 @@ int nHeightEllipse // height of ellipse
             this.Hide();
             Admin_Home admin_Home = new Admin_Home();
             admin_Home.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void LoadALLPlanIntoTable(){
+            try
+            {
+
+                SqlConnection sqlConnection = DatabaseManager.GetConnection();
+                sqlConnection.Open();
+
+                string query = "Select * from gyms;";
+                SqlCommand command = new SqlCommand(query, sqlConnection);
+
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                Gridview.DataSource = dataTable;
+            }
+            catch(Exception ex)
+            {
+               
+            }
+            
+        }
+
+      
+        private void AdminGymPerfomance_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+                buttonColumn.HeaderText = "Action";
+                buttonColumn.Text = "REMOVE";
+                buttonColumn.Name = "btnColumn";
+                buttonColumn.UseColumnTextForButtonValue = true;
+                Gridview.Columns.Add(buttonColumn);
+                Gridview.CellContentClick += Gridview_CellContentClick;
+                LoadALLPlanIntoTable();
+            }
+            catch (Exception ex) { 
+                MessageBox.Show(ex.ToString());
+             }
+        }
+
+        private void Gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

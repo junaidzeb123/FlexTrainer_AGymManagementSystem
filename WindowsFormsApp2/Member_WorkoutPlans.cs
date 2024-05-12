@@ -124,7 +124,7 @@ namespace WindowsFormsApp2
         private void home_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Workout_Display trainer_Workout = new Workout_Display();
+            Member_WokroutPlanDisplay trainer_Workout = new Member_WokroutPlanDisplay();
             trainer_Workout.Show();
         }
     }

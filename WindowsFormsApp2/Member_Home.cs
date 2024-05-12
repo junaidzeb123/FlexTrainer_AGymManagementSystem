@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+
 namespace WindowsFormsApp2
 {
     public partial class Member_Home : Form
@@ -143,7 +144,7 @@ namespace WindowsFormsApp2
         {
             Currbtn(ref button7, 40);
             Thread.Sleep(50);
-          Member_WorkoutPlans form = new Member_WorkoutPlans();
+            Member_WokroutPlanDisplay form = new Member_WokroutPlanDisplay();
             form.Show();
             this.Hide();
         }

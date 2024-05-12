@@ -80,44 +80,51 @@ namespace WindowsFormsApp2
             else
             {
 
-                string membershiptype = "";
-                if (basic.Checked) membershiptype = "basic";
-                else if (standard.Checked) membershiptype = "basic";
-                else if (premium.Checked) membershiptype = "premium";
+                try
+                {
+                    string membershiptype = "";
+                    if (basic.Checked) membershiptype = "basic";
+                    else if (standard.Checked) membershiptype = "basic";
+                    else if (premium.Checked) membershiptype = "premium";
 
 
-                member.SetGymName(Gym.SelectedItem.ToString());
-                SqlConnection sqlConnection = DatabaseManager.GetConnection();
-                sqlConnection.Open();
+                    member.SetGymName(Gym.SelectedItem.ToString());
+                    SqlConnection sqlConnection = DatabaseManager.GetConnection();
+                    sqlConnection.Open();
 
-                string query = "INSERT INTO Member VALUES (@UserName, @FirstName, @Gmail,@cnic,@Date,@Address,@membershiptype, @Password)";
-                string query2 = "INSERT INTO MemberGym VALUES (@UserName,@Gymname)";
-                
-                SqlCommand cmd1 = new SqlCommand(query, sqlConnection);
-                SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
-                cmd1.Parameters.AddWithValue("@UserName", member.GetUserName());
-                cmd1.Parameters.AddWithValue("@FirstName", member.GetFirstName());
-                cmd1.Parameters.AddWithValue("@Gmail", member.GetGmail());
-                cmd1.Parameters.AddWithValue("@cnic",member.GetCNIC());
-                cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
-                cmd1.Parameters.AddWithValue("@Address", member.GetAddress());
-                cmd1.Parameters.AddWithValue("@membershiptype",membershiptype);
-                cmd1.Parameters.AddWithValue("@Password", member.GetPassword());
+                    string query = "INSERT INTO Member VALUES (@UserName, @FirstName, @Gmail,@cnic,@Date,@Address,@membershiptype, @Password)";
+                    string query2 = "INSERT INTO MemberGym VALUES (@UserName,@Gymname)";
+
+                    SqlCommand cmd1 = new SqlCommand(query, sqlConnection);
+                    SqlCommand cmd2 = new SqlCommand(query2, sqlConnection);
+                    cmd1.Parameters.AddWithValue("@UserName", member.GetUserName());
+                    cmd1.Parameters.AddWithValue("@FirstName", member.GetFirstName());
+                    cmd1.Parameters.AddWithValue("@Gmail", member.GetGmail());
+                    cmd1.Parameters.AddWithValue("@cnic", member.GetCNIC());
+                    cmd1.Parameters.AddWithValue("@Date", DateTime.Now);
+                    cmd1.Parameters.AddWithValue("@Address", member.GetAddress());
+                    cmd1.Parameters.AddWithValue("@membershiptype", membershiptype);
+                    cmd1.Parameters.AddWithValue("@Password", member.GetPassword());
 
 
-                cmd2.Parameters.AddWithValue("@UserName", member.GetUserName());
-                cmd2.Parameters.AddWithValue("@Gymname", member.GetMemberGym());
+                    cmd2.Parameters.AddWithValue("@UserName", member.GetUserName());
+                    cmd2.Parameters.AddWithValue("@Gymname", member.GetMemberGym());
+                    MessageBox.Show(cmd1.ToString());
+                    // ExecuteNonQuery for each command
+                    cmd1.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
 
-                // ExecuteNonQuery for each command
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
 
-               
 
-                sqlConnection.Close();
-                this.Hide();
-                LoginPage loginPage = new LoginPage();
-                loginPage.Show();
+                    sqlConnection.Close();
+                    this.Hide();
+                    LoginPage loginPage = new LoginPage();
+                    loginPage.Show();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 
